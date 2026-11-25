@@ -1,0 +1,19 @@
+{
+  "version": "0.5",
+  "structural_pass": true,
+  "arguments": 18,
+  "claims": 108,
+  "proof_edges": 124,
+  "source_anchor_links": 87,
+  "unique_source_anchors": 65,
+  "concept_links": 61,
+  "legacy_modules_covered": 12,
+  "status_counts": {
+    "conditional": 7,
+    "normative_open": 8,
+    "empirical_open": 2,
+    "synthesis_open": 1
+  },
+  "errors": [],
+  "scope": "Структурная проверка и редакторская реконструкция; не машинное доказательство истинности или внешняя академическая проверка."
+}

@@ -1,0 +1,40 @@
+{
+  "counts": {
+    "documents": 6,
+    "paragraphs": 1797,
+    "exact_duplicate_records": 827,
+    "nodes": 300,
+    "edges": 252,
+    "legacy_mappings": 37,
+    "new_concepts": 31,
+    "new_relations": 25,
+    "source_links": 969,
+    "mapping_status": {
+      "direct": 31,
+      "partial": 5,
+      "needs_split": 1
+    },
+    "audit_issues": 8
+  },
+  "structural_checks": "passed",
+  "semantic_validation": "pending",
+  "limitations": [
+    "Не подтверждена полнота исторической Wiki.",
+    "Архивные URL не перепроверены онлайн.",
+    "Документ аналитического обзора не удалось материализовать; не включён.",
+    "Точные дубли отмечены без слияния редакций.",
+    "Граф из v0.2 сохранён; новые связи требуют смысловой проверки.",
+    "34 гипотезы сопоставления с книгой не проверены."
+  ],
+  "browser_smoke_test": {
+    "status": "passed_partial",
+    "checked": [
+      "Оба HTML загружаются в изолированных страницах Chromium через set_content",
+      "Поиск arch:C001 в обоих интерфейсах",
+      "Выбор узла и адрес перехода к свидетельствам",
+      "Поиск Transparency в корпусе",
+      "Вкладка аудита (8 записей)"
+    ],
+    "limitation": "Переходы между локальными file:// не проверены: политика браузера блокирует файловые URL."
+  }
+}

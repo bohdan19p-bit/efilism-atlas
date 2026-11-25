@@ -1,0 +1,32 @@
+{
+  "version": "0.7",
+  "status": "passed_structural",
+  "concept_coverage": 72,
+  "argument_coverage": 18,
+  "chapter_count": 49,
+  "page_anchor_count": 135,
+  "mapping_links": 275,
+  "all_pages_in_range": true,
+  "old_graph_preserved": true,
+  "limitations": [
+    "Выборочное чтение содержательных фрагментов и адресация по заголовкам: не построчный аудит всех 529 страниц.",
+    "Не проверены заново все 34 старых соответствия и 56 связей прежней карты; старые идентификаторы не перенесены автоматически.",
+    "Проверяется русская PDF-редакция, не EN/UA; не подтверждена полнота всех исторических материалов Wiki.",
+    "Точная фраза может отсутствовать из-за кодировки или иной терминологии; отсутствие совпадения не означает отсутствие концепции."
+  ],
+  "browser_test": {
+    "browser": "Chromium",
+    "viewport": "390×844",
+    "method": "set_content; no local file navigation",
+    "passed": [
+      "72 concept cards",
+      "search Error Prime",
+      "18 argument cards",
+      "partial filter (6)",
+      "page evidence dialog",
+      "49 chapter cards",
+      "8 issues",
+      "no page errors"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "counts": {
+    "nodes": 304,
+    "edges_total": 274,
+    "edges_active": 261,
+    "reviewed_concepts": 72,
+    "old_concepts": 68,
+    "new_concepts": 4,
+    "mapping_count": 34,
+    "mapping_classes": {
+      "overlap": 11,
+      "close": 6,
+      "related": 11,
+      "rejected": 4,
+      "source_narrower": 2
+    },
+    "reviewed_edges": 73,
+    "edge_review_classes": {
+      "qualified": 26,
+      "held": 9,
+      "retyped": 38
+    },
+    "held_edges_including_mappings": 13,
+    "pending_book_edges": 56,
+    "new_edges": 22,
+    "cases": 10,
+    "corpus_records": 1797
+  },
+  "checks": {
+    "unique_node_ids": true,
+    "unique_edge_ids": true,
+    "all_edge_endpoints_exist": true,
+    "all_relation_types_declared": true,
+    "all_evidence_anchors_exist": true,
+    "all_legacy_nodes_retained": true,
+    "all_legacy_edges_retained": true,
+    "no_automatic_merge": true,
+    "all_core_records_reviewed": true,
+    "case_anchors_exist": true
+  },
+  "limitations": [
+    "Редакторский анализ не доказывает истинность тезисов или валидность всех аргументов.",
+    "Не перепроверена актуальная редакция монографии; 56 рёбер ноябрьского графа отложены.",
+    "Локальные копии Wiki не сверены с внешними архивными снимками.",
+    "Статусы source_match унаследованы из v0.3; новые границы — аналитическая реконструкция.",
+    "Термины нейронауки и модальной логики требуют дальнейшей независимой сверки."
+  ],
+  "browser_smoke_test": {
+    "chromium_mobile_viewport": true,
+    "ontologia_search_filters_evidence_pagination": true,
+    "atlas_search_and_links": true,
+    "held_edges_excluded_from_graph": true,
+    "corpus_new_node_search": true,
+    "javascript_page_errors": [],
+    "cross_file_navigation": "Не проверена: политика браузера блокирует прямое открытие файлов и тестового домена. Атрибуты ссылок проверены."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "version": "0.6",
+  "arguments_reviewed": 18,
+  "source_anchor_references": 87,
+  "external_sources": 16,
+  "boolean_tests": 6,
+  "countermodel_tests": 5,
+  "statuses": {
+    "limited": 6,
+    "normative": 8,
+    "empirical": 2,
+    "open": 2
+  },
+  "all_anchor_ids_resolve": true,
+  "all_external_ids_resolve": true,
+  "original_argumentatio_preserved": true,
+  "limits": [
+    "Источники проверены выборочно на уровне поисковых результатов/аннотаций, без полного критического обзора.",
+    "Формальные проверки относятся к булевым абстракциям, не к полной логике аргументов.",
+    "Проверка актуальной монографии отложена."
+  ]
+}

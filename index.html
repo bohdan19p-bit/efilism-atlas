@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Исследовательский атлас эфилизма · v3.7 | Efilism RUS</title>
-  <meta name="description" content="Исследовательский справочник и интерактивный граф понятий, аргументов, возражений и источников по монографии Efilism RUS (версия 3.7).">
+  <title>Исследовательский атлас эфилизма · Efilism RUS</title>
+  <meta name="description" content="Полностью русскоязычный мобильный справочник по монографии Efilism RUS: 137 понятий, 9 принципов, 18 аргументов, 12 возражений, 139 источников и 24 редакторские правки.">
   <style>
     :root {
       --bg: #f6f8fb;
@@ -18,8 +18,13 @@
       --border: #d9e2ec;
       --badge-bg: #e6eef8;
       --badge-text: #1b365d;
+      --ok-bg: #e6f4ea;
+      --ok-text: #1e6b34;
       --warn-bg: #fff8eb;
       --warn-border: #e6c68b;
+      --warn-text: #7a4f01;
+      --p1-bg: #fde8e8;
+      --p1-text: #9b1c1c;
       --shadow: 0 2px 10px rgba(27, 54, 93, 0.06);
       --radius: 12px;
     }
@@ -28,22 +33,25 @@
       --bg: #0f1722;
       --surface: #172231;
       --surface-soft: #1d2c40;
-      --primary: #6ea3e0;
-      --primary-hover: #8bb8eb;
-      --accent: #9cc2ec;
+      --primary: #7cb0eb;
+      --primary-hover: #9bc4f2;
+      --accent: #a6cbf5;
       --text: #e6edf5;
       --muted: #9fb0c4;
       --border: #2a3b52;
       --badge-bg: #20344d;
       --badge-text: #b7d3f5;
+      --ok-bg: #152e20;
+      --ok-text: #7ad89b;
       --warn-bg: #262015;
       --warn-border: #6e5832;
-      --shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+      --warn-text: #f3d28c;
+      --p1-bg: #3b1c20;
+      --p1-text: #f8a4a4;
+      --shadow: 0 2px 12px rgba(0, 0, 0, 0.32);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -54,32 +62,25 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 30;
       background: var(--surface);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(8px);
     }
 
     .topbar-inner {
-      max-width: 960px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 10px 16px;
+      padding: 10px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
@@ -87,57 +88,58 @@
       font-weight: 700;
       font-size: 0.95rem;
       color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
     }
 
     .nav-links a {
       color: var(--muted);
       font-weight: 500;
+      padding: 4px 2px;
     }
 
-    .nav-links a:hover {
-      color: var(--primary);
-      text-decoration: none;
-    }
+    .nav-links a:hover { color: var(--primary); text-decoration: none; }
 
     .theme-btn {
       border: 1px solid var(--border);
       background: var(--surface-soft);
       color: var(--text);
       border-radius: 8px;
-      padding: 5px 10px;
+      padding: 6px 12px;
+      min-height: 36px;
       font-size: 0.84rem;
+      font-weight: 500;
       cursor: pointer;
       font-family: inherit;
     }
 
-    .theme-btn:hover {
-      border-color: var(--primary);
-    }
-
     .container {
-      max-width: 960px;
+      max-width: 980px;
       margin: 0 auto;
-      padding: 28px 16px 48px;
+      padding: 18px 14px 56px;
     }
 
     .hero {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 28px 24px;
+      padding: 20px 18px;
       box-shadow: var(--shadow);
-      margin-bottom: 20px;
+      margin-bottom: 16px;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .pill {
@@ -148,222 +150,371 @@
       font-weight: 600;
       padding: 4px 10px;
       border-radius: 999px;
-      margin-bottom: 12px;
-      letter-spacing: 0.02em;
+      margin-bottom: 8px;
     }
 
     h1 {
-      margin: 0 0 10px;
-      font-size: clamp(1.5rem, 4vw, 2.05rem);
+      margin: 0 0 8px;
+      font-size: clamp(1.38rem, 4.5vw, 1.95rem);
       line-height: 1.2;
       color: var(--primary);
     }
 
     .lead {
-      margin: 0 0 18px;
+      margin: 0;
       color: var(--muted);
-      font-size: 1rem;
-      max-width: 70ch;
+      font-size: 0.94rem;
+      max-width: 72ch;
     }
 
-    .cta-row {
+    .search-box {
+      position: sticky;
+      top: 56px;
+      z-index: 20;
+      background: var(--bg);
+      padding: 8px 0 10px;
+    }
+
+    .search-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 16px;
+      gap: 8px;
+      align-items: center;
     }
 
-    .btn {
+    .search-input-wrap {
+      position: relative;
+      flex: 1;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 12px 40px 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.96rem;
+      font-family: inherit;
+      box-shadow: var(--shadow);
+    }
+
+    #searchInput:focus {
+      outline: 2px solid var(--primary);
+      border-color: var(--primary);
+    }
+
+    .clear-btn {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      font-size: 1.15rem;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .clear-btn.visible { display: inline-flex; align-items: center; justify-content: center; }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 0 4px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .tabs::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      flex: 0 0 auto;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 9px 14px;
+      min-height: 40px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 18px;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: background 0.15s ease, border-color 0.15s ease;
+      gap: 6px;
+      white-space: nowrap;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
     }
 
-    .btn-primary {
+    .tab-btn.active {
       background: #1b365d;
       color: #ffffff;
+      border-color: #1b365d;
     }
 
-    .btn-primary:hover {
-      background: #274c82;
-      text-decoration: none;
-    }
-
-    [data-theme="dark"] .btn-primary {
+    [data-theme="dark"] .tab-btn.active {
       background: #3b6ea5;
+      border-color: #3b6ea5;
       color: #ffffff;
     }
 
-    [data-theme="dark"] .btn-primary:hover {
-      background: #4e83bd;
+    .tab-count {
+      font-size: 0.78rem;
+      opacity: 0.82;
+      font-weight: 500;
     }
 
-    .btn-secondary {
-      background: var(--surface-soft);
-      color: var(--primary);
-      border: 1px solid var(--border);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--primary);
-      text-decoration: none;
-    }
-
-    .meta-line {
-      font-size: 0.85rem;
-      color: var(--muted);
+    .subbar {
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px 16px;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .stat {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px;
-      text-align: center;
-    }
-
-    .stat-num {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--primary);
-      line-height: 1.2;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    h2 {
-      font-size: 1.18rem;
-      margin: 26px 0 12px;
-      color: var(--primary);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
-    }
-
-    .card {
-      display: flex;
-      flex-direction: column;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-      box-shadow: var(--shadow);
-      color: var(--text);
-      transition: border-color 0.15s ease, transform 0.15s ease;
-    }
-
-    .card:hover {
-      border-color: var(--primary);
-      transform: translateY(-1px);
-      text-decoration: none;
-    }
-
-    .card-top {
-      display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-      margin-bottom: 6px;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 6px 0 14px;
     }
 
-    .card-title {
-      font-weight: 700;
-      font-size: 0.98rem;
-      color: var(--primary);
+    .chips {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      flex: 1;
     }
 
-    .card-size {
-      font-size: 0.76rem;
+    .chip {
+      border: 1px solid var(--border);
+      background: var(--surface);
       color: var(--muted);
+      border-radius: 999px;
+      padding: 6px 11px;
+      min-height: 34px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .chip.active {
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      border-color: var(--primary);
+      font-weight: 600;
+    }
+
+    .action-btn {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--primary);
+      border-radius: 8px;
+      padding: 7px 12px;
+      min-height: 36px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
       white-space: nowrap;
     }
 
-    .card-desc {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin: 0;
+    .banner-note {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      color: var(--warn-text);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.86rem;
+      margin-bottom: 14px;
     }
 
-    details {
+    .cards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .item-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 14px 18px;
-      margin-top: 16px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: border-color 0.2s ease;
     }
 
-    summary {
+    .item-card.highlight {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(27, 54, 93, 0.22);
+    }
+
+    .item-summary {
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      padding: 14px 16px;
       cursor: pointer;
+      font-family: inherit;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .item-head {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 0;
+    }
+
+    .item-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.74rem;
       font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+    }
+
+    .badge-ok { background: var(--ok-bg); color: var(--ok-text); }
+    .badge-warn { background: var(--warn-bg); color: var(--warn-text); }
+    .badge-p1 { background: var(--p1-bg); color: var(--p1-text); }
+
+    .item-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+    }
+
+    .item-sub {
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .chevron {
+      flex: 0 0 auto;
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding-top: 2px;
+      transition: transform 0.15s ease;
+    }
+
+    .item-card.open .chevron { transform: rotate(180deg); }
+
+    .item-body {
+      display: none;
+      padding: 0 16px 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    .item-card.open .item-body { display: block; }
+
+    .field { margin-top: 10px; }
+    .field-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .ref-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+      align-items: center;
+    }
+
+    .ref-chip {
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--primary);
+      border-radius: 6px;
+      padding: 4px 9px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .copy-btn {
+      margin-top: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 6px 11px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 32px 16px;
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      color: var(--muted);
+    }
+
+    .archive-box {
+      margin-top: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+    }
+
+    .archive-box summary {
+      cursor: pointer;
+      font-weight: 700;
       color: var(--primary);
       font-size: 0.95rem;
     }
 
-    .module-list {
+    .archive-grid {
       list-style: none;
       padding: 12px 0 0;
       margin: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 8px 16px;
-      font-size: 0.88rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px 14px;
+      font-size: 0.86rem;
     }
 
-    .module-list li {
-      padding: 4px 0;
+    .archive-grid li {
+      padding: 5px 0;
       border-bottom: 1px dashed var(--border);
     }
 
-    .notice {
-      background: var(--warn-bg);
-      border: 1px solid var(--warn-border);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-      margin-top: 24px;
-      font-size: 0.88rem;
-    }
-
-    .notice strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--text);
-    }
-
-    .notice ul {
-      margin: 6px 0 0;
-      padding-left: 18px;
-    }
-
-    .notice li {
-      margin-bottom: 4px;
+    .notice-footer {
+      margin-top: 18px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
     }
 
     footer {
-      margin-top: 32px;
-      padding-top: 18px;
+      margin-top: 24px;
+      padding-top: 16px;
       border-top: 1px solid var(--border);
       font-size: 0.84rem;
       color: var(--muted);
@@ -373,170 +524,470 @@
       gap: 10px;
     }
 
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+    .footer-links { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #1b365d;
+      color: #ffffff;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 50;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand">Efilism RUS · Исследовательский атлас v3.7</div>
-      <nav class="nav-links" aria-label="Основные разделы проекта">
-        <a href="https://bohdan19p-bit.github.io/efilism-faq/start.html">Начать здесь</a>
-        <a href="https://bohdan19p-bit.github.io/efilism-faq/concept.html">За 5 минут</a>
-        <a href="https://bohdan19p-bit.github.io/efilism-faq/">FAQ</a>
-        <a href="https://bohdan19p-bit.github.io/efilism-faq/glossary.html">Глоссарий</a>
-        <button class="theme-btn" id="themeToggle" type="button" aria-label="Переключить тему">Тема</button>
+      <div class="brand">Efilism RUS · Атлас эфилизма</div>
+      <nav class="nav-links" aria-label="Навигация проекта">
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/start.html" target="_blank" rel="noopener">Начать здесь</a>
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/concept.html" target="_blank" rel="noopener">За 5 минут</a>
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/" target="_blank" rel="noopener">FAQ</a>
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/glossary.html" target="_blank" rel="noopener">Глоссарий</a>
+        <button class="theme-btn" id="themeToggle" type="button">Тема</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <span class="pill">Для продвинутых читателей и исследователей · v3.7</span>
+      <div class="hero-top">
+        <span class="pill">Исследовательский справочник · v3.7 (с привязкой к книге ru5)</span>
+      </div>
       <h1>Исследовательский атлас эфилизма</h1>
       <p class="lead">
-        Аналитический справочник, граф понятий, разбор сильных возражений и аппарат проверки аргументов по монографии
-        «Эфилизм. Философия абсолютного антинатализма». Если вы только знакомитесь с темой, лучше начать со страницы
-        <a href="https://bohdan19p-bit.github.io/efilism-faq/concept.html">«Эфилизм за 5 минут»</a> или
-        <a href="https://bohdan19p-bit.github.io/efilism-faq/">Большого FAQ</a>.
+        Быстрый русскоязычный справочник для глубокого чтения и дискуссий: 137 понятий, 9 принципов, 18 аргументов, 12 сильных возражений, 139 источников и 24 редакторские заметки к монографии «Эфилизм. Философия абсолютного антинатализма».
       </p>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="Corpus_Definitivum.html">Открыть справочник (849 КБ · быстро на телефоне)</a>
-        <a class="btn btn-secondary" href="Atlas_Efilismi.html">Полный граф и модули (4,25 МБ · лучше на ПК)</a>
-      </div>
-
-      <div class="meta-line">
-        <span>Базовая сверка: редакция книги от 23.11.2026 (529 PDF-стр.)</span>
-        <span>Автономный статический архив без внешних скриптов</span>
-      </div>
     </section>
 
-    <section class="stats-grid" aria-label="Состав справочника">
-      <div class="stat">
-        <div class="stat-num">137</div>
-        <div class="stat-label">понятий и терминов</div>
+    <div class="search-box">
+      <div class="search-row">
+        <div class="search-input-wrap">
+          <input id="searchInput" type="search" placeholder="Поиск по термину, коду (ARG-08, CRI:O09, REV-01) или тексту..." autocomplete="off" aria-label="Поиск по атласу">
+          <button id="clearSearch" class="clear-btn" type="button" aria-label="Очистить поиск">×</button>
+        </div>
       </div>
-      <div class="stat">
-        <div class="stat-num">18</div>
-        <div class="stat-label">разобранных аргументов</div>
+
+      <div class="tabs" id="tabsBar" role="tablist" aria-label="Разделы атласа">
+        <button class="tab-btn active" data-tab="lexicon" type="button" role="tab">Словарь <span class="tab-count" id="cnt-lexicon">137</span></button>
+        <button class="tab-btn" data-tab="principles" type="button" role="tab">Принципы <span class="tab-count" id="cnt-principles">9</span></button>
+        <button class="tab-btn" data-tab="arguments" type="button" role="tab">Аргументы <span class="tab-count" id="cnt-arguments">18</span></button>
+        <button class="tab-btn" data-tab="objections" type="button" role="tab">Возражения <span class="tab-count" id="cnt-objections">12</span></button>
+        <button class="tab-btn" data-tab="bibliography" type="button" role="tab">Источники <span class="tab-count" id="cnt-bibliography">139</span></button>
+        <button class="tab-btn" data-tab="amendments" type="button" role="tab">Правки к книге <span class="tab-count" id="cnt-amendments">24</span></button>
       </div>
-      <div class="stat">
-        <div class="stat-num">12</div>
-        <div class="stat-label">сильных возражений</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">139</div>
-        <div class="stat-label">библиографических URL</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">24</div>
-        <div class="stat-label">редакторских предложения</div>
-      </div>
-    </section>
+    </div>
 
-    <h2>Ключевые разделы атласа</h2>
-    <section class="cards">
-      <a class="card" href="Corpus_Definitivum.html">
-        <div class="card-top">
-          <span class="card-title">Единый справочник (v3.7)</span>
-          <span class="card-size">849 КБ</span>
-        </div>
-        <p class="card-desc">Главная точка входа: словарь, 9 принципов, 18 аргументов, 12 возражений, библиография и реестр 24 правок.</p>
-      </a>
+    <div class="subbar">
+      <div class="chips" id="filterChips"></div>
+      <button class="action-btn" id="toggleAllBtn" type="button">Раскрыть все</button>
+    </div>
 
-      <a class="card" href="Cartographia_Efilismi.html">
-        <div class="card-top">
-          <span class="card-title">Картография (95 карт)</span>
-          <span class="card-size">710 КБ</span>
-        </div>
-        <p class="card-desc">Интерактивные тематические карты связей между понятиями, посылками и главами монографии.</p>
-      </a>
+    <div id="sectionBanner"></div>
+    <section class="cards-list" id="cardsContainer" aria-live="polite"></section>
 
-      <a class="card" href="Encyclopaedia_Efilismi.html">
-        <div class="card-top">
-          <span class="card-title">Энциклопедия понятий</span>
-          <span class="card-size">219 КБ</span>
-        </div>
-        <p class="card-desc">137 редакторских статей по 11 рубрикам с указателем пробелов и текстовыми локаторами.</p>
-      </a>
-
-      <a class="card" href="Systematica_Efilismi.html">
-        <div class="card-top">
-          <span class="card-title">Систематика и матрица</span>
-          <span class="card-size">248 КБ</span>
-        </div>
-        <p class="card-desc">Сводный реестр 24 задач, матрица 137 концепций, 9 принципов и 18 аргументов.</p>
-      </a>
-
-      <a class="card" href="Revisio_Definitiva.html">
-        <div class="card-top">
-          <span class="card-title">Реестр редакционных правок</span>
-          <span class="card-size">68 КБ</span>
-        </div>
-        <p class="card-desc">Приоритетная очередь правок (P1–P3) с якорями, критериями приёмки и зависимостями.</p>
-      </a>
-
-      <a class="card" href="Demonstratio_Fundamentalis.html">
-        <div class="card-top">
-          <span class="card-title">Фундаментальные проверки</span>
-          <span class="card-size">56 КБ</span>
-        </div>
-        <p class="card-desc">Пять досье минимальной поддержки посылок и воспроизводимые логические тесты.</p>
-      </a>
-    </section>
-
-    <details>
-      <summary>Все тематические модули (12 разделов) и набор для ИИ-помощника</summary>
-      <ul class="module-list">
-        <li><a href="Ethica_Efilismi.html">Ethica Efilismi</a> — совместимость этических требований</li>
-        <li><a href="Metaethica_Efilismi.html">Metaethica Efilismi</a> — сравнительные метаэтические позиции</li>
-        <li><a href="Ontologia_Valororum.html">Ontologia Valororum</a> — шкалы и асимметрии ценности</li>
-        <li><a href="Justificatio_Efilismi.html">Justificatio Efilismi</a> — обоснование посылок и тесты</li>
-        <li><a href="Epistemologia_Efilismi.html">Epistemologia Efilismi</a> — модель подтверждения и аудит</li>
-        <li><a href="Metaphysica_Efilismi.html">Metaphysica Efilismi</a> — законы, детерминизм, модели</li>
-        <li><a href="Phenomenologia_Efilismi.html">Phenomenologia Efilismi</a> — диагностические модели опыта</li>
-        <li><a href="Biologia_Efilismi.html">Biologia Efilismi</a> — биологическая функция и отбор</li>
-        <li><a href="Psychologia_Efilismi.html">Psychologia Efilismi</a> — когнитивный аудит и нормы</li>
-        <li><a href="Hermeneutica_Efilismi.html">Hermeneutica Efilismi</a> — 14 досье источникового сопоставления</li>
-        <li><a href="Concordantia_Efilismi.html">Concordantia Efilismi</a> — полнотекстовый лексический поиск</li>
-        <li><a href="Lacunae_Efilismi.html">Lacunae Efilismi</a> — 137 контекстных оценок и пробелы</li>
+    <details class="archive-box">
+      <summary>Полный граф и архив глубоких модулей (для ПК)</summary>
+      <p style="margin: 10px 0 6px; font-size: 0.85rem; color: var(--muted);">
+        Полный интерактивный граф весит 4,25 МБ и лучше открывается на компьютере. Все тематические модули архива v3.7 сохранены по своим исходным адресам:
+      </p>
+      <ul class="archive-grid">
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Atlas_Efilismi.html" target="_blank" rel="noopener">Полный граф связей (4,25 МБ)</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Cartographia_Efilismi.html" target="_blank" rel="noopener">Картография · 95 схем (710 КБ)</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Encyclopaedia_Efilismi.html" target="_blank" rel="noopener">Энциклопедия понятий</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Systematica_Efilismi.html" target="_blank" rel="noopener">Систематика и матрица</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Demonstratio_Fundamentalis.html" target="_blank" rel="noopener">Фундаментальные проверки</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Ethica_Efilismi.html" target="_blank" rel="noopener">Этика и совместимость норм</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Metaethica_Efilismi.html" target="_blank" rel="noopener">Метаэтика</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Ontologia_Valororum.html" target="_blank" rel="noopener">Онтология ценностей</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Justificatio_Efilismi.html" target="_blank" rel="noopener">Обоснование посылок</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Epistemologia_Efilismi.html" target="_blank" rel="noopener">Эпистемология</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Metaphysica_Efilismi.html" target="_blank" rel="noopener">Метафизика и законы</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Phenomenologia_Efilismi.html" target="_blank" rel="noopener">Феноменология опыта</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Biologia_Efilismi.html" target="_blank" rel="noopener">Биология и отбор</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Psychologia_Efilismi.html" target="_blank" rel="noopener">Психология и аудит</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Hermeneutica_Efilismi.html" target="_blank" rel="noopener">Герменевтика источников</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Concordantia_Efilismi.html" target="_blank" rel="noopener">Лексический поиск по книге</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Lacunae_Efilismi.html" target="_blank" rel="noopener">Анализ пробелов</a></li>
+        <li><a href="https://bohdan19p-bit.github.io/efilism-atlas/Revisio_Definitiva.html" target="_blank" rel="noopener">Исходный реестр правок</a></li>
       </ul>
-      <p style="margin: 12px 0 0; font-size: 0.86rem; color: var(--muted);">
-        Для работы с ИИ-помощником в репозитории лежит папка <code>Corpus_Kit/</code> (6 Markdown-файлов и инструкция
-        <a href="Corpus_Kit/00_Instructions.md">00_Instructions.md</a>), а полная история версий сохранена в
-        <a href="CHANGELOG_v3_7.md">CHANGELOG_v3_7.md</a>.
-      </p>
     </details>
 
-    <section class="notice" aria-label="Статус и границы справочника">
-      <strong>Важно о статусе материалов и границах проверки</strong>
-      <ul>
-        <li>Справочник является исследовательской реконструкцией, а не авторски утверждённым каноном; проекты правок (REV-01–REV-24) не вносились автоматически в текст книги.</li>
-        <li>Номера страниц привязаны к редакции монографии от 23.11.2026 (529 PDF-страниц); в более поздних редакциях пагинация может отличаться — сверяйтесь по номеру параграфа (§).</li>
-        <li>Этическое обсуждение несоздания не допускает вреда, принуждения или вмешательства в автономию уже существующих субъектов.</li>
-      </ul>
-    </section>
+    <div class="notice-footer">
+      Справочник является исследовательской реконструкцией, а не догматическим каноном. Этическое обсуждение добровольного несоздания ни при каких условиях не допускает вреда, принуждения или вмешательства в автономию уже существующих субъектов.
+    </div>
 
     <footer>
-      <div>© Efilism RUS · Atlas Efilismi v3.7</div>
+      <div>© Efilism RUS · Исследовательский атлас v3.7</div>
       <div class="footer-links">
-        <a href="https://bohdan19p-bit.github.io/efilism-faq/start.html">Все ссылки проекта</a>
-        <a href="https://t.me/efilism_RUS/1093">Монография</a>
-        <a href="https://t.me/efilism_RUS">Telegram-канал</a>
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/start.html" target="_blank" rel="noopener">Все ссылки проекта</a>
+        <a href="https://t.me/efilism_RUS/1093" target="_blank" rel="noopener">Монография</a>
+        <a href="https://t.me/efilism_RUS" target="_blank" rel="noopener">Telegram-канал</a>
       </div>
     </footer>
   </main>
 
+  <div class="toast" id="toast" role="status" aria-live="polite">Ссылка скопирована</div>
+
   <script>
-    (function () {
-      var key = 'efilism_atlas_theme';
-      var root = document.documentElement;
-      var btn = document.getElementById('themeToggle');
+    const DATA = {"lexicon":[{"id":"CON:E01","title":"Объективная истина","en":"Objective Truth","group":"Познание и объяснение","def":"Истинность положения не определяется удобством, симпатиями или общественным голосованием.","bound":"Объективность истины не даёт человеку автоматической безошибочности.","app":"Развести реальность, модель и степень обоснованности модели.","status":"Содержание подтверждено","pages":[32,44],"args":["ARG-02"]},{"id":"CON:E02","title":"Субъективизм и релятивизм","en":"Subjectivism and Relativism","group":"Познание и объяснение","def":"Вики критикует попытку сделать истину зависимой от частной перспективы.","bound":"Этический субъективизм, относительность к субъекту и глобальное отрицание всякой истины — разные позиции; один довод не опровергает их все.","app":"Проверять точный тезис оппонента до применения аргумента самопротиворечия.","status":"Содержание подтверждено","pages":[32,45],"args":[]},{"id":"CON:E03","title":"Анализандум в авторском смысле","en":"Analysandum","group":"Познание и объяснение","def":"Название конструкции, которая создаёт видимость объяснения, скрывая неопределённость или незаконный переход.","bound":"Обычное значение слова — предмет анализа. Критический смысл вики является специальным определением.","app":"Вводить как авторский диагностический термин с примером скрытой предпосылки.","status":"Содержание подтверждено","pages":[60,61],"args":[]},{"id":"CON:E04","title":"Объясняемое явление","en":"Explicandum / Explanandum","group":"Познание и объяснение","def":"Конкретный факт или различие, относительно которого ставится задача объяснения.","bound":"В ЧаВО на с. 64 переживание и его физический механизм получают роли, обратные обычной схеме объяснения их возникновения.","app":"Всегда формулировать, что именно объясняется; в книге использовать «экспланандум».","status":"Содержание подтверждено","pages":[59,60],"args":[]},{"id":"CON:E05","title":"Объясняющий аппарат","en":"Explicans / Explanans","group":"Познание и объяснение","def":"Условия и механизм, благодаря которым объясняемое явление возникает или изменяется.","bound":"Описание вмешательства, объяснение его эффективности и обоснование его допустимости требуют разных звеньев.","app":"Для боли различать устройство возникновения, действие помощи и нормативное основание.","status":"Содержание подтверждено","pages":[60,62],"args":[]},{"id":"CON:E06","title":"Замкнутое понятие","en":"Closed-concept","group":"Познание и объяснение","def":"Программа достаточного объяснения, которое закрывает поставленный вопрос.","bound":"Логическая непротиворечивость, достаточность модели для задачи и окончательная полнота знания не тождественны.","app":"Реконструировать как достаточность оснований в явно ограниченной задаче.","status":"Частичное соответствие","pages":[59,60,116],"args":[]},{"id":"CON:E07","title":"Бритва Оккама","en":"Occam’s Razor","group":"Познание и объяснение","def":"Предпочтение объяснению без лишних допущений.","bound":"Простота не доказывает истинность и не разрешает игнорировать установленные данные.","app":"Сравнивать модели по объяснительной работе, проверкам и числу независимых предпосылок.","status":"Содержание подтверждено","pages":[39,69],"args":[]},{"id":"CON:E08","title":"Скептицизм и агностицизм","en":"Agnosticism and Skepticism","group":"Познание и объяснение","def":"Вики требует применять сомнение также к основаниям самого сомнения.","bound":"Умеренная неопределённость не равна утверждению, будто никакое знание невозможно; сомнение не обязано быть абсолютно достоверным, чтобы иметь основание.","app":"Выделять конкретный пробел или контрпример и его влияние на вывод.","status":"Содержание подтверждено","pages":[47,49],"args":[]},{"id":"CON:E09","title":"Неизвестные неизвестности","en":"Unknown unknowns","group":"Познание и объяснение","def":"Неучтённые обстоятельства, о существовании которых исследователь пока не знает.","bound":"Незнание не доказывает удобную альтернативу; существование неизвестностей также не устраняет установленного риска.","app":"Разделять неизвестность параметров, возможную ошибку модели и произвольную фантазию.","status":"Содержание подтверждено","pages":[55,56],"args":[]},{"id":"CON:E10","title":"Чёрный лебедь в вики","en":"Black Swan Theory","group":"Познание и объяснение","def":"Название бесконечного резервирования места для неподтверждённой альтернативы.","bound":"Это авторское употребление расходится с понятием Талеба о неожиданном событии большого воздействия.","app":"Для критики назвать «необоснованная ссылка на неизвестное исключение»; риски неожиданностей рассматривать отдельно.","status":"Содержание подтверждено","pages":[55,59],"args":[]},{"id":"CON:E11","title":"Правильность вместо настроения","en":"Pessimism and Optimism","group":"Познание и объяснение","def":"Оценивать объяснение по основаниям и соответствию фактам, а не по приятности его вывода.","bound":"Модель может быть приблизительной и неопределённой; ярлык оптимиста или пессимиста сам по себе её не оценивает.","app":"Сделать общим правилом симметричной проверки сторонников и критиков.","status":"Содержание подтверждено","pages":[47],"args":[]},{"id":"CON:E12","title":"Эпистемическая независимость несоздания","en":"Fundamental Truth","group":"Познание и объяснение","def":"Опровержение отдельного довода эфилизма ещё не является обоснованием рождения.","bound":"Верно и обратное: ошибка оппонента не делает ошибочный довод истинным. Требование обоснования действия нуждается в нормативном основании.","app":"Применять как правило оценки конкретного возражения, сохраняя обязанность исправлять свои ошибки.","status":"Содержание подтверждено","pages":[256,258,307],"args":["ARG-02"]},{"id":"CON:E13","title":"Единая объяснительная модель","en":"Theory Of Everything","group":"Познание и объяснение","def":"Попытка связать устройство мира, переживание, познание, этику и стратегию в одной архитектуре.","bound":"Философская систематизация отличается от количественной физической теории взаимодействий.","app":"Для книги говорить о системной философской реконструкции и показывать зависимости между уровнями.","status":"Частичное соответствие","pages":[31,116,278],"args":["ARG-18"]},{"id":"CON:E14","title":"Материальная опора объяснения","en":"Substrate-anchored","group":"Познание и объяснение","def":"Требование связать объяснение с реальными условиями реализации явления.","bound":"Материальное происхождение утверждения не доказывает его истинность, а физическая реализованность оценки не завершает этическое обоснование.","app":"Показывать механизм, критерий проверки и предел объясняемого результата.","status":"Содержание подтверждено","pages":[108,186],"args":[]},{"id":"CON:E15","title":"Солипсизм и знание о других","en":"Solipsism","group":"Познание и объяснение","def":"Вики рассматривает радикальное сомнение во внешнем мире и других субъектах как угрозу завершённому объяснению.","bound":"Сомнение в доступе к миру не тождественно достоверному отрицанию мира. Нужен разбор конкретной формы скептицизма.","app":"Различать непосредственный доступ к своему опыту и основания признавать чужой.","status":"Содержание подтверждено","pages":[45,57],"args":[]},{"id":"CON:E16","title":"Нулевая гипотеза в нестандартном смысле","en":"Null hypothesis","group":"Познание и объяснение","def":"Вики называет так неподтверждённую и непроверяемую теорию.","bound":"Это смешивается со статистическим термином: нулевая гипотеза сама по себе не означает негодную или ненаучную теорию.","app":"Для данного довода писать «неподтверждённая гипотеза» и отдельно оценивать проверяемость.","status":"Не локализовано надёжно","pages":[59,60],"args":[]},{"id":"CON:L01","title":"Модальная логика","en":"Modal Logic","group":"Логика и модальность","def":"Проверка возможного, необходимого, невозможного и контингентного.","bound":"Деление на истинное и ложное само по себе ещё не является модальной логикой.","app":"Для каждого утверждения указывать пространство возможностей и основания его исключения.","status":"Содержание подтверждено","pages":[56,72],"args":[]},{"id":"CON:L02","title":"Необходимая истина","en":"Necessary Truth","group":"Логика и модальность","def":"Положение, которое не может быть ложным в рассматриваемом классе возможностей.","bound":"Слово «необходимо» не следует переносить с логического правила на конкретную физическую картину без дополнительного аргумента.","app":"Различать логическую необходимость и условия физических законов.","status":"Содержание подтверждено","pages":[53,98],"args":[]},{"id":"CON:L03","title":"Положение дел и его отрицание","en":"What is the case / what is not the case","group":"Логика и модальность","def":"Базовое различение утверждаемого положения и его отрицания.","bound":"Двузначность высказывания не означает, что исследователь знает его значение, и не доказывает детерминизм.","app":"Отделять истинность, знание, вероятность и уверенность.","status":"Содержание подтверждено","pages":[32,45],"args":[]},{"id":"CON:L04","title":"Самоприменение принципа","en":"Doubting doubts and questioning questions","group":"Логика и модальность","def":"Проверка, выдерживает ли правило применение к самому себе.","bound":"Критика скептической формулы не доказывает всю альтернативную систему; умеренный скептицизм может принимать пересмотр собственных оснований.","app":"Применять также к словам «ошибка», «рационально» и к собственным стандартам доказательства.","status":"Содержание подтверждено","pages":[42,47],"args":[]},{"id":"CON:L05","title":"Рекурсия","en":"Recursion","group":"Логика и модальность","def":"Вики связывает самоссылку, повторное применение правил и необходимые истины.","bound":"Самоссылка, проверка на метауровне и рекурсивная процедура различаются. Повторение утверждения не является доказательством.","app":"Развести возврат к собственным основаниям и воспроизводящийся причинный цикл.","status":"Частичное соответствие","pages":[47,202,216],"args":[]},{"id":"CON:L06","title":"Число и физическая инструкция","en":"Numbers as representation and instruction","group":"Логика и модальность","def":"Числовое описание может быть реализовано в физических конфигурациях и управляющих процедурах.","bound":"Символ приобретает функцию инструкции внутри определённого кода; два предмета сами по себе не доказывают, что число является физической командой.","app":"Сохранять различение описания, кодирования и исполнения.","status":"Частичное соответствие","pages":[47,103],"args":[]},{"id":"CON:L07","title":"Метапознание","en":"Metacognition","group":"Логика и модальность","def":"Способность анализировать собственные убеждения, способы вывода и оценки уверенности.","bound":"Такая проверка остаётся деятельностью психики и может ошибаться. Она не выводит человека за пределы причинности.","app":"Проверять исходные допущения, мотивированность и соответствие уверенности основаниям.","status":"Содержание подтверждено","pages":[50],"args":[]},{"id":"CON:L08","title":"Метарациональность","en":"Meta-Rationality","group":"Логика и модальность","def":"Проверка самого пространства целей и генератора задач, а не только эффективности их решения.","bound":"Необходимо показать, какие проблемы создаются, какие интересы уже существуют и почему устранение генератора допустимо.","app":"Сравнивать помощь существующим с решением воспроизводить новых носителей уязвимости.","status":"Содержание подтверждено","pages":[233,234,446],"args":[]},{"id":"CON:L09","title":"Случайность и псевдослучайность","en":"Randomness / Pseudo-random Number Generation","group":"Логика и модальность","def":"Вики трактует случайность как имя отсутствующего знания о причинах.","bound":"Детерминированность псевдослучайного алгоритма не доказывает невозможность иных источников случайных данных. Слово «определяет» не равнозначно детерминизму.","app":"Развести непредсказуемость, статистическую модель, физический источник и метафизический тезис.","status":"Переработано или ограничено","pages":[99,121,122,140],"args":[]},{"id":"CON:L10","title":"Причина и нормативное основание","en":"Everything happens for a reason","group":"Логика и модальность","def":"У события могут быть причины, хотя оно не имеет оправдывающей цели.","bound":"Английское reason обозначает разные отношения; причинное объяснение не является этической защитой.","app":"Показывать этот переход на болезни, насилии и репродуктивном решении.","status":"Содержание подтверждено","pages":[65,239,256],"args":[]},{"id":"CON:L11","title":"Минимальная достаточность модели","en":"Minimally sufficient set","group":"Логика и модальность","def":"Объяснение должно содержать достаточно оснований для конкретного результата.","bound":"Достаточность для выбранной задачи не означает полного знания Вселенной или окончательной неизменности модели.","app":"Указывать условия, при которых вывод сохраняется, и данные, способные его изменить.","status":"Содержание подтверждено","pages":[59,62],"args":[]},{"id":"CON:L12","title":"Иерархия ограничений","en":"Rules for rules themselves","group":"Логика и модальность","def":"Вопрос о том, что делает возможными сами правила и законы.","bound":"Переименование основания в «номологическую необходимость» ещё не раскрывает механизм и не выводит конкретные законы.","app":"Сохранить как отдельную философскую исследовательскую задачу.","status":"Частичное соответствие","pages":[98,121],"args":[]},{"id":"CON:L13","title":"Отсутствие произвольных исключений","en":"No Wildcards","group":"Логика и модальность","def":"Требование, чтобы модель учитывала реальные условия и не вводила удобные исключения без основания.","bound":"Ограниченность природными законами не доказывает ни известность всех параметров, ни конкретную интерпретацию физики.","app":"Применять одинаковый стандарт к утопическим обещаниям и собственным космологическим гарантиям.","status":"Содержание подтверждено","pages":[39,54,69],"args":[]},{"id":"CON:O01","title":"Неразумное устройство","en":"Unintelligent design","group":"Онтология и причинность","def":"Процессы возникают и воспроизводятся без установленного намеренного проектировщика и гарантированной заботы о субъектах.","bound":"Отсутствие цели не доказывает отсутствия всякого локального блага. Слово «устройство» означает организацию, не обязательно проект.","app":"Раскрывать механизмы возникновения и сохранять самостоятельный нормативный аргумент.","status":"Содержание подтверждено","pages":[76,96,100],"args":[]},{"id":"CON:O02","title":"Причинный детерминизм","en":"Determinism","group":"Онтология и причинность","def":"При заданных законах и полном исходном состоянии дальнейшее развитие однозначно определено.","bound":"Осуществление какого-то исхода ещё не доказывает, что был однозначно предопределён именно он.","app":"Аргументировать физический тезис отдельно от необходимости причинного учёта действий.","status":"Содержание подтверждено","pages":[124,126,129],"args":[]},{"id":"CON:O03","title":"Свобода воли и причинная обусловленность","en":"Determinism Vs. Freedom","group":"Онтология и причинность","def":"Вики отрицает независимого от причинного мира автора выбора.","bound":"Отвергается прежде всего беспричинная или самосоздающая свобода; совместимость иных понятий свободы с причинностью требует отдельного разбора.","app":"Уточнять, какое понятие выбора отвергается, и сохранять эффективность обсуждения и помощи.","status":"Содержание подтверждено","pages":[124,126,129],"args":["ARG-04"]},{"id":"CON:O04","title":"Детерминизм и фатализм","en":"Determinism Vs. Fatalism","group":"Онтология и причинность","def":"Действие может быть причинно обусловлено и при этом менять последствия.","bound":"Фаталистическое «ничего не имеет смысла делать» не следует из причинной обусловленности.","app":"Показывать, что объяснение, обучение и предотвращение входят в цепь причин.","status":"Содержание подтверждено","pages":[132,136],"args":["ARG-04"]},{"id":"CON:O05","title":"Контингентность и необходимость","en":"Contingency Vs. Necessity","group":"Онтология и причинность","def":"Вики различает изменяемые конфигурации и неизменные условия их существования.","bound":"Изменяемость во времени и возможность быть иначе — разные признаки. Неизменное в истории может быть контингентным.","app":"Для рождения различать возможность, фактическое осуществление и необходимость запуска.","status":"Содержание подтверждено","pages":[98,100],"args":[]},{"id":"CON:O06","title":"Номологическая необходимость","en":"Nomological Necessity","group":"Онтология и причинность","def":"Ограничение возможного законами природы; вики дополнительно придаёт термину роль основания всех правил.","bound":"Необходимость при данных законах не тождественна необходимости самих законов во всех мыслимых мирах.","app":"Развести физическую необходимость, логическую необходимость и гипотезу о предельном основании.","status":"Переработано или ограничено","pages":[98],"args":[]},{"id":"CON:O07","title":"Первичный факт","en":"Fact Prime","group":"Онтология и причинность","def":"Вопрос о предельном факте, делающем возможными или необходимыми остальные положения дел.","bound":"Это постановка задачи, а не установленный единственный факт или готовая теория. Не смешивать с Error Prime.","app":"Разработать отдельно карту зависимости фактов и метафизических допущений.","status":"Частичное соответствие","pages":[117,120,121],"args":["ARG-15"]},{"id":"CON:O08","title":"Номологическая иерархия фактов","en":"Nomological hierarchy","group":"Онтология и причинность","def":"Гипотеза о слоях условий, допускающих или исключающих другие события.","bound":"Иерархию нужно предъявить; один вопрос о ней не устанавливает её устройство.","app":"Использовать как схему предпосылок, не как доказанную физическую лестницу.","status":"Частичное соответствие","pages":[98,121],"args":["ARG-15"]},{"id":"CON:O09","title":"Номологический детерминированный хаос","en":"Nomological Deterministic Chaos","group":"Онтология и причинность","def":"Авторская модель закономерного, безличного и нецелевого становления.","bound":"«Хаос» здесь означает отсутствие замысла, а не обязательно математическую чувствительность к начальным условиям.","app":"Сохранить термин с определением его особого смысла и раздельным обоснованием детерминизма.","status":"Содержание подтверждено","pages":[99,100],"args":["ARG-15"]},{"id":"CON:O10","title":"Начало и продолжение процессов","en":"The Beginning / The Continuing","group":"Онтология и причинность","def":"Различение происхождения причинной архитектуры и преобразований внутри уже действующего мира.","bound":"Аналогия с 0/0 и распадом единицы не является космологической моделью или расчётом.","app":"Разделить открытый вопрос основания и проверяемое объяснение конкретных переходов.","status":"Содержание подтверждено","pages":[117,121],"args":[]},{"id":"CON:O11","title":"Квазистазис и истинный стазис","en":"Quasi stasis / True stasis","group":"Онтология и причинность","def":"Вики различает условное отсутствие событий и окончательную невозможность любых событий.","bound":"Из определения конечного состояния не следует его физическая достижимость или неизбежность.","app":"Оставить как метафизическую модель с названными условиями и статусом.","status":"Содержание подтверждено","pages":[118],"args":[]},{"id":"CON:O12","title":"Бесконечность и бесконечный регресс","en":"Infinity / Infinite backward chain","group":"Онтология и причинность","def":"Вики отрицает бесконечную причинную предысторию и связывает это с уникальностью мирового процесса.","bound":"Последовательность без первого элемента логически не опровергается фразой «она не могла начаться». Полного доказательства из ссылки Infinity свод не содержит.","app":"Разбирать отдельные аргументы; не выводить конечность и единственность космоса из одного словесного возражения.","status":"Переработано или ограничено","pages":[120,121],"args":[]},{"id":"CON:O13","title":"Неотменимость состоявшегося","en":"What is done can never be undone","group":"Онтология и причинность","def":"Состоявшийся эпизод не становится никогда не происходившим.","bound":"Историческая неотменимость отличается от изменения последствий, компенсации и повторения конфигурации.","app":"Для этики точно раскрывать, что можно облегчить и что уже нельзя сделать небывшим.","status":"Содержание подтверждено","pages":[134,224],"args":[]},{"id":"CON:O14","title":"Аналоговые и цифровые уровни","en":"Analog Bits and Digital Bits","group":"Онтология и причинность","def":"Образ возникновения жизни и познания из неживых физических составляющих.","bound":"Живое не тождественно цифровому, неживое — аналоговому; аналогия не объясняет автоматически сознание и рациональность.","app":"Реконструировать как уровни организации: физические процессы, информация, модель, проверка вывода.","status":"Содержание подтверждено","pages":[102,103],"args":[]},{"id":"CON:O15","title":"Абиогенез и эволюция","en":"Abiogenesis / Evolution","group":"Онтология и причинность","def":"Происхождение жизни и изменение воспроизводящихся систем образуют разные задачи объяснения.","bound":"Ссылка на естественное происхождение не является полным объяснением конкретного механизма и не завершает оценку создания.","app":"Разделить происхождение репликации, эволюционные изменения, возникновение опыта и нормативную оценку.","status":"Содержание подтверждено","pages":[144,146],"args":["ARG-05"]},{"id":"CON:O16","title":"ДНК и условия её возможности","en":"DNA Vs. DNA's Contingency","group":"Онтология и причинность","def":"Вики предлагает исследовать не только репликатор, но и физические условия, благодаря которым он мог возникнуть.","bound":"Условие возможности, ближайшая причина и достаточный механизм различаются; открытая возможность не тождественна уже наступившему вреду.","app":"Связать биологию с картой причинных зависимостей, сохраняющей уровни анализа.","status":"Содержание подтверждено","pages":[137,207],"args":["ARG-11"]},{"id":"CON:O17","title":"Репликатор и благополучие организма","en":"Selfish gene","group":"Онтология и причинность","def":"Успех воспроизводящегося материала и благополучие его носителя могут оцениваться по разным критериям.","bound":"Образ эгоистичности не приписывает молекуле сознательных намерений; из отбора не следует, что всякое взаимодействие является игрой с нулевой суммой.","app":"Показывать различие репликационного успеха и интересов субъекта, избегая олицетворения.","status":"Содержание подтверждено","pages":[149,150],"args":[]},{"id":"CON:C01","title":"Феноменология и эпистемология","en":"Phenomenology Vs. Epistemology","group":"Сознание и переживание","def":"Переживание является происходящим событием; объяснение его внешней причины может оказаться неверным.","bound":"Существование переживания отличается от точности отчёта о нём и знания его причины.","app":"Разбирать боль, иллюзию и ошибочное объяснение без отрицания реальности опыта.","status":"Содержание подтверждено","pages":[185],"args":["ARG-01","ARG-13"]},{"id":"CON:C02","title":"Ноцицепция","en":"Nociception","group":"Сознание и переживание","def":"Обработка потенциально повреждающих стимулов; вики местами использует её как синоним вреда.","bound":"Ноцицепция и боль различаются; ноцицепция не охватывает весь отрицательный опыт.","app":"Отделить физиологический процесс от переживаемого состояния.","status":"Переработано или ограничено","pages":[176,188],"args":["ARG-01"]},{"id":"CON:C03","title":"Отрицательная эмоциональная окраска","en":"Negative Valence","group":"Сознание и переживание","def":"Отрицательный характер переживания для самого субъекта.","bound":"Эмоциональная окраска не является новой физической силой; её объективная реализованность ещё не определяет все обязанности другого агента.","app":"Вводить валентность через понятный смысл и сохранять различие факта, оценки и предписания.","status":"Содержание подтверждено","pages":[188,190],"args":["ARG-13"]},{"id":"CON:C04","title":"Объективная ценность для субъекта","en":"Objective Value","group":"Сознание и переживание","def":"То, что реально хорошо или плохо для определённого субъекта, не сводится к желанию наблюдателя это признать.","bound":"Зависимость от субъекта не равнозначна произвольности; одна причинная обусловленность не доказывает правильность оценки.","app":"Развернуть реляционную объективность и её отдельную связь с нормативными основаниями.","status":"Содержание подтверждено","pages":[193,196,243],"args":["ARG-13"]},{"id":"CON:C05","title":"Тождество различие и устойчивость ценности","en":"Identical, Distinct, and Static Value","group":"Сознание и переживание","def":"Разные субъекты и причины могут реализовывать определённые положительные и отрицательные состояния.","bound":"Сохранение знака данного переживания не доказывает одинаковой интенсивности всех случаев или универсальной численной шкалы.","app":"Уточнить, что фиксируется: наличие, знак, тяжесть, длительность или сравнение между субъектами.","status":"Частичное соответствие","pages":[185,193],"args":["ARG-13"]},{"id":"CON:C06","title":"Феноменальная прозрачность","en":"Phenomenal Transparency","group":"Сознание и переживание","def":"Субъект переживает содержание представления, не замечая способа его построения.","bound":"Это модель свойства опыта, а не достаточное доказательство возникновения любого сознания или всех ценностей.","app":"Показать разницу между непосредственностью переживания и знанием его механизма.","status":"Содержание подтверждено","pages":[177,185],"args":[]},{"id":"CON:C07","title":"Непосредственность опыта и знания","en":"Phenomenal Vs. Epistemic Immediacy","group":"Сознание и переживание","def":"Ощущение прямой данности не гарантирует прямого и безошибочного знания о мире.","bound":"Этот приведённый вики тезис ограничивает её собственные заявления о полной достоверности всех выводов из прозрачности.","app":"Сделать центральным предохранителем против подмены опыта теорией его причин.","status":"Содержание подтверждено","pages":[185,187],"args":[]},{"id":"CON:C08","title":"Прозрачность эпистемического состояния","en":"Weakly / Strongly Transparent","group":"Сознание и переживание","def":"Здесь прозрачность обозначает возможность знать о нахождении в состоянии и, в сильной версии, о его отсутствии.","bound":"Это другое значение, чем недоступность механизма представления в феноменальной прозрачности.","app":"Ввести два раздельных термина и исключить доказательства посредством их смешения.","status":"Частичное соответствие","pages":[185,186],"args":[]},{"id":"CON:C09","title":"Непрозрачность представления","en":"Phenomenal Opacity","group":"Сознание и переживание","def":"Представление переживается как представление, например при осознании сна.","bound":"Вики сначала атакует возможность непрозрачности, затем приводит текст, прямо признающий её. Непрозрачный опыт продолжает быть опытом.","app":"Сохранить реальность переживания при разных способах осознания его модельного характера.","status":"Содержание подтверждено","pages":[180,503],"args":[]},{"id":"CON:C10","title":"Модель мира и модель себя","en":"World-model / Self-model","group":"Сознание и переживание","def":"Система формирует организованное представление мира и собственного положения в нём.","bound":"Предложенная модель должна объяснять конкретные свойства и не становится завершённой теорией всех видов опыта по одному названию.","app":"Связать восприятие, самоконтроль и метапознание через уровни представления.","status":"Содержание подтверждено","pages":[177,179],"args":[]},{"id":"CON:C11","title":"Окно настоящего и туннель реальности","en":"Virtual window of presence / Reality tunnel","group":"Сознание и переживание","def":"Опыт организован как единый доступный сейчас мир.","bound":"Модель субъективного настоящего не следует переносить в космологическую теорию времени.","app":"Показать, почему уверенное переживание текущего мира не даёт полного доступа к его построению.","status":"Содержание подтверждено","pages":[178,180],"args":[]},{"id":"CON:C12","title":"Нейронные корреляты сознания","en":"Specific and Global NCC","group":"Сознание и переживание","def":"Вики различает условия отдельных содержаний опыта и сознательного состояния в целом.","bound":"Нахождение коррелята, причинного механизма и завершённого объяснения — разные исследовательские результаты.","app":"Использовать как исследовательскую рамку с точным указанием объясняемого свойства.","status":"Частичное соответствие","pages":[107,109,178],"args":[]},{"id":"CON:C13","title":"Носитель и содержание представления","en":"Vehicle-content distinction","group":"Сознание и переживание","def":"Различие между физической реализацией представления и тем, что представлено.","bound":"Различение аналитических ролей само по себе не означает двух независимых субстанций.","app":"Объяснить, как материальный процесс имеет содержание, избегая грубого противопоставления материального и реального.","status":"Содержание подтверждено","pages":[177,185,186],"args":[]},{"id":"CON:C14","title":"Онтология и модель сознания","en":"Transparency Vs. Ontology","group":"Сознание и переживание","def":"Вики противопоставляет объяснение через прозрачность «устаревшей онтологии».","bound":"Онтология исследует, что существует; физикализм сам содержит онтологические положения. Модель свойства опыта её не заменяет.","app":"Развести вопрос о существующем, механизм опыта и условия знания.","status":"Частичное соответствие","pages":[108,177,185],"args":[]},{"id":"CON:C15","title":"Сентиентность и сентиоцентризм","en":"Sentience","group":"Сознание и переживание","def":"Способность к переживанию и его значимость задают область этического внимания.","bound":"Жизнь, интеллект, сознание, ноцицепция и отрицательная эмоциональная окраска обозначают разные свойства.","app":"Определить субъекта переживания и различить его собственную ценность и инструментальное значение окружающих условий.","status":"Содержание подтверждено","pages":[173,187],"args":["ARG-11"]},{"id":"CON:A01","title":"Потребности которые не требовалось создавать","en":"Needs that don't need to exist","group":"Нужда благо и вред","def":"Создание субъекта создаёт и условия, ради удовлетворения которых затем требуется деятельность.","bound":"Необходимо различать необязательность создания и реальную важность нужд уже существующего субъекта.","app":"Сделать центральной связью между генезисом нужды и проверкой воспроизводства.","status":"Содержание подтверждено","pages":[199,235],"args":["ARG-05"]},{"id":"CON:A02","title":"Тотальный депривационализм","en":"Deprivationalism Insurmountability","group":"Нужда благо и вред","def":"Вики сводит всякое удовольствие к устранению предшествующего дефицита.","bound":"Из примеров голода и жажды не получается универсальное доказательство природы всех благ; нужна отдельная модель каждого класса.","app":"Сохранить сильный анализ нужды, отдельно проверяя обобщение на творчество, интерес и радость.","status":"Содержание подтверждено","pages":[215,218],"args":["ARG-16"]},{"id":"CON:A03","title":"Квазиположительный опыт","en":"Quasi-positives","group":"Нужда благо и вред","def":"Облегчение оценивается как снятие предварительно возникшего неблагополучия.","bound":"Происхождение удовольствия из облегчения не делает само переживание мнимым.","app":"Развести реальность блага, его причинный источник и полномочие создавать ради него новый риск.","status":"Переработано или ограничено","pages":[218],"args":["ARG-16"]},{"id":"CON:A04","title":"Постоянная зависимость удовлетворения","en":"Need:harm liability","group":"Нужда благо и вред","def":"Удовлетворённая потребность может возникать вновь, а её нарушение способно причинять вред.","bound":"Сохранение зависимости не означает, что субъект непрерывно страдает или что помощь ничего не меняет.","app":"Показать переходы: нужда, удовлетворение, повторное возникновение, открытый риск.","status":"Содержание подтверждено","pages":[215],"args":[]},{"id":"CON:A05","title":"Необязательное удовольствие как основание запуска","en":"Unnecessary Indulgence","group":"Нужда благо и вред","def":"Личное желание получить благо не тождественно достаточному основанию создать другого носителя риска.","bound":"Необязательность сама по себе ещё не означает запрета любого действия. Нужен принцип авторизации риска.","app":"Применять к репродуктивному решению и различать собственное удовольствие и чужие последствия.","status":"Содержание подтверждено","pages":[248,250,261],"args":["ARG-08"]},{"id":"CON:A06","title":"Неотменимость жертвенного вреда","en":"Sacrificial Inexorability","group":"Нужда благо и вред","def":"Позднейшие удовольствия не делают состоявшееся тяжёлое страдание никогда не происходившим.","bound":"Историческая неотменимость, невозможность компенсации и этическая недопустимость — связанные, но отдельные утверждения.","app":"Разобрать четыре вопроса: устранить сейчас, облегчить последствия, возместить утрату, оправдать исходный риск.","status":"Содержание подтверждено","pages":[134,224,451],"args":["ARG-09"]},{"id":"CON:A07","title":"Предельная хрупкость благополучия","en":"Ultimate Fragility","group":"Нужда благо и вред","def":"Достигнутое благополучие не обеспечивает защиты от тяжёлого последующего поражения.","bound":"Физическая разрушительность события не даёт автоматически численной шкалы всей аксиологии.","app":"Строить аргумент от утраты возможностей и отсутствия гарантии, не от выдуманного процента перевеса.","status":"Содержание подтверждено","pages":[224,226],"args":[]},{"id":"CON:A08","title":"Нулевая сумма","en":"Zero-sum game","group":"Нужда благо и вред","def":"Вики описывает жизнь как воспроизводство нужд без внешнего достижения и с итоговым прекращением субъекта.","bound":"Техническая игра с нулевой суммой требует определённых выигрышей и суммы; смерть не стирает историческую реальность пережитых благ и вреда.","app":"Для книги раскрывать структурный смысл и избегать неподтверждённой арифметики.","status":"Частичное соответствие","pages":[196,218],"args":["ARG-16"]},{"id":"CON:A09","title":"Невозможность утилитарного оправдания","en":"Utilitarian Impossibility","group":"Нужда благо и вред","def":"Критика представления, будто достаточная сумма удовольствий автоматически оправдывает создание их носителей.","bound":"Это не готовое опровержение всех версий утилитаризма; полезность не исчерпывается удовольствием, а спор требует выбора критерия.","app":"Сформулировать конкретный конфликт агрегирования и антижертвенного порога.","status":"Частичное соответствие","pages":[218,451],"args":["ARG-09"]},{"id":"CON:A10","title":"Предназначение значимость и последствия","en":"Meaning and Purpose / Significance and Impact","group":"Нужда благо и вред","def":"Отсутствие космической миссии совместимо с реальными последствиями для субъектов.","bound":"Личный смысл не обязан быть космическим замыслом; критике подлежит превращение личного смысла в право назначать чужой риск.","app":"Связать атеизм и реализм вреда без вывода «ничто не имеет значения».","status":"Содержание подтверждено","pages":[205],"args":[]},{"id":"CON:A11","title":"Беговая дорожка удовлетворения","en":"Hedonic treadmill","group":"Нужда благо и вред","def":"Модель повторяющейся нужды и возобновляемого стремления к удовлетворению.","bound":"Из адаптации к части улучшений не следует отсутствие длительных изменений благополучия у всех людей.","app":"Описывать конкретные циклы и не использовать метафору вместо эмпирического закона.","status":"Содержание подтверждено","pages":[215],"args":[]},{"id":"CON:A12","title":"Отсутствие субъекта лишения","en":"No problem-haver","group":"Нужда благо и вред","def":"Если конкретный субъект не возникает, он не переживает отсутствия обещанных благ.","bound":"Это не означает отсутствия любых последствий для уже существующих и не тождественно переживанию приятного небытия.","app":"Соединить асимметрию несоздания с оценкой авторизации крайнего риска.","status":"Содержание подтверждено","pages":[59,408],"args":["ARG-07"]},{"id":"CON:A13","title":"Двойное предотвращение","en":"Double-Action Failsafe and Solution","group":"Нужда благо и вред","def":"Несоздание исключает и вред данному несозданному субъекту, и его лишение благ.","bound":"Формула «предотвращение вреда требует отсутствия субъекта» чрезмерна: помощь предотвращает вред существующим. Здесь достаточно говорить о достаточном условии.","app":"Сохранить двойную асимметрию, исправив необходимость на достаточность и указав масштаб.","status":"Содержание подтверждено","pages":[412,441],"args":["ARG-17"]},{"id":"CON:A14","title":"Нигилизм цели и нигилизм ценности","en":"Nihilism","group":"Нужда благо и вред","def":"Вики отвергает вывод, будто отсутствие предназначения устраняет реальную значимость происходящего.","bound":"Отсутствие космической миссии и отсутствие всякого хорошего или плохого для субъектов — разные положения.","app":"Сохранить разделение и не выводить запрет рождения из одного отказа от космической цели.","status":"Содержание подтверждено","pages":[196,205],"args":[]},{"id":"CON:A15","title":"Продолжение процесса и его оправдание","en":"A process must earn its keep","group":"Нужда благо и вред","def":"Наличие и устойчивое продолжение процесса ещё не устанавливают основания его сохранять и воспроизводить.","bound":"Уже возникшие интересы имеют самостоятельное значение; внешний вопрос об оправданности запуска не отменяет внутренней помощи.","app":"Использовать как связку метарациональности, критики антимортализма и репродуктивной этики.","status":"Содержание подтверждено","pages":[226,256],"args":[]},{"id":"CON:P01","title":"Репликационное заблуждение","en":"DNA Delusion","group":"Психология убеждений","def":"Сборное авторское название защиты воспроизводства посредством привычки, самооправдания и ложной телеологии.","bound":"Причинная история убеждения не доказывает его ложность; ДНК не является сознательным лжецом.","app":"Сохранить закреплённый русский термин и разбирать конкретный ошибочный переход.","status":"Содержание подтверждено","pages":[151],"args":[]},{"id":"CON:P02","title":"Предпочтение продолжения существования","en":"Existence bias","group":"Психология убеждений","def":"Наклонность принимать уже начатое существование и его продолжение за исходный стандарт.","bound":"Предпочтение существующего субъекта может защищать реальные интересы; его перенос на создание нового требует аргумента.","app":"Развести сохранение своей жизни и решение создать другую.","status":"Содержание подтверждено","pages":[92,371],"args":[]},{"id":"CON:P03","title":"Оптимистическое смещение","en":"Optimism bias","group":"Психология убеждений","def":"Благоприятная оценка будущего может уменьшать внимание к неблагоприятным исходам.","bound":"Смещение устанавливается по несоответствию данных и оценок, а не по наличию надежды или детей.","app":"Проверять прогноз отдельно от достаточности этического оправдания.","status":"Содержание подтверждено","pages":[285,286],"args":[]},{"id":"CON:P04","title":"Теория управления страхом смерти","en":"Terror Management Theory","group":"Психология убеждений","def":"Объяснительная гипотеза о роли осознания смертности в защите мировоззрения и образа себя.","bound":"Вики превращает её в почти универсальное объяснение несогласия. Исследования конкретного эффекта не дают диагноза каждому оппоненту.","app":"Использовать для проверяемых гипотез о защите убеждений и симметрично применять к своей стороне.","status":"Содержание подтверждено","pages":[289],"args":[]},{"id":"CON:P05","title":"Парохиализм","en":"Parochialism","group":"Психология убеждений","def":"Узость охвата, при которой частное проявление принимается за полный источник проблемы.","bound":"Ограниченная практическая задача не является ошибкой, если её границы осознаны.","app":"Различать универсальный критерий, выбранную задачу и пределы конкретного вмешательства.","status":"Содержание подтверждено","pages":[239],"args":[]},{"id":"CON:P06","title":"Благопристойная видимость","en":"Charade","group":"Психология убеждений","def":"Риторический образ поддержания приятного фасада при игнорировании цены процесса.","bound":"Слово обозначает интерпретацию поведения; оно не устанавливает, кто сознательно притворяется.","app":"Вместо обвинения предъявлять пропущенные факты и несовпадение публичного образа с последствиями.","status":"Не локализовано надёжно","pages":[286,287,293],"args":[]},{"id":"CON:P07","title":"Конфабуляция","en":"Confabulation","group":"Психология убеждений","def":"Создание ложного воспоминания или объяснения без осознанного намерения обмануть.","bound":"Назвать это «рефлексивной ложью» — значит смешать ошибку памяти с намеренным обманом; бытовое употребление требует оговорённого смысла.","app":"Развести память, реконструкцию причин и сознательную неправду.","status":"Частичное соответствие","pages":[111,287],"args":[]},{"id":"CON:P08","title":"Рационализация","en":"Rationalization","group":"Психология убеждений","def":"Подбор объяснений, поддерживающих заранее привлекательное убеждение или действие.","bound":"Она не обязательно сознательна. Наличие мотива не доказывает ошибочность конкретного довода.","app":"Показывать, какое основание было принято после решения и выдерживает ли оно независимую проверку.","status":"Содержание подтверждено","pages":[51,228],"args":[]},{"id":"CON:P09","title":"Нормализация вреда","en":"Hyper-Normalization","group":"Психология убеждений","def":"Привыкание к постоянной опасности и превращение тяжёлого в обыденное.","bound":"Это расширенное авторское употребление; привычность события не показывает изменения его тяжести.","app":"Предпочесть ясное название «нормализация вреда» и отдельно объяснить снижение заметности.","status":"Содержание подтверждено","pages":[289,290],"args":[]},{"id":"CON:P10","title":"Притязание на исключительность","en":"Exceptionalism","group":"Психология убеждений","def":"Попытка вывести свою группу или любимую модель из общего стандарта проверки.","bound":"Реальные релевантные различия допустимы; ошибочно без основания считать свою группу исключением.","app":"Требовать назвать различие, объясняющее особый статус.","status":"Содержание подтверждено","pages":[93,94],"args":[]},{"id":"CON:P11","title":"Антропоцентризм","en":"Anthropocentrism","group":"Психология убеждений","def":"Преимущественная или исключительная ценность человека в сравнении с другими субъектами.","bound":"Из отличия способностей не следует отсутствие значимости чужого страдания; превосходящий интеллект сам по себе не означает большей способности переживать.","app":"Использовать зеркальную проверку критерия превосходства без смешения интеллекта и сознания.","status":"Содержание подтверждено","pages":[82,94,175],"args":[]},{"id":"CON:P12","title":"Мания величия как полемический образ","en":"Megalomania","group":"Психология убеждений","def":"Вики связывает мечты о вселенской миссии с преувеличенной значимостью себя и своей группы.","bound":"Клинический ярлык по одному философскому высказыванию не обоснован.","app":"Критиковать притязание на миссию и полномочия, сохраняя предметность аргумента.","status":"Содержание подтверждено","pages":[93,94],"args":[]},{"id":"CON:P13","title":"Групповое мышление","en":"Hivemind","group":"Психология убеждений","def":"Унификация оценок через насмешку, статусные сигналы и давление окружения.","bound":"Непопулярность идеи не доказывает её истинность; согласие специалистов не равно автоматически толпе.","app":"Разбирать механизм подавления проверки и применять стандарт к собственному сообществу.","status":"Частичное соответствие","pages":[239,293],"args":[]},{"id":"CON:P14","title":"Психологическое принятие и философское обоснование","en":"Psychology Vs. Philosophy","group":"Психология убеждений","def":"Вики противопоставляет защиту психологического комфорта проверке того, что действительно следует из оснований.","bound":"Наука психология и психическая деятельность в целом не являются противоположностью философии; метапознание тоже психическая функция.","app":"Сохранить различие происхождения убеждения и его обоснования.","status":"Содержание подтверждено","pages":[282,291],"args":[]},{"id":"CON:P15","title":"Негативное смещение и обвинение в нём","en":"Negativity Bias","group":"Психология убеждений","def":"Вики отвечает на попытку объяснить антинатализм исключительно повышенным вниманием к плохому.","bound":"Наличие смещения у одной стороны не доказывает его отсутствие у другой. Решает точность отбора и оценки данных.","app":"Применять симметричную проверку примеров, пропущенных исходов и силы выводов.","status":"Не локализовано надёжно","pages":[286,287,293],"args":[]},{"id":"CON:N01","title":"Невозможность предварительного согласия","en":"Impossibility of Consent","group":"Создание и этическое основание","def":"До первого появления самого субъекта невозможно получить его содержательное согласие.","bound":"Невозможность согласия не является универсальным запретом любого действия; требуется различить спасение существующего и создание нового.","app":"Связать согласие с предшествующим интересом и независимым защитным порогом.","status":"Содержание подтверждено","pages":[250],"args":["ARG-08"]},{"id":"CON:N02","title":"Воздействие на третью сторону","en":"Third-party Imposition","group":"Создание и этическое основание","def":"Решение взрослого меняет положение другого субъекта, чья биография станет носителем последствий.","bound":"Личная свобода решения и отсутствие затрагиваемых чужих интересов — разные характеристики.","app":"Сделать явными роли: инициатор, будущий субъект, получатели благ и носители риска.","status":"Содержание подтверждено","pages":[238,246,403],"args":["ARG-08"]},{"id":"CON:N03","title":"Бремя обоснования создания","en":"Burden of explanation","group":"Создание и этическое основание","def":"Назначение другому опасности требует основания со стороны инициатора.","bound":"Нормативное бремя оправдания действия отличается от обязанности доказать любое собственное фактическое утверждение.","app":"Развести доказательство фактов, защиту этического принципа и авторизацию конкретного риска.","status":"Содержание подтверждено","pages":[54,307],"args":["ARG-02"]},{"id":"CON:N04","title":"Апелляция к естественности","en":"Naturalistic fallacy","group":"Создание и этическое основание","def":"Естественное происхождение способности не делает её применение этически оправданным.","bound":"Апелляция к природе, разрыв «есть — следует» и ошибка определения добра относятся к разным аргументам.","app":"Для биологии использовать точную формулу: естественность не предоставляет автоматической авторизации.","status":"Содержание подтверждено","pages":[65,66],"args":[]},{"id":"CON:N05","title":"Иммунитет от нормативной критики","en":"Immunity to deontic counter-arguments","group":"Создание и этическое основание","def":"Вики заявляет, что её система устраняет целый класс возражений о долге и допустимости.","bound":"Система, выносящая вывод о недопустимости, сама предъявляет нормативное положение и должна защищать основания.","app":"Заменить обещание иммунитета картой конкретных посылок и точек возможного несогласия.","status":"Переработано или ограничено","pages":[46,502],"args":[]},{"id":"CON:N06","title":"Сделка ДНК","en":"DNA’s Deal","group":"Создание и этическое основание","def":"Образ запуска биографии вместе с потребностями, зависимостью, риском и ограниченными возможностями исправления.","bound":"Это метафора условий существования, не договор с сознательной молекулой или единым намерением природы.","app":"Использовать как вход в точную проверку ролей, согласия, управления риском и компенсации.","status":"Частичное соответствие","pages":[149,150,235],"args":[]},{"id":"CON:N07","title":"Гарантия защита компенсация","en":"No guarantees / No compensation","group":"Создание и этическое основание","def":"Возможность заботиться не равнозначна гарантии защиты от каждого крайнего исхода.","bound":"Отсутствие полной компенсации не означает бесполезности облегчения или частичного восстановления. Радость сама по себе не является физическим щитом.","app":"Составить отдельные критерии предотвращения, контроля, обратимости и возмещения.","status":"Содержание подтверждено","pages":[76,225,261],"args":["ARG-09"]},{"id":"CON:N08","title":"Ценность блага и полномочие создать риск","en":"Value Vs. Authorization","group":"Создание и этическое основание","def":"Вики неоднократно требует объяснить, почему блага дают право впервые назначить другому опасность.","bound":"Чёткая формула различения здесь является реконструкцией линии текста; сама достаточность оснований требует нормативной защиты.","app":"Использовать как центральный переход от анализа благ к антижертвенному порогу.","status":"Содержание подтверждено","pages":[257,268,450],"args":["ARG-08","ARG-09"]},{"id":"CON:N09","title":"Драгоценность жизни и профилактика","en":"Life’s Preciousness","group":"Создание и этическое основание","def":"Реальная значимость существующего субъекта усиливает требование беречь его от вреда.","bound":"Отсюда непосредственно следует забота; запрет создания нуждается ещё в принципе допустимости нового риска.","app":"Усилить связь между защитой существующих и критикой необоснованного воспроизводства.","status":"Содержание подтверждено","pages":[252,446],"args":[]},{"id":"CON:N10","title":"Структурная зависимость и цена выхода","en":"Hostage situation","group":"Создание и этическое основание","def":"Образ зависимости субъекта от условий, утрата которых может причинять тяжёлый вред.","bound":"Здесь нет буквального договора или единого захватчика; прекращение жизни не следует считать безвредным ответом на отсутствие согласия при её начале.","app":"Реконструировать как связку зависимости, уязвимости и интересов уже существующего субъекта.","status":"Содержание подтверждено","pages":[235,312],"args":[]},{"id":"CON:N11","title":"Передача вреда через отношения","en":"Agony by proxy","group":"Создание и этическое основание","def":"Утрата или страдание одного затрагивает близких и создаёт сеть взаимной уязвимости.","bound":"Из этого не следует, что привязанность является только ловушкой или что реальная забота обесценивается.","app":"Добавить анализ связанных интересов, утраты и поддержки без романтизации вреда.","status":"Содержание подтверждено","pages":[312,343],"args":[]},{"id":"CON:N12","title":"Моральный код и этический анализ","en":"Morals Vs. Ethics","group":"Создание и этическое основание","def":"Вики противопоставляет унаследованные нормы проверке последствий и оснований.","bound":"Слово «мораль» не обозначает по определению только религиозную догму; это авторская терминологическая рамка.","app":"Определить используемое различие, сохранив полезную критику непроверенных норм.","status":"Содержание подтверждено","pages":[238,241],"args":[]},{"id":"CON:S01","title":"Утопическая ошибка","en":"Utopia — The Final Fallacy","group":"Риск технологии и будущее","def":"Обещание будущего благополучия может скрывать незакрытые риски и цену пути.","bound":"Отсутствие предъявленной гарантии не является доказательством логической невозможности любой будущей модели.","app":"Проверять цепь перехода, риск для разных субъектов и действительную защиту от крайних исходов.","status":"Содержание подтверждено","pages":[88,369],"args":["ARG-10"]},{"id":"CON:S02","title":"Философия безопасности и предохранитель","en":"Security Philosophy / Failsafe","group":"Риск технологии и будущее","def":"Оценка системы по её способности предотвращать крайние неблагоприятные исходы.","bound":"Нужно различать снижение вероятности, ограничение тяжести, прекращение конкретного запуска и универсальную гарантию.","app":"Привязать требования безопасности к классу действия, носителю риска и доступному контролю.","status":"Содержание подтверждено","pages":[220,225],"args":["ARG-09"]},{"id":"CON:S03","title":"Двойное применение технологии","en":"Dual Use of Technology","group":"Риск технологии и будущее","def":"Одни возможности могут использоваться для помощи и для усиления вреда.","bound":"Рост мощности не доказывает неизбежность катастрофы, но исключает автоматическое отождествление мощности и этического прогресса.","app":"Проверять способность, цель, распределение контроля и способы ограничения последствий.","status":"Содержание подтверждено","pages":[370,372],"args":[]},{"id":"CON:S04","title":"Технологическая сингулярность","en":"The Singularity","group":"Риск технологии и будущее","def":"Гипотеза о самоускоряющемся росте возможностей технического интеллекта.","bound":"Из вычислительной силы не следуют сознание, этическая правильность целей и безотказность контроля.","app":"Развести интеллект, субъектность, целевую функцию и безопасность; в сценариях по умолчанию рассматривать нечувствующий ИИ.","status":"Содержание подтверждено","pages":[278,370],"args":[]},{"id":"CON:S05","title":"Общий и гиперинтеллект","en":"General-intelligence / Hyper-intelligence","group":"Риск технологии и будущее","def":"Вики различает широкую обучаемость и огромный масштаб интеллектуальных возможностей.","bound":"Сравнение с миллиардом Земель является иллюстрацией, не стандартным порогом и не количественным прогнозом.","app":"Давать функциональные определения без превращения масштаба в доказательство целей.","status":"Содержание подтверждено","pages":[373,378],"args":[]},{"id":"CON:S06","title":"Ограниченный сверхинтеллект","en":"Simple Super Intelligence","group":"Риск технологии и будущее","def":"Предположение, что даже система без максимальной универсальности может находить важные новые решения.","bound":"Возможность открытия новых закономерностей не доказывает конкретный космологический сценарий или допустимость средств.","app":"Рассматривать как исследование возможностей и рисков; технические сценарии глобального разрушения не разворачивать.","status":"Частичное соответствие","pages":[381,382],"args":[]},{"id":"CON:S07","title":"Конечное состояние и космологический прогноз","en":"Terminal stasis / Heat death","group":"Риск технологии и будущее","def":"Вики связывает окончательную невозможность нового вреда с дальними космологическими сценариями.","bound":"Тепловая смерть, отсутствие жизни и невозможность любых событий — разные тезисы. Один прогноз не обосновывает остальные.","app":"Хранить физическую проверку отдельно от аргумента о нынешнем репродуктивном решении.","status":"Содержание подтверждено","pages":[119,379],"args":[]},{"id":"CON:S08","title":"Бесконечное возвращение жизни","en":"Life’s Infinite Recurrence","group":"Риск технологии и будущее","def":"Гипотеза, что после прекращения известной жизни её возникновение всё равно будет повторяться.","bound":"Неподтверждённость не равна доказанной невозможности; сама возможность повторения не делает помощь бессмысленной.","app":"Проверять основания сценария и последствия при разных исходах, сохраняя различие детерминизма и фатализма.","status":"Частичное соответствие","pages":[120,376,379],"args":[]},{"id":"CON:S09","title":"Благожелательный искусственный антинатализм","en":"Benevolent Artificial AntiNatalism / BAAN","group":"Риск технологии и будущее","def":"В своде приведена ссылка на отдельную идею этического отношения искусственного интеллекта к созданию сознания.","bound":"Сама ссылка не является разработанной теорией в данном документе; её нельзя ставить в один ряд с физическими механизмами катастрофы.","app":"При дальнейшем использовании отдельно изучить первичный текст и цель мысленного сценария.","status":"Содержание подтверждено","pages":[372,381],"args":[]},{"id":"CON:S10","title":"Риски страдания и экзистенциальные риски","en":"S-risk / X-risk","group":"Риск технологии и будущее","def":"Во внешней терминологии S-risk — риск страдания астрономического масштаба; X-risk — риск уничтожения или радикальной необратимой утраты потенциала земного разумного будущего. Вики упоминает оба направления.","bound":"Определения здесь даны по отдельным первичным источникам P7–P8; в самом своде они не развёрнуты. Критерии и объект защиты не тождественны.","app":"Перед заимствованием терминов отдельно определить объект защиты и масштаб риска.","status":"Частичное соответствие","pages":[378,510],"args":[]},{"id":"CON:S11","title":"Катастрофический риск","en":"Catastrophic Risk","group":"Риск технологии и будущее","def":"Возможность крайне тяжёлого исхода, связанная с запуском уязвимой биографии.","bound":"Возможность, причинно реальный риск, оценка вероятности и неизбежность не взаимозаменяемы.","app":"Указывать маршрут вреда, тяжесть, длительность, обратимость и распределение последствий.","status":"Содержание подтверждено","pages":[242,261],"args":["ARG-09"]},{"id":"CON:S12","title":"Критика антимортализма","en":"Anti-mortalism","group":"Риск технологии и будущее","def":"Вики критикует безусловное сохранение жизни и условий её воспроизводства.","bound":"Продолжение как самоцель отличается от лечения и защиты реальных интересов существующего субъекта.","app":"Проверять цель продления, последствия и отличие сохранения от оправдания создания.","status":"Содержание подтверждено","pages":[200,445],"args":[]},{"id":"CON:D01","title":"Взаимное обнуление презумпций","en":"Mutually Void","group":"Полемические аргументы","def":"Вики предлагает убрать положительные обоснования обеих сторон и сохранить отсутствие запуска как исходную альтернативу.","bound":"Необоснованность рождения не равна полному доказательству запрета без защитного принципа. Отсутствие носителей двух взглядов не означает отсутствия всей жизни.","app":"Реконструировать как асимметрию полномочий при действии и воздержании.","status":"Содержание подтверждено","pages":[258],"args":[]},{"id":"CON:D02","title":"Ловушка цены выхода","en":"Catch 22 Catastrophe","group":"Полемические аргументы","def":"Продолжение процесса порождает новые беды, а прекращение создаёт трудности для уже вовлечённых.","bound":"Ответственность за происхождение проблемы не снимает обязанности оценить последствия предложенного ответа.","app":"Разработать одновременно предотвращение новых случаев и заботу о существующих, включая переходные издержки.","status":"Частичное соответствие","pages":[235,236,312],"args":[]},{"id":"CON:D03","title":"Зеркальная проверка аргумента","en":"Argument Copycats","group":"Полемические аргументы","def":"Одинаковый стандарт доказательства применяется к антинатализму и защите рождения.","bound":"Зеркало выявляет двойной стандарт, но не подменяет собственное положительное обоснование.","app":"Указывать точный общий критерий и релевантные различия между случаями.","status":"Содержание подтверждено","pages":[307,410],"args":[]},{"id":"CON:D04","title":"Начало и прекращение жизни","en":"Negatives Do Not Justify Ending Life","group":"Полемические аргументы","def":"Вики зеркально спрашивает, почему положительное должно оправдывать начало, если отрицательное не оправдывает прекращение.","bound":"Случаи имеют разные условия: интересы и согласие уже существующего субъекта нельзя исключить ради симметрии фразы.","app":"Использовать для запроса критерия, затем отдельно анализировать создание и действия в отношении живущих.","status":"Переработано или ограничено","pages":[243,265,273],"args":["ARG-12"]},{"id":"CON:D05","title":"Требование формулы и источника","en":"E = mc² / Citation Needed","group":"Полемические аргументы","def":"Этический тезис не становится необоснованным только потому, что не записан формулой физики.","bound":"Чужое отсутствие формулы не отменяет обязанность подтвердить свои эмпирические утверждения.","app":"Различать ссылку на данные, формальную корректность и защиту нормативной посылки.","status":"Содержание подтверждено","pages":[194,258],"args":[]},{"id":"CON:D06","title":"Поклонение смерти и отсутствие поклонения","en":"Death Worship / Non-worship","group":"Полемические аргументы","def":"Вики отрицает, что критика рождения обязана опираться на культ смерти.","bound":"Отсутствие у смерти способности программировать убеждения не доказывает безошибочность сторонников антинатализма.","app":"Развести отсутствие обязанности создавать, заботу о живущих и оценку смерти конкретного субъекта.","status":"Содержание подтверждено","pages":[256],"args":[]},{"id":"CON:D07","title":"Антинатализм и евгеника","en":"Antinatalism Vs. Eugenics","group":"Полемические аргументы","def":"Универсальная критика создания отличается от отбора людей, которым дозволено воспроизводство по признаку качества.","bound":"Биологический выбор партнёра сам по себе не тождествен политике евгеники; ответ вики здесь зеркально расширяет понятие.","app":"Защитить универсальность принципа и отсутствие отбора достойных и недостойных существования.","status":"Содержание подтверждено","pages":[275,463],"args":[]},{"id":"CON:D08","title":"Наследие и невозвратные затраты","en":"Legacy / Sunk-cost fallacy","group":"Полемические аргументы","def":"Уже понесённые издержки и желание продолжить цепь не оправдывают новые издержки сами по себе.","bound":"Сохранение ценного результата может иметь отдельное будущее основание; конечность проекта не стирает всю его ценность.","app":"Различать историческую цену, реальные будущие интересы и создание нового носителя риска.","status":"Содержание подтверждено","pages":[305,314],"args":[]},{"id":"CON:D09","title":"Заявленное право и личный выбор","en":"Right to have children / Personal Choice","group":"Полемические аргументы","def":"Само произнесение слова «право» не объясняет допустимость последствий для другого.","bound":"Юридическое право, философское обоснование и личный характер мотива — разные вопросы.","app":"Проверять основания заявленного права и распределение последствий, не выдавая философский вывод за описание закона.","status":"Содержание подтверждено","pages":[246,410],"args":[]},{"id":"CON:D10","title":"Единственность альтернативы и ложная середина","en":"Anti-Efilist Antinatalism / Golden mean","group":"Полемические аргументы","def":"Вики требует от антинаталиста последовательно учитывать универсальный вред.","bound":"Отказ принять космологическую гипотезу или предложенное средство не равнозначен защите рождения. Дилемма «или ошибка, или Бог» не исчерпывает позиций.","app":"Проверять согласие с ядром отдельно от согласия с объяснительными и стратегическими расширениями.","status":"Содержание подтверждено","pages":[275],"args":[]},{"id":"CON:T01","title":"Помощь и работа с источником","en":"Repair and prevention","group":"Практическая ориентация","def":"Вики признаёт необходимость улучшать условия существующих людей и животных при сохранении критики воспроизводства.","bound":"Локальная помощь не оправдывает создание новых нужд; универсальный критерий не обесценивает ограниченную задачу помощи.","app":"Связать главы о профилактике, помощи и метарациональности без противопоставления этих задач.","status":"Содержание подтверждено","pages":[446],"args":["ARG-12"]},{"id":"CON:T02","title":"Забота о существующих субъектах","en":"Humanitarian and activist efforts","group":"Практическая ориентация","def":"Облегчение страдания и защита уже затронутых сохраняют самостоятельную ценность.","bound":"Оценка происхождения проблемы не разрешает обращаться с её носителями как со средствами.","app":"Развивать доступную помощь, просвещение и исследование последствий.","status":"Содержание подтверждено","pages":[247,338],"args":["ARG-12"]},{"id":"CON:T03","title":"Веганство и предел частного решения","en":"Veganism / Vegetarianism / VHEMT","group":"Практическая ориентация","def":"Сокращение эксплуатации и гуманное отношение к животным рассматриваются как важные, но не исчерпывающие весь вопрос вреда.","bound":"Неполнота решения не доказывает его бесполезность; названия движений не определяют автоматически взгляды каждого участника.","app":"Различать общую область этического внимания и конкретные формы доступной помощи.","status":"Содержание подтверждено","pages":[337,338],"args":[]},{"id":"CON:T04","title":"Надежда с проверяемой работой","en":"Hope is not illogical","group":"Практическая ориентация","def":"Вики допускает обоснованную надежду на уменьшение страдания и различные роли участников.","bound":"Надежда становится аргументом только через конкретную цель, доступное действие и данные о последствиях.","app":"Строить исследовательскую и просветительскую работу с понятными критериями результата.","status":"Частичное соответствие","pages":[336,337,403],"args":[]},{"id":"CON:T05","title":"Прогресс и цена его распределения","en":"Progress / Civilizational risk","group":"Практическая ориентация","def":"Увеличение технических возможностей не автоматически означает улучшение положения всех субъектов.","bound":"Вики приводит показатели 2008 и 2013 годов; они не являются актуальными универсальными измерениями риска и благополучия.","app":"Сравнивать интенсивность и масштаб вреда, распределение благ, уязвимость и управляемость.","status":"Содержание подтверждено","pages":[86,364],"args":[]},{"id":"CON:T06","title":"Гуманный переход и предельная цель","en":"Graceful exit","group":"Практическая ориентация","def":"Источник предлагает мыслить завершение воспроизводящего процесса как задачу, а не случайное крушение.","bound":"Желаемое конечное состояние не доказывает допустимости и осуществимости конкретного вмешательства. Утверждения о готовой глобальной технологии здесь не подтверждены.","app":"Разрабатывать ненасильственное несоздание, заботу о живущих и оценку переходных издержек; разрушительные инструкции из текста не разворачивать.","status":"Содержание подтверждено","pages":[355,389],"args":[]},{"id":"CON:T07","title":"Страдание диких животных","en":"Wild animal suffering","group":"Практическая ориентация","def":"Системный вред природы рассматривается через положение отдельных животных, а не красоту пейзажа.","bound":"Из наличия страдания не следует, что любое крупное вмешательство уменьшит его; утверждение о безусловном преимуществе уничтожения среды не доказано.","app":"Развести оценку естественных процессов, цель помощи и прогноз последствий доступного действия.","status":"Содержание подтверждено","pages":[325,337],"args":["ARG-12"]},{"id":"CON:T08","title":"Смена исходного положения","en":"Luck of the draw","group":"Практическая ориентация","def":"Условия рождения, свойства и социальная среда не выбраны человеком заранее.","bound":"Фраза «ты мог быть другим животным» не доказывает буквальное перемещение одной личности между организмами.","app":"Использовать как мысленную смену позиции для беспристрастной проверки принципа.","status":"Содержание подтверждено","pages":[129,130],"args":[]},{"id":"CON:X01","title":"Эфилизм и абсолютный антинатализм","en":"Absolute Antinatalism","group":"Связь с предыдущим аудитом","def":"Вики расширяет критику создания за пределы человека и ДНК; книга закрепляет абсолютный антинатализм как ядро эфилизма.","bound":"В своде встречаются разные способы описать отношение общего мировоззрения и антинатализма. Конкретную техническую конфигурацию книги нужно определить один раз.","app":"Рассматривать остальные узлы как объяснительную инфраструктуру принятого ядра.","status":"Содержание подтверждено","pages":[273,278],"args":["ARG-18"]},{"id":"CON:X02","title":"Объективные проблемы и ошибки","en":"Objective Errors / Objective Problems","group":"Связь с предыдущим аудитом","def":"Общий технический узел связывает неблагополучие субъекта и оценку причинной архитектуры.","bound":"Актуальное страдание, открытая угроза, ошибка модели и критериальная оценка сохраняют разные роли внутри узла.","app":"Использовать различения главы 23 и предыдущего аудита.","status":"Содержание подтверждено","pages":[193],"args":["ARG-06"]},{"id":"CON:X03","title":"Первичная и номологическая ошибка","en":"Error Prime / Nomological error","group":"Связь с предыдущим аудитом","def":"Предельная оценка условий, допускающих воспроизводство вреда; предшествующая неживая причинная архитектура обсуждается отдельно.","bound":"Не смешивать с Fact Prime; отсутствие замысла само по себе не даёт оценки дефекта без названного критерия.","app":"Применить определения и правки предыдущего аудита.","status":"Содержание подтверждено","pages":[199],"args":["ARG-15"]},{"id":"CON:X04","title":"Нормативный мост и предписание рациональности","en":"Duty of rationality / Two reduction passes","group":"Связь с предыдущим аудитом","def":"Вики пытается связать объективный вред, решение проблем и обязанность действовать.","bound":"Эффективность устранения не заменяет обоснование цели и допустимости; определение рациональности не скрывает самостоятельность этических посылок.","app":"Привести краткие формулы к явным посылкам главы 30 и защитному порогу главы 32.","status":"Содержание подтверждено","pages":[243,244],"args":["ARG-14"]}],"principles":[{"id":"A1","title":"Феноменальная антиценность","body":"Отрицательное качество опыта составляет неблагоприятный аспект для его носителя. Аксиологическая гипотеза, не вывод из физикализма.","related":"DEM-01","status":"Кандидатный принцип; условная модель, не доказанная аксиома."},{"id":"A2","title":"Практическое основание","body":"Причинение локальной антиценности создаёт первоначальное основание против действия. Не итоговый запрет.","related":"DEM-02","status":"Кандидатный принцип; условная модель, не доказанная аксиома."},{"id":"A3","title":"Долг рационального учёта","body":"Способный рассуждать агент должен учитывать доступное основание. Не утверждает, что оно всегда побеждает.","related":"DEM-03","status":"Кандидатный принцип; условная модель, не доказанная аксиома."},{"id":"A4","title":"Независимость критерия от носителя","body":"При сопоставимых свойствах опыта применяется одинаковый критерий без видовой или субстратной скидки. Не тождество решений при разных обстоятельствах.","related":"ARG-11","status":"Кандидатный принцип; условная модель, не доказанная аксиома."},{"id":"A5","title":"Асимметрия несоздания","body":"В рассматриваемом случае несоздание не лишает уже существующего субъекта блага и не нарушает независимое притязание. Не утверждение об отсутствии всех внешних последствий.","related":"ARG-07","status":"Кандидатный принцип; условная модель, не доказанная аксиома."},{"id":"A6","title":"Антижертвенный защитный принцип","body":"Кандидатный принцип: добровольное несоздание предпочтительно, когда создание навязывает существенный риск крайнего вреда без предварительной авторизации и независимой необходимости. Условия требуют проверки, принцип не доказан перечислением.","related":"ARG-09","status":"Кандидатный принцип; условная модель, не доказанная аксиома."},{"id":"A7","title":"Допустимость помощи","body":"Разрешение конкретного средства требует независимого обоснования, согласия либо надлежащей защиты интересов, и соразмерности. Не лицензия на вмешательство.","related":"ARG-12","status":"Кандидатный принцип; условная модель, не доказанная аксиома."},{"id":"A8","title":"Независимость допустимости средств","body":"Этическое несогласие с действием не разрешает принуждение. В данном случае средство без независимого оправдания запрещено.","related":"LOG-T12","status":"Кандидатный принцип; условная модель, не доказанная аксиома."},{"id":"A9","title":"Предосторожность при неопределённости","body":"Неопределённость существенного риска создаёт требование дополнительной оценки; отсутствие данных не означает безопасность и само по себе не устанавливает категорический запрет.","related":"LOG-T18","status":"Кандидатный принцип; условная модель, не доказанная аксиома."}],"arguments":[{"id":"ARG-01","title":"Реальность переживания","status":"Условная аргументация","rule":"Различение события и содержания суждения.","conclusion":"Ложность убеждения о причине боли не влечёт отсутствия пережитой боли.","objection":"Само сообщение о боли тоже может быть ошибочным.","reply":"Различить наличие опыта и достоверность отчёта о нём: аргумент условен на фактическое наличие переживания.","limit":"Не доказывает без дополнительных посылок объективный моральный долг.","depends":[]},{"id":"ARG-02","title":"Бремя доказательства создания","status":"Открытое нормативное основание","rule":"Применение правила оправдания риска.","conclusion":"Допустимость создания требует самостоятельного обоснования; отсутствие доказательства запрета не является таким обоснованием.","objection":"Антинатализм также предъявляет универсальный тезис и несёт бремя его доказательства.","reply":"Различить бремя оправдания конкретного действия и бремя доказательства общего запрета. Оба сохраняются.","limit":"Не выводит всеобщий запрет только из распределения бремени.","depends":[]},{"id":"ARG-03","title":"Отсутствие доказанной метафизической гарантии","status":"Условная аргументация","rule":"Различение возможности и доказательства.","conclusion":"Ссылка на непроверенный скрытый смысл сама по себе не оправдывает риск.","objection":"Отсутствие доказательства не доказывает отсутствия смысла.","reply":"Для ограниченного вывода не требуется доказать отсутствие любого смысла; требуется не принимать непроверенное за гарантию.","limit":"Не является доказательством атеизма или метафизической невозможности компенсации.","depends":[]},{"id":"ARG-04","title":"Детерминизм не фатализм","status":"Условная аргументация","rule":"Контрпример: действие само является звеном причинной цепи.","conclusion":"Детерминированность сама по себе не влечёт бесполезности действий.","objection":"При фиксированных начальных условиях исход один.","reply":"Это совместимо с тем, что исход включает причинно действенное вмешательство; контрфактическое сравнение меняет условия.","limit":"Не доказывает истинность универсального детерминизма и не решает спор о свободе воли.","depends":[]},{"id":"ARG-05","title":"Первичная дисфункция и воспроизводство нужды","status":"Открытая эмпирическая посылка","rule":"Функциональное объяснение и различение локальной пользы и оправдания системы.","conclusion":"Обслуживание созданных нужд не является самостоятельным оправданием создания системы нужды.","objection":"Некоторые удовольствия не переживаются как снятие явного дефицита.","reply":"Ограниченный вывод не требует универсальной теории удовольствия; более сильный тезис о квазипозитивности проверяется отдельно.","limit":"Не устанавливает, что всякое положительное переживание только устраняет дефицит.","depends":[]},{"id":"ARG-06","title":"Объективные проблемы и ошибки","status":"Открытое нормативное основание","rule":"Применение явно указанного критерия проблемности.","conclusion":"Причинная система может быть проблемной относительно переживаемого вреда, даже если её функционирование естественно.","objection":"Ошибка предполагает цель или стандарт; природа не ставит целей.","reply":"Указать стандарт — интересы субъекта, а не намерение природы; не переносить автоматически оценку на неживую материю.","limit":"Объективность стандарта и расширение к Error Prime требуют отдельной защиты.","depends":[]},{"id":"ARG-07","title":"Асимметрия создания и несоздания","status":"Открытое нормативное основание","rule":"Сравнение личностно-ориентированных последствий двух альтернатив.","conclusion":"Несоздание не причиняет этому возможному субъекту переживаемого лишения, тогда как создание открывает риск вреда.","objection":"Безличная аксиология может считать отсутствие счастливых жизней потерей ценности.","reply":"Защитить личностно-ориентированный критерий либо показать, почему безличная ценность недостаточна для оправдания риска.","limit":"Не исключает автоматически интересы уже существующих людей или все безличные теории ценности.","depends":[]},{"id":"ARG-08","title":"Предварительное согласие","status":"Открытое нормативное основание","rule":"Применение ограничения авторизации.","conclusion":"Отсутствие возможности спросить не является достаточным оправданием создания.","objection":"Многие действия без согласия допустимы, например спасение человека без сознания.","reply":"Различить защиту существующего интереса и создание нового носителя интересов; отдельно проверить критерий необходимости.","limit":"Не доказывает, что все действия без согласия недопустимы.","depends":[]},{"id":"ARG-09","title":"Катастрофический риск и предохранитель","status":"Открытое нормативное основание","rule":"Условный modus ponens при выполнении порогового условия.","conclusion":"Если остаточный риск превышает обоснованный защитный порог, создание недопустимо.","objection":"Нулевой риск недостижим; обычные решения всегда содержат риск.","reply":"Отдельно обосновать порог для создания, отличая его от риска помощи существующим; не подменять порог требованием нуля.","limit":"Всеобщий вывод требует обоснования порога и его универсальной применимости.","depends":["ARG-02","ARG-08"]},{"id":"ARG-10","title":"Антиутопический аргумент","status":"Условная аргументация","rule":"Ограничение оправдания будущим результатом.","conclusion":"Ожидание будущего благополучия само по себе не оправдывает серьёзный навязанный риск.","objection":"Некоторые коллективные проекты действительно уменьшают вред в будущем.","reply":"Различить проверяемое снижение вреда и неподтверждённую утопию, оценить необходимость и допустимость конкретного действия.","limit":"Не исключает добровольные и безопасные меры помощи или прогресс.","depends":["ARG-09"]},{"id":"ARG-11","title":"Независимость критерия от субстрата","status":"Условная аргументация","rule":"Универсализация критерия при равенстве релевантных свойств.","conclusion":"Если неднк-система способна переживать вред, её интересы подлежат этическому учёту.","objection":"Нет надёжного способа установить искусственную чувствительность.","reply":"Условный вывод не утверждает её фактическое наличие; эпистемическая неопределённость требует самостоятельного исследования.","limit":"Не выводит сознание из вычислений и не лицензирует вред существующим системам.","depends":[]},{"id":"ARG-12","title":"Частичные решения и этика помощи","status":"Условная аргументация","rule":"Отсутствие логического следования.","conclusion":"Успех локального снижения вреда сам по себе не доказывает допустимость создания новых субъектов.","objection":"Снижение вреда может сделать будущие условия значительно лучше.","reply":"Это релевантно оценке условий создания, но не заменяет её; помощь сохраняет самостоятельную ценность.","limit":"Не принижает этическую значимость помощи, охраны среды или благополучия животных.","depends":[]},{"id":"ARG-13","title":"От феноменального факта к объективной ценности","status":"Открытое нормативное основание","rule":"Применение аксиологической посылки к феноменальному факту.","conclusion":"Отрицательное переживание может быть объективно установимым неблагоприятным состоянием субъекта.","objection":"Объективность события ещё не устанавливает объективность ценности.","reply":"Защитить аксиологический мост отдельно: различить зависимость от субъекта и произвольную зависимость от мнения.","limit":"Не выводит категорическую обязанность из физического факта.","depends":["ARG-01"]},{"id":"ARG-14","title":"Долг рациональности и гильотина Юма","status":"Открытое нормативное основание","rule":"Если есть практическое основание, рациональное рассмотрение обязано учитывать его; достаточность основания оценивается отдельно.","conclusion":"Предотвращение необязательного тяжёлого вреда является обоснованной практической задачей; безусловность запрета требует дальнейших посылок.","objection":"Определение рациональности как устранения ошибки уже содержит нормативный стандарт.","reply":"Открыто предъявить обе нормативные посылки, проверить их через беспристрастность и непротиворечивость; не объявлять спор решённым определением.","limit":"Это условная реконструкция, не доказательство дедукции должного из чисто описательных фактов.","depends":["ARG-13","ARG-06"]},{"id":"ARG-15","title":"Error Prime: космологический уровень","status":"Открытое нормативное основание","rule":"Разграничение причинного источника и оценочной квалификации.","conclusion":"Error Prime можно исследовать как философское обозначение космологической предпосылки проблемы; оценочная квалификация не следует из безличности сама по себе.","objection":"Отсутствие замысла не является дефектом Вселенной.","reply":"Не считать отсутствие цели достаточным условием ошибки; уточнить, в каком смысле критерий применяется к причинным предпосылкам вреда.","limit":"Не физическая теория и не утверждение о виновности неживой материи.","depends":["ARG-06"]},{"id":"ARG-16","title":"Квазипозитивность как сильный эмпирический тезис","status":"Открытая эмпирическая посылка","rule":"Проверка универсального обобщения.","conclusion":"Компенсаторный механизм поддерживает ограниченный тезис о части благ; универсальная квазипозитивность остаётся исследуемой гипотезой.","objection":"Игра, интерес и эстетическое наслаждение могут иметь положительную окраску без переживаемого дефицита.","reply":"Различить физиологический дефицит, мотивационную потребность и феноменальную отрицательность; не расширять понятие нужды до нефальсифицируемого.","limit":"Требуется независимая научная проверка; ограниченный аргумент ARG-05 от неё не зависит.","depends":["ARG-05"]},{"id":"ARG-17","title":"Двойной предохранитель: два эффекта несоздания","status":"Условная аргументация","rule":"Сравнение альтернатив относительно одного возможного субъекта.","conclusion":"Несоздание предотвращает его возможный вред без причинения ему переживаемого лишения благ.","objection":"Это не доказывает, что прекращение жизни существующего субъекта эквивалентно несозданию.","reply":"Именно так: сохранить различие между несозданием и интересами уже существующих; никакие действия над ними из этой схемы не следуют.","limit":"Область — добровольное несоздание; не техническая гарантия или разрешение причинять вред.","depends":["ARG-07"]},{"id":"ARG-18","title":"Синтез: условное обоснование абсолютного антинатализма","status":"Открытый синтез","rule":"Универсальная инстанциация и условный вывод: если для всякого создания выполнено достаточное условие запрета, то всякое создание недопустимо.","conclusion":"Абсолютный антинатализм следует условно при обосновании универсального условия запрета и его применимости.","objection":"Универсальность запрета не установлена аргументами о типичных случаях.","reply":"Проверить предельные контрпримеры, достаточность защитного порога и основания исключений. Не считать универсальную посылку независимым доказательством, если она повторяет вывод.","limit":"Это карта доказательных обязательств, не завершённое доказательство. Только добровольный отказ от создания; не оправдывает насилие или вред существующим.","depends":["ARG-02","ARG-07","ARG-08","ARG-09","ARG-11","ARG-14","ARG-17"]}],"objections":[{"id":"CRI:O01","title":"Открытый вопрос Мура","objection":"Даже если опыт имеет отрицательную окраску, можно осмысленно спросить, является ли эта окраска этически значимой. Факт не тождествен оценке по одному определению.","reply":"Различить аналитическое определение и синтетическое тождество. Отсутствие аналитического тождества не исключает натуралистического объяснения, но не доказывает его.","obligation":"Обосновать критерий тождества либо независимую аксиологическую посылку.","survives":"Локальная фактичность опыта сохраняется.","principles":["A1"],"arguments":["ARG-13"]},{"id":"CRI:O02","title":"Релятивизм и различие субъектов","objection":"Одинаковый стимул может оцениваться людьми по-разному; независимый от субъекта универсальный рейтинг стимулов не установлен.","reply":"Критерий относится к переживанию данного субъекта, а не стимулу в отрыве от контекста. Различие опыта совместимо с общим критерием сопоставимых свойств.","obligation":"Доказать межсубъектную применимость критерия, не постулируя точную общую шкалу интенсивности.","survives":"Различие факта и мнения сохраняется.","principles":["A1","A4"],"arguments":["ARG-01","ARG-11"]},{"id":"CRI:O03","title":"Положительный опыт и компенсация","objection":"Наличие самостоятельных благ может сделать жизнь в целом предпочтительной, даже если отдельные эпизоды неблагоприятны.","reply":"Локальный вред не исчезает от общей положительной оценки. Но отдельный защитный принцип необходим, чтобы от непрекращающегося локального вреда перейти к ограничению обмена благами на риск.","obligation":"Обосновать силу защитного принципа независимо от тезиса, что всё удовольствие является снятием дефицита.","survives":"Локальная антиценность и оценка риска остаются предметом анализа.","principles":["A1","A6"],"arguments":["ARG-16","ARG-18"]},{"id":"CRI:O04","title":"Теория этической ошибки","objection":"Нормативные утверждения претендуют на объективные предписания, однако таких свойств может не существовать. Реальность боли совместима с этой гипотезой.","reply":"Не отождествлять антиреализм с отрицанием переживания; сначала установить, какого рода объективность необходима аргументу. Условные рекомендации остаются возможны при принятом стандарте.","obligation":"Защитить метаэтическое основание против онтологической и семантической частей теории ошибки.","survives":"Феноменальные и причинные факты сохраняются, категорическое предписание нет.","principles":["A1","A2","A3","A4","A6","A7","A8","A9"],"arguments":["ARG-13","ARG-14"]},{"id":"CRI:O05","title":"Агрегативная альтернатива","objection":"Если общий выигрыш велик, суммарная оценка может оправдывать распределение риска, даже при наличии отдельного проигрывающего субъекта.","reply":"Различить оценку совокупного результата и индивидуальную допустимость; договорная этика даёт пример анализа индивидуальных оснований без прямой агрегации. Это аналогия, а не доказательство применимости к созданию.","obligation":"Обосновать, когда и почему индивидуальное ограничение имеет приоритет над совокупной выгодой.","survives":"Сам факт распределения риска сохраняется.","principles":["A6"],"arguments":["ARG-09","ARG-18"]},{"id":"CRI:O06","title":"Этика средств и конфликт обязанностей","objection":"Если нормативная цель объявлена универсальной, может возникнуть соблазн считать любое средство её достижения оправданным.","reply":"Запрет действия и полномочие принуждать логически различны. Помощь существующим субъектам имеет самостоятельные основания, включая автономию, согласие и соразмерность.","obligation":"Проверить этические статусы конкретных вмешательств независимо от целей; не считать принуждение допустимым по умолчанию.","survives":"Добровольный отказ и ненасильственная помощь совместимы с независимой проверкой средств.","principles":["A7","A8"],"arguments":["ARG-12","ARG-18"]},{"id":"CRI:O07","title":"Асимметрия без универсального запрета","objection":"Из того, что несоздание не лишает будущего человека блага, не следует, что создание при благоприятных ожиданиях всегда недопустимо.","reply":"A5 описывает отсутствие определённого притязания, а A6 добавляет отдельное ограничение. Нельзя вывести A6 из A5 только переименованием асимметрии.","obligation":"Нужен независимый аргумент в пользу защитного порога и доказательство покрытия области создания.","survives":"Асимметрия в указанном смысле не опровергнута этим возражением.","principles":["A5","A6"],"arguments":["ARG-07","ARG-18"]},{"id":"CRI:O08","title":"Проблема нетождества","objection":"При несоздании тот же человек не существовал бы; поэтому трудно показать, что он оказался в худшем положении по сравнению с альтернативой.","reply":"Несравнительное неблагоприятное состояние и сравнительное ухудшение — различные понятия. Первое может обосновывать исследование вреда без сравнения с небытием.","obligation":"Обосновать нормативную значимость несравнительного вреда и критерий ответственности за создание.","survives":"Реальность неблагоприятных состояний не зависит от решения проблемы нетождества.","principles":["A2","A5"],"arguments":["ARG-07","ARG-08"]},{"id":"CRI:O09","title":"Согласие и оправдание без предварительной авторизации","objection":"Невозможность предварительного согласия не всегда делает действие недопустимым: помощь при утрате дееспособности может быть оправдана.","reply":"Различить создание и защиту интересов уже существующего субъекта. В помощи может существовать независимое основание, которого нет в случае чистого создания.","obligation":"Установить границы чистого создания, включая смешанные случаи и независимые притязания; доказать силу ограничения.","survives":"Невозможность согласия сама по себе не выдаёт разрешения и не устанавливает запрет.","principles":["A6","A7"],"arguments":["ARG-08","ARG-12"]},{"id":"CRI:O10","title":"Условная допустимость риска","objection":"Разумные благоприятные ожидания могут служить аргументом в пользу допустимости риска; наличие любого риска не равнозначно недопустимости.","reply":"Разграничить положительное ожидание и защитный порог. При недостатке данных A9 требует оценки, не предрешая результат; A6 работает только при заданных условиях.","obligation":"Обосновать порог, его измеримость и охват реальных случаев, не заменяя неопределённость утверждением о гарантии.","survives":"Требование оценки риска сохраняется при отказе от категорического запрета.","principles":["A6","A9"],"arguments":["ARG-09","ARG-18"]},{"id":"CRI:O11","title":"Интернализм практических оснований","objection":"Если основания действия зависят от мотивационного набора агента, признание чужого вреда не гарантирует наличия основания для его предотвращения у любого агента.","reply":"Различить причины поведения, мотивацию и оправдание. Экстернализм является возможной альтернативой, но не опровержением интернализма по определению.","obligation":"Дать независимую защиту оснований, не сводимых к текущим желаниям агента.","survives":"Причинное объяснение и проверка согласованности убеждений остаются возможны.","principles":["A2","A3"],"arguments":["ARG-14"]},{"id":"CRI:O12","title":"Инструментализм и возражение Эноха","objection":"Стандарт, определяющий рациональную деятельность, может не давать причины следовать ему. Эффективность средств относительно цели не устанавливает ценность цели.","reply":"Требование согласованности допускает пересмотр цели. Для содержательного требования нужны самостоятельные практические основания; конститутивная стратегия может помочь описать требования, но не заменить их обоснование.","obligation":"Защитить переход от объективного основания к требованию его учёта и его нормативную силу.","survives":"Критика ошибочных убеждений и инструментальной несогласованности сохраняется.","principles":["A3"],"arguments":["ARG-14"]}],"bibliography":[{"id":"BIB-001","title":"SEP: Classical Logic","url":"https://plato.stanford.edu/entries/logic-classical/","scope":"Поисковые выдержки: логическое следование и удовлетворимость. · Поисковые выдержки SEP; не исчерпывающее чтение","count":2},{"id":"BIB-002","title":"SEP: Reasons for Action: Justification, Motivation, Explanation","url":"https://plato.stanford.edu/entries/reasons-just-vs-expl/","scope":"Поисковые выдержки: первоначальные основания и итоговый нормативный статус.","count":7},{"id":"BIB-003","title":"SEP: Deontological Ethics","url":"https://plato.stanford.edu/entries/ethics-deontological/","scope":"Поисковые выдержки: обязательность, запрет, разрешение, конфликт требований.","count":1},{"id":"BIB-004","title":"On the origin of life: an RNA-focused synthesis and narrative (2023)","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC10351881/","scope":"Обзор РНК-ориентированного сценария; не доказательство единственной исторической траектории.","count":1},{"id":"BIB-005","title":"The Origins of Cellular Life (2010)","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC2926753/","scope":"Протоклеточные модели, сочетание компартмента и наследования; ограничения реконструкции.","count":1},{"id":"BIB-006","title":"Frank. Natural selection. IV. The Price equation (2012)","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC3354028/","scope":"Разложение изменения среднего признака на дифференциальный вклад и передачу.","count":1},{"id":"BIB-007","title":"Schulkin & Sterling. Allostasis: A Brain-Centered, Predictive Mode of Physiological Regulation (2019)","url":"https://pubmed.ncbi.nlm.nih.gov/31488322/","scope":"Упреждающая регуляция и координация физиологии.","count":1},{"id":"BIB-008","title":"Clarifying the roles of homeostasis and allostasis in physiological regulation (2014)","url":"https://pubmed.ncbi.nlm.nih.gov/24730599/","scope":"Различение регуляторных контуров; не жёсткое противопоставление двух универсальных режимов.","count":1},{"id":"BIB-009","title":"Trade-Offs (and Constraints) in Organismal Biology (2021/2022)","url":"https://pubmed.ncbi.nlm.nih.gov/34905443/","scope":"Многообразие эволюционных компромиссов, ограничения и антагонистическая плейотропия.","count":1},{"id":"BIB-010","title":"The influence of evolutionary history on human health and disease (2021)","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC7787134/","scope":"Ограничения, компромиссы, несоответствие среде, конфликты.","count":1},{"id":"BIB-011","title":"Ten questions for evolutionary studies of disease vulnerability (2011)","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC3352562/","scope":"Эволюционные объяснения уязвимости, включая различие защитных реакций и болезней.","count":1},{"id":"BIB-012","title":"Natural selection. III. Selection versus transmission and the levels of selection (2012)","url":"https://doi.org/10.1111/j.1420-9101.2011.02431.x","scope":"Ковариация признака и относительного репродуктивного вклада; уровни отбора.","count":1},{"id":"BIB-013","title":"Метаэтический натурализм; сверка поисковой выдержки","url":"https://plato.stanford.edu/entries/naturalism-moral/","scope":"Метаэтический натурализм; сверка поисковой выдержки · Открытый вопрос Мура и возможность синтетического натурализма.","count":7},{"id":"BIB-014","title":"Несравнительный вред и нетождество; сверка поисковой выдержки","url":"https://plato.stanford.edu/entries/nonidentity-problem/","scope":"Несравнительный вред и нетождество; сверка поисковой выдержки · Проблема сравнительного вреда и обязанностей в отношении будущих людей.","count":6},{"id":"BIB-015","title":"Ограничения договорных подходов к нетождеству; сверка поисковой выдержки","url":"https://plato.stanford.edu/entries/contractualism/","scope":"Ограничения договорных подходов к нетождеству; сверка поисковой выдержки","count":5},{"id":"BIB-016","title":"Практические основания и инструментальная рациональность; сверка поисковой выдержки","url":"https://plato.stanford.edu/archives/spr2026/entries/practical-reason/","scope":"Практические основания и инструментальная рациональность; сверка поисковой выдержки","count":2},{"id":"BIB-017","title":"SEP: Moral Anti-Realism","url":"https://plato.stanford.edu/entries/moral-anti-realism/","scope":"Различие теории ошибки, некогнитивизма и других вариантов антиреализма.","count":3},{"id":"BIB-018","title":"SEP: Reasons for Action: Internal vs. External","url":"https://plato.stanford.edu/archives/fall2024/entries/reasons-internal-external/","scope":"Зависимость практических оснований от мотиваций и альтернативные позиции.","count":1},{"id":"BIB-019","title":"Wasserman (2015): Against Anti-Natalism","url":"https://academic.oup.com/book/25806/chapter-abstract/193420320","scope":"Аннотация главы: критика категорических аргументов асимметрии, согласия и риска.","count":1},{"id":"BIB-020","title":"Benatar (2015): The Asymmetry Argument","url":"https://academic.oup.com/book/25806/chapter-abstract/193414324","scope":"Аннотация главы: асимметрия и проблема нетождества.","count":3},{"id":"BIB-021","title":"SEP: Parenthood and Procreation","url":"https://plato.stanford.edu/entries/parenthood/","scope":"Обзор альтернативных подходов к допустимости создания и родительству.","count":3},{"id":"BIB-022","title":"SEP: Contractualism","url":"https://plato.stanford.edu/archives/sum2019/entries/contractualism/","scope":"Индивидуальные основания и сопоставление бремени без прямой агрегации.","count":1},{"id":"BIB-023","title":"SEP: Instrumental Rationality","url":"https://plato.stanford.edu/entries/rationality-instrumental/","scope":"Согласованность средств и целей и широкая область требования.","count":1},{"id":"BIB-024","title":"Enoch (2006): Agency, Shmagency","url":"https://cris.huji.ac.il/en/publications/agency-shmagency-why-normativity-wont-come-what-is-constitut/","scope":"Библиографические сведения; основное возражение сверено с аннотацией продолжения (R11).","count":1},{"id":"BIB-025","title":"Enoch (2010): Shmagency Revisited","url":"https://cris.huji.ac.il/en/publications/shmagency-revisited/","scope":"Аннотация: необходимость независимого основания для нормативной силы конститутивных стандартов.","count":2},{"id":"BIB-026","title":"SEP: Practical Reason","url":"https://plato.stanford.edu/entries/practical-reason/","scope":"Различие структурной рациональности и содержательных практических оснований.","count":5},{"id":"BIB-027","title":"Anti-natalism, Pollyannaism, and Asymmetry: A Defence of Cheery Optimism","url":"https://link.springer.com/article/10.1007/s10790-022-09884-8","scope":"Доступная выдержка: принятие интуиций асимметрии без общего запрета.","count":1},{"id":"BIB-028","title":"SEP: Pain","url":"https://plato.stanford.edu/entries/pain/","scope":"","count":2},{"id":"BIB-029","title":"SEP: Moral Naturalism","url":"https://plato.stanford.edu/archives/win2023/entries/naturalism-moral/","scope":"","count":2},{"id":"BIB-030","title":"SEP: Reasons for Action: Internal vs. External","url":"https://plato.stanford.edu/entries/reasons-internal-external/","scope":"","count":2},{"id":"BIB-031","title":"SEP: Constructivism in Metaethics","url":"https://plato.stanford.edu/entries/constructivism-metaethics/","scope":"","count":2},{"id":"BIB-032","title":"SEP: The Nonidentity Problem","url":"https://plato.stanford.edu/archives/spr2026/entries/nonidentity-problem/","scope":"","count":2},{"id":"BIB-033","title":"SEP: Parenthood and Procreation","url":"https://plato.stanford.edu/archives/spr2023/entries/parenthood/","scope":"","count":1},{"id":"BIB-034","title":"Guy Kahane, Pain, Dislike and Experience (2009)","url":"https://www.cambridge.org/core/journals/utilitas/article/abs/pain-dislike-and-experience/D8ED43316431F884C8B2A7C9B66CB9E1","scope":"","count":1},{"id":"BIB-035","title":"The Badness of Pain","url":"https://www.cambridge.org/core/journals/utilitas/article/abs/badness-of-pain/D2F4FDF637792C5F78157E5D4F5D0960","scope":"","count":1},{"id":"BIB-036","title":"David Enoch, Agency, Shmagency (2006)","url":"https://cris.huji.ac.il/en/publications/agency-shmagency-why-normativity-wont-come-from-what-is-constitut/","scope":"","count":1},{"id":"BIB-037","title":"Seana Shiffrin, Wrongful Life, Procreative Responsibility, and the Significance of Harm (1999)","url":"https://doi.org/10.1017/s1352325299052015","scope":"","count":3},{"id":"BIB-038","title":"Johann Frick, Conditional Reasons and the Procreation Asymmetry (online 2020)","url":"https://doi.org/10.1111/phpe.12139","scope":"","count":3},{"id":"BIB-039","title":"Towards Affective-Evaluativism: the Intentional Structure of Unpleasant Pain Experience","url":"https://doi.org/10.1093/pq/pqae002","scope":"","count":1},{"id":"BIB-040","title":"The Correspondence Theory of Truth","url":"https://plato.stanford.edu/entries/truth-correspondence/","scope":"","count":1},{"id":"BIB-041","title":"Underdetermination of Scientific Theory","url":"https://plato.stanford.edu/entries/scientific-underdetermination/","scope":"","count":1},{"id":"BIB-042","title":"Models in Science","url":"https://plato.stanford.edu/archives/spr2026/entries/models-science/","scope":"","count":1},{"id":"BIB-043","title":"Fleming & Lau (2014), How to measure metacognition","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4097944/","scope":"","count":1},{"id":"BIB-044","title":"Bayesian Epistemology","url":"https://plato.stanford.edu/entries/epistemology-bayesian/","scope":"","count":1},{"id":"BIB-045","title":"Reflective Equilibrium","url":"https://plato.stanford.edu/entries/reflective-equilibrium/","scope":"","count":1},{"id":"BIB-046","title":"Scientific Explanation","url":"https://plato.stanford.edu/archives/fall2023/entries/scientific-explanation/","scope":"","count":1},{"id":"BIB-047","title":"Scientific Objectivity","url":"https://plato.stanford.edu/entries/scientific-objectivity/","scope":"","count":1},{"id":"BIB-048","title":"Confirmation","url":"https://plato.stanford.edu/entries/confirmation/","scope":"","count":1},{"id":"BIB-049","title":"Doing vs. Allowing Harm","url":"https://plato.stanford.edu/entries/doing-allowing/","scope":"","count":1},{"id":"BIB-050","title":"Informed Consent","url":"https://plato.stanford.edu/entries/informed-consent/","scope":"","count":2},{"id":"BIB-051","title":"Treating Persons as Means","url":"https://plato.stanford.edu/entries/persons-means/","scope":"","count":1},{"id":"BIB-052","title":"Moral Decision-Making Under Uncertainty","url":"https://plato.stanford.edu/entries/moral-decision-uncertainty/","scope":"","count":1},{"id":"BIB-053","title":"Kant’s Moral Philosophy","url":"https://plato.stanford.edu/entries/kant-moral/","scope":"","count":1},{"id":"BIB-054","title":"SEP: Constructivism in Metaethics","url":"https://plato.stanford.edu/archives/spr2026/entries/constructivism-metaethics/","scope":"","count":2},{"id":"BIB-055","title":"David Enoch: Agency, Shmagency (2006)","url":"https://davidenoch.huji.ac.il/publications/agency-shmagency-why-normativity-wont-come-what-constitutive-action","scope":"","count":1},{"id":"BIB-056","title":"SEP: Fitting Attitude Theories of Value","url":"https://plato.stanford.edu/entries/fitting-attitude-theories/","scope":"","count":1},{"id":"BIB-057","title":"SEP: Reasons for Action: Internal vs. External","url":"https://plato.stanford.edu/archives/fall2025/entries/reasons-internal-external/index.html","scope":"","count":1},{"id":"BIB-058","title":"SEP: Moral Non-Naturalism","url":"https://plato.stanford.edu/archives/sum2026/entries/moral-non-naturalism/","scope":"","count":1},{"id":"BIB-059","title":"SEP: Contractualism","url":"https://plato.stanford.edu/archives/sum2026/entries/contractualism/","scope":"","count":1},{"id":"BIB-060","title":"SEP: Well-Being","url":"https://plato.stanford.edu/entries/well-being/","scope":"","count":5},{"id":"BIB-061","title":"SEP: Intrinsic vs. Extrinsic Value","url":"https://plato.stanford.edu/entries/value-intrinsic-extrinsic/","scope":"","count":1},{"id":"BIB-062","title":"SEP — Analysis: Definitions and Descriptions","url":"https://plato.stanford.edu/archives/spr2024/entries/analysis/s1.html","scope":"","count":1},{"id":"BIB-063","title":"SEP — Scientific Explanation","url":"https://plato.stanford.edu/archives/Win2023/entries/scientific-explanation/","scope":"","count":1},{"id":"BIB-064","title":"IASP — Revised Definition of Pain (2020)","url":"https://www.iasp-pain.org/publications/iasp-news/iasp-announces-revised-definition-of-pain/","scope":"","count":4},{"id":"BIB-065","title":"Thomas Metzinger — Phenomenal transparency and cognitive self-reference (2003)","url":"https://doi.org/10.1023/b%3Aphen.0000007366.42918.eb","scope":"","count":1},{"id":"BIB-066","title":"SEP — Hume’s Moral Philosophy","url":"https://plato.stanford.edu/archives/spr2024/entries/hume-moral/","scope":"","count":2},{"id":"BIB-067","title":"SEP — Moore’s Moral Philosophy","url":"https://plato.stanford.edu/archives/fall2024/entries/moore-moral/","scope":"","count":1},{"id":"BIB-068","title":"SEP — Laws of Nature","url":"https://plato.stanford.edu/entries/laws-of-nature/","scope":"","count":3},{"id":"BIB-069","title":"Моральный натурализм и нормативность","url":"https://plato.stanford.edu/archives/fall2025/entries/naturalism-moral/","scope":"","count":1},{"id":"BIB-070","title":"Функция и дисфункция в биологии","url":"https://plato.stanford.edu/archives/spr2024/entries/teleology-biology/","scope":"","count":1},{"id":"BIB-071","title":"Родительство и деторождение","url":"https://plato.stanford.edu/archives/spr2024/entries/parenthood/","scope":"","count":1},{"id":"BIB-072","title":"IASP, Terminology","url":"https://www.iasp-pain.org/resources/terminology/","scope":"","count":2},{"id":"BIB-073","title":"Enoch, Shmagency Revisited (2015), аннотация","url":"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2607070","scope":"","count":1},{"id":"BIB-074","title":"Parenthood and Procreation, SEP, §2","url":"https://plato.stanford.edu/archives/sum2026/entries/parenthood/","scope":"","count":1},{"id":"BIB-075","title":"Benatar & Wasserman, Debating Procreation (2015), издательская аннотация","url":"https://academic.oup.com/book/25806","scope":"","count":2},{"id":"BIB-076","title":"Modal Logic","url":"https://plato.stanford.edu/entries/logic-modal/","scope":"Поисковые выдержки SEP; не исчерпывающее чтение","count":1},{"id":"BIB-077","title":"Deontic Logic","url":"https://plato.stanford.edu/entries/logic-deontic/","scope":"Поисковые выдержки SEP; не исчерпывающее чтение","count":1},{"id":"BIB-078","title":"Non-monotonic Logic","url":"https://plato.stanford.edu/entries/logic-nonmonotonic/","scope":"Поисковые выдержки SEP; не исчерпывающее чтение","count":1},{"id":"BIB-079","title":"Decision Theory","url":"https://plato.stanford.edu/entries/decision-theory/","scope":"Поисковые выдержки SEP; не исчерпывающее чтение","count":1},{"id":"BIB-080","title":"Imprecise Probabilities","url":"https://plato.stanford.edu/entries/imprecise-probabilities/","scope":"Поисковые выдержки SEP; не исчерпывающее чтение","count":1},{"id":"BIB-081","title":"Supervenience in Ethics, SEP, §1","url":"https://plato.stanford.edu/entries/supervenience-ethics/","scope":"","count":1},{"id":"BIB-082","title":"Moral Epistemology, SEP, §§4.1–4.2","url":"https://plato.stanford.edu/entries/moral-epistemology/","scope":"","count":1},{"id":"BIB-083","title":"Moral Realism, SEP","url":"https://plato.stanford.edu/entries/moral-realism/","scope":"","count":1},{"id":"BIB-084","title":"Moral Non-Naturalism, SEP","url":"https://plato.stanford.edu/entries/moral-non-naturalism/","scope":"","count":1},{"id":"BIB-085","title":"Railton, Moral Realism (1986), издательская выдержка","url":"https://www.cambridge.org/core/books/abs/facts-values-and-norms/moral-realism-1986/3AD2BBE355F45DCD74A46ABCCB8EDD8D","scope":"","count":1},{"id":"BIB-086","title":"Enoch, Taking Morality Seriously (2011), аннотация","url":"https://academic.oup.com/book/26213","scope":"","count":1},{"id":"BIB-087","title":"Morality and Evolutionary Biology, SEP","url":"https://plato.stanford.edu/entries/morality-biology/","scope":"","count":1},{"id":"BIB-088","title":"Fitting Attitude Theories of Value, SEP","url":"https://plato.stanford.edu/archives/sum2021/entries/fitting-attitude-theories/","scope":"","count":1},{"id":"BIB-089","title":"Physicalism (SEP, archived 2024)","url":"https://plato.stanford.edu/archives/fall2024/entries/physicalism/index.html","scope":"","count":1},{"id":"BIB-090","title":"Varieties of Modality (SEP)","url":"https://plato.stanford.edu/archives/spr2026/entries/modality-varieties/","scope":"","count":1},{"id":"BIB-091","title":"Causal Determinism (SEP)","url":"https://plato.stanford.edu/entries/determinism-causal/","scope":"","count":2},{"id":"BIB-092","title":"Chaos (SEP)","url":"https://plato.stanford.edu/entries/chaos/","scope":"","count":1},{"id":"BIB-093","title":"Metaphysical Grounding (SEP)","url":"https://plato.stanford.edu/archives/win2021/entries/grounding/","scope":"","count":1},{"id":"BIB-094","title":"Emergent Properties (SEP)","url":"https://plato.stanford.edu/entries/properties-emergent/","scope":"","count":1},{"id":"BIB-095","title":"Principle of Sufficient Reason (SEP)","url":"https://plato.stanford.edu/entries/sufficient-reason/","scope":"","count":1},{"id":"BIB-096","title":"Birch, Schnell & Clayton (2020). Dimensions of Animal Consciousness","url":"https://pubmed.ncbi.nlm.nih.gov/32830051/","scope":"","count":1},{"id":"BIB-097","title":"Seth & Bayne (2022). Theories of consciousness","url":"https://pubmed.ncbi.nlm.nih.gov/35505255/","scope":"","count":1},{"id":"BIB-098","title":"Cogitate Consortium (2025). Adversarial testing of GNWT and IIT","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC12137136/","scope":"","count":1},{"id":"BIB-099","title":"Metzinger (2003). Phenomenal transparency and cognitive self-reference","url":"https://doi.org/10.1023/B:PHEN.0000007366.42918.EB","scope":"","count":2},{"id":"BIB-100","title":"Metzinger (2017). Suffering","url":"https://www.blogs.uni-mainz.de/fb05philosophieengl/files/2013/07/Metzinger_Suffering_2017.pdf","scope":"","count":1},{"id":"BIB-101","title":"Berridge & Kringelbach (2015). Pleasure systems in the brain","url":"https://pubmed.ncbi.nlm.nih.gov/25950633/","scope":"","count":1},{"id":"BIB-102","title":"Rainville et al. (1999). Dissociation of sensory and affective dimensions of pain","url":"https://pubmed.ncbi.nlm.nih.gov/10467921/","scope":"","count":1},{"id":"BIB-103","title":"Personal Identity (Stanford Encyclopedia of Philosophy)","url":"https://plato.stanford.edu/entries/identity-personal/","scope":"","count":1},{"id":"BIB-104","title":"New York Declaration on Animal Consciousness (2024)","url":"https://sites.google.com/nyu.edu/nydeclaration/declaration","scope":"","count":1},{"id":"BIB-105","title":"Facts","url":"https://plato.stanford.edu/entries/facts/","scope":"","count":1},{"id":"BIB-106","title":"Metaphysical Grounding","url":"https://plato.stanford.edu/entries/grounding/","scope":"","count":1},{"id":"BIB-107","title":"Personal Identity and Ethics","url":"https://plato.stanford.edu/entries/identity-ethics/","scope":"","count":1},{"id":"BIB-108","title":"Prioritarianism as a Theory of Value","url":"https://plato.stanford.edu/entries/prioritarianism/","scope":"","count":1},{"id":"BIB-109","title":"Models in Science","url":"https://plato.stanford.edu/entries/models-science/","scope":"","count":1},{"id":"BIB-110","title":"The Meaning of Life","url":"https://plato.stanford.edu/archives/spr2022/entries/life-meaning/","scope":"","count":1},{"id":"BIB-111","title":"Nickerson (1998). Confirmation Bias","url":"https://doi.org/10.1037/1089-2680.2.2.175","scope":"Избирательный поиск и интерпретация свидетельств.","count":1},{"id":"BIB-112","title":"Kunda (1990). The Case for Motivated Reasoning","url":"https://pubmed.ncbi.nlm.nih.gov/2270237/","scope":"Цели точности и направленного вывода.","count":1},{"id":"BIB-113","title":"Johansson et al. (2006). Choice blindness and introspection","url":"https://pubmed.ncbi.nlm.nih.gov/17049881/","scope":"Ограниченность доступа к причинам собственного выбора; не клиническая диагностика.","count":1},{"id":"BIB-114","title":"Vaughan (1996). The Challenger Launch Decision — обзор AHRQ","url":"https://psnet.ahrq.gov/issue/challenger-launch-decision-risky-technology-culture-and-deviance-nasa","scope":"Организационная нормализация отклонений; аналогия, не доказательство общего закона психики.","count":1},{"id":"BIB-115","title":"Sharot et al. (2011). How unrealistic optimism is maintained in the face of reality","url":"https://www.nature.com/articles/nn.2949","scope":"Асимметрия обновления ожиданий.","count":1},{"id":"BIB-116","title":"Shah et al. (2016). A pessimistic view of optimistic belief updating","url":"https://pubmed.ncbi.nlm.nih.gov/27542765/","scope":"Методологическое возражение: возможные статистические артефакты.","count":1},{"id":"BIB-117","title":"Garrett & Sharot (2017). Optimistic update bias holds firm","url":"https://pubmed.ncbi.nlm.nih.gov/27836628/","scope":"Ответ на критику и проверки устойчивости.","count":1},{"id":"BIB-118","title":"Rozin & Royzman (2001). Negativity Bias, Negativity Dominance, and Contagion","url":"https://doi.org/10.1207/S15327957PSPR0504_2","scope":"Таксономия повышенного веса негативной информации.","count":1},{"id":"BIB-119","title":"Balliet, Wu & De Dreu (2014). Ingroup favoritism in cooperation","url":"https://pubmed.ncbi.nlm.nih.gov/25222635/","scope":"Метаанализ межгруппового предпочтения.","count":1},{"id":"BIB-120","title":"Neal & Watling Neal (2022). Prevalence, age of decision, and interpersonal warmth judgements of childfree adults","url":"https://www.nature.com/articles/s41598-022-15728-z","scope":"Выборка взрослых Мичигана; оценки межличностной теплоты.","count":1},{"id":"BIB-121","title":"Watling Neal & Neal (2023). Replication and extensions","url":"https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0283301","scope":"Повторное исследование в Мичигане, не универсальная выборка.","count":1},{"id":"BIB-122","title":"Bandura (1999). Moral disengagement in the perpetration of inhumanities","url":"https://pubmed.ncbi.nlm.nih.gov/15661671/","scope":"Механизмы ослабления этического самоконтроля, не диагноз групп.","count":1},{"id":"BIB-123","title":"Lord, Lepper & Preston (1984). Considering the opposite","url":"https://pubmed.ncbi.nlm.nih.gov/6527215/","scope":"Экспериментальная стратегия рассмотрения противоположной гипотезы.","count":1},{"id":"BIB-124","title":"Stanovich, West & Toplak (2013). Myside Bias, Rational Thinking, and Intelligence","url":"https://journals.sagepub.com/doi/full/10.1177/0963721413480174","scope":"Смещение в пользу своей позиции и рациональное мышление.","count":1},{"id":"BIB-125","title":"Hedonism, SEP","url":"https://plato.stanford.edu/entries/hedonism/","scope":"","count":1},{"id":"BIB-126","title":"Social Choice Theory, SEP, §4 (measurability and comparability)","url":"https://plato.stanford.edu/entries/social-choice/","scope":"","count":1},{"id":"BIB-127","title":"Incommensurable Values, SEP","url":"https://plato.stanford.edu/entries/value-incommensurable/","scope":"","count":1},{"id":"BIB-128","title":"The Wrong Inference to the Best Explanation for Anti-Natalism (2025)","url":"https://link.springer.com/article/10.1007/s11158-025-09716-z","scope":"","count":1},{"id":"BIB-129","title":"Painful differences between different pain scale assessments (2024)","url":"https://pubmed.ncbi.nlm.nih.gov/38502712/","scope":"","count":1},{"id":"BIB-130","title":"Berridge & Kringelbach, Pleasure Systems in the Brain (2015)","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4425246/","scope":"","count":1},{"id":"BIB-131","title":"SEP, Teleological Notions in Biology","url":"https://plato.stanford.edu/entries/teleology-biology/","scope":"","count":1},{"id":"BIB-132","title":"Birch, The Edge of Sentience (2024)","url":"https://academic.oup.com/book/57949","scope":"","count":1},{"id":"BIB-133","title":"SEP, Doing vs. Allowing Harm","url":"https://plato.stanford.edu/entries/doing-allowing/index.html","scope":"","count":1},{"id":"BIB-134","title":"Cogitate Consortium, Nature, 2025","url":"https://doi.org/10.1038/s41586-025-08888-1","scope":"","count":1},{"id":"BIB-135","title":"Frank, 2012, Natural selection IV: The Price equation","url":"https://doi.org/10.1111/j.1420-9101.2012.02498.x","scope":"","count":1},{"id":"BIB-136","title":"Watling Neal & Neal, 2022","url":"https://doi.org/10.1038/s41598-022-15728-z","scope":"","count":1},{"id":"BIB-137","title":"Watling Neal & Neal, 2023","url":"https://doi.org/10.1371/journal.pone.0283301","scope":"","count":1},{"id":"BIB-138","title":"Bostrom, 2013","url":"https://doi.org/10.1111/1758-5899.12002","scope":"","count":1},{"id":"BIB-139","title":"Centre for Reducing Suffering, S-risk FAQ","url":"https://centerforreducingsuffering.org/research/faq/","scope":"","count":1}],"amendments":[{"id":"REV-01","priority":"P1","title":"Объективная ценность и локальная антиценность","status":"исследование","address":"§23.2; §21.2; §30.6.1","pdf4":"193","pdf5":"192","print5":"191","ru5_note":"Основной пример на PDF 193; три уровня уже перечислены в §22.4 (PDF 189).","anchor":"Реляционная объективность и почему агонию нельзя свести к","operation":"Дополнение после определения","proposal":"Реляционная объективность устанавливает, что характеристика состояния принадлежит самому отношению между переживанием и его носителем, а не произвольному суждению наблюдателя. Внутренняя неблагоприятность мучительного аспекта опыта — самостоятельный аксиологический тезис. Его аргументативная опора состоит в том, что изменение внешней полезности состояния не устраняет сам неблагоприятный аспект. Это основание не следует смешивать с доказательством полной метаэтической теории.","acceptance":"Развести истинность факта, ценностную гипотезу и практическое основание; ответить на конкурирующее объяснение."},{"id":"REV-02","priority":"P1","title":"Нормативный мост и защитное ограничение","status":"исследование","address":"§30.6.1; §32.4.2","pdf4":"261","pdf5":"260","print5":"259","ru5_note":"Посылка 3 на PDF 260; схема 05 и ответ об обычных рисках — PDF 261–262.","anchor":"Посылка 3 (Принцип антижертвенного защитного порога).","operation":"Пояснение статуса посылки","proposal":"Первоначальное практическое основание против вреда и категорическое ограничение представляют разные по силе нормативные утверждения. Аргументация в пользу ограничения требует ответа на вопрос, почему ожидаемые выгоды не создают достаточных полномочий в указанном классе решений. Согласованность вывода с посылкой не заменяет её независимого обоснования.","acceptance":"Предъявить независимые основания обеих ступеней; не выдавать условную валидность за доказательство посылки."},{"id":"REV-03","priority":"P1","title":"Долг рациональности и метарациональность","status":"исследование","address":"§4.6; §30.6.1","pdf4":"243","pdf5":"242","print5":"241","ru5_note":"Заключительный переход на PDF 244; словарь оснований — §4.6 (PDF 65–66).","anchor":"двухпроходная редукция и предписание рациональности","operation":"Дополнение к §30.6.1","proposal":"Внутренняя рациональная критика выявляет несогласованность между признанным принципом и его применением. Внешняя критика исследует основания самого принципа. Дефект применения уже признанного критерия не равнозначен доказательству безусловной обязанности принять этот критерий.","acceptance":"Дать отдельный ответ на отказ от критерия, не повторяя его в качестве посылки."},{"id":"REV-04","priority":"P1","title":"Область абсолютности","status":"решение автора","address":"§33.4.4; §33.5.4; §32.4.2","pdf4":"278","pdf5":"278","print5":"277","ru5_note":"Сопоставить §§33.4.3–33.4.4 (PDF 272–273), §33.5.1 (274), глоссарий (501).","anchor":"Абсолютность антинатализма выражает здесь универсальность самого проверочного критерия","operation":"Согласование определения","proposal":"Эфилизм — философия абсолютного антинатализма. Абсолютность здесь характеризует космологический и субстратно-нейтральный охват этического стандарта. Объём заключения конкретного аргумента определяется его посылками и областью применимости. Универсальный стандарт не равнозначен эмпирическому всеведению или полномочию ограничивать автономию других субъектов.","acceptance":"Автор определяет, означает ли абсолютность универсальный стандарт или безусловный запрет; второй вариант требует самостоятельного доказательства охвата."},{"id":"REV-05","priority":"P1","title":"Согласие, авторизация и чистое создание","status":"правка","address":"§31.3; §32.4.2","pdf4":"251","pdf5":"250","print5":"249","ru5_note":"Схема 06 на PDF 249; у тезиса Шиффрин на PDF 250 первоисточник — [S32].","anchor":"Предварительное согласие невозможно; предшествующего интереса для спасения нет","operation":"Пояснение после сравнительной таблицы","proposal":"Невозможность предварительного согласия отличается от отказа дать согласие. Последующее одобрение является значимым свидетельством актуального отношения субъекта к собственной жизни, но не становится предварительным разрешением. Основания помощи существующему субъекту рассматриваются отдельно; оценка создания не даёт полномочий принуждать других к репродуктивному решению.","acceptance":"Различены создание, добровольный выбор и помощь существующему субъекту; нет ретроспективной подмены согласия."},{"id":"REV-06","priority":"P1","title":"Предохранитель, неопределённость и бремя доказательства","status":"правка","address":"§32.1–4; приложение A","pdf4":"255","pdf5":"255","print5":"254","ru5_note":"Проверить повтор в §34.3.3 (PDF 285).","anchor":"Почему снятие отдельного запрета не даёт разрешения","operation":"Дополнение","proposal":"Следует различать причинно обоснованную возможность неблагоприятного исхода, неизвестность его вероятности и доказанное исключение соответствующего механизма. Эпистемическое бремя лежит на стороне, предъявляющей утверждение; практическое обоснование зависит от затронутых интересов и доступных альтернатив. Отсутствие доказанного запрета само по себе не доказывает допустимость, как и отсутствие доказанной допустимости само по себе не доказывает запрет.","acceptance":"Не выводить запрет из незнания; не выводить разрешение из отсутствия доказанного запрета."},{"id":"REV-07","priority":"P1","title":"Профилактика, коррекция и совместимость обязанностей","status":"правка","address":"§29–30; глава 48; приложение A","pdf4":"234","pdf5":"233","print5":"232","ru5_note":"Связывать с главой 41 о помощи живущим.","anchor":"Под генератором понимается многоуровневый комплекс безличных и социальных процессов","operation":"Дополнение к §29.1","proposal":"Профилактика и коррекция различаются по предмету, но не исключают друг друга. Отказ от необязательного создания нового риска не отменяет обязанностей перед существующими субъектами. При конфликте требований необходимо проверять доступные альтернативы, добровольность, безопасность и сохранение автономии; цель профилактики не оправдывает причинение вреда существующим существам.","acceptance":"Ни один вывод о создании не становится основанием вредить существующим субъектам; конфликт требований не скрыт."},{"id":"REV-08","priority":"P1","title":"Несравнительный вред и неидентичность","status":"правка","address":"§33.3.4","pdf4":"270","pdf5":"269","print5":"268","ru5_note":"Третий вопрос внутри раздела на PDF 270.","anchor":"Проблема неидентичности и три вопроса о вреде","operation":"Пояснение после трёх вопросов","proposal":"Причинная связь решения с состоянием субъекта, неблагоприятность этого состояния, сравнительное ухудшение положения и нарушение нормативного ограничения — четыре разные оценки. Проблема неидентичности затрагивает прежде всего сравнительное измерение; она не отменяет необходимости самостоятельной проверки остальных трёх.","acceptance":"Каждая оценка имеет собственный критерий; не предполагается сравнение переживания с несуществованием."},{"id":"REV-09","priority":"P2","title":"Квазипозитивность и нулевая сумма","status":"правка","address":"§26.1–3; §33.5.4; PDF 191","pdf4":"191","pdf5":"189","print5":"188","ru5_note":"Сверить с §§26.2 и 26.4 (PDF 211, 214).","anchor":"облегчение и удовольствие всегда работают как снятие или обслуживание предварительно созданного напряжения","operation":"Замена только выделенного фрагмента","proposal":"облегчение связано с устранением неблагоприятного состояния, а значительная часть удовольствий функционально связана с обслуживанием или преобразованием уже существующей системы нужд; при этом вопрос о самостоятельном положительном опыте рассматривается в главе 26","acceptance":"Критика создания не зависит от недоказанного универсального нулевого баланса."},{"id":"REV-10","priority":"P2","title":"Соизмеримость, агрегирование и компенсация","status":"правка","address":"§26.5; §27; приложение A","pdf4":"217","pdf5":"216","print5":"215","ru5_note":"Разбор единицы измерения и вопроса полномочий.","anchor":"Границы гедонической арифметики, минимальная асимметрия","operation":"Дополнение: числовой пример","proposal":"Пусть исход X имеет оценки (0, 2), а Y — (1, 0) по двум индивидуальным шкалам. При независимом положительном масштабировании a и b разность сумм X и Y равна 2b − a. Её знак может измениться при неизменности индивидуальных предпочтений. Пример устанавливает необходимость обосновать общую шкалу для данного агрегирования, но не доказывает невозможность любых межсубъектных сравнений. Неотменимость прошлого вреда, компенсация и допустимость действия остаются разными вопросами.","acceptance":"Сумма не подменяет права; пример не объявлен эмпирической невозможностью всякого сравнения."},{"id":"REV-11","priority":"P2","title":"Первичный факт и Первичная Ошибка","status":"правка","address":"§7.4; §10.5–7; §24.1–4","pdf4":"119","pdf5":"119","print5":"118","ru5_note":"Историческая помета (Fact Prime, ENC:O07); не путать с фразой на PDF 108.","anchor":"Основание без временного «раньше»","operation":"Краткая справка","proposal":"В исторической методологии эфилизма вопрос о предельном основании реальности обозначался как Fact Prime — Первичный факт. Это открытый вопрос о фундаментальности, необходимости и возможной уникальности основания, а не утверждение о доказанном единственном законе. Первичная Ошибка (глава 24) является самостоятельным оценочным диагнозом причинной архитектуры.","acceptance":"Одна краткая справка и перекрёстная ссылка; не новая глава и не космологическая теорема."},{"id":"REV-12","priority":"P2","title":"Тождество и устойчивость ценности","status":"правка","address":"§21; §23.2","pdf4":"185","pdf5":"184","print5":"183","ru5_note":"Событие и поздний отчёт на PDF 183–184; §34.3.4 (PDF 285).","anchor":"Феноменальная непосредственность против эпистемической","operation":"Дополнение","proposal":"Истинность утверждения о состоявшемся переживании не меняется лишь потому, что субъект позднее иначе оценивает его или забывает о нём. Это не означает неизменность текущего переживания, одинаковость интенсивности разных состояний или существование общей единицы их измерения.","acceptance":"Не подменять объективность количественной измеримостью."},{"id":"REV-13","priority":"P2","title":"Замкнутое понятие и объяснительный аудит","status":"правка","address":"§4.2–13","pdf4":"71","pdf5":"72","print5":"71","ru5_note":"Специальное определение анализандума в §4.1 (PDF 60).","anchor":"Объяснительный аудит и предел вывода","operation":"Добавление одного примера","proposal":"Если две конкурирующие гипотезы приписывают одному наблюдению одинаковую ненулевую вероятность, оно само по себе не изменяет отношение их вероятностей. Объяснительная достаточность требует обозначить вопрос, область применения, свидетельства и рассмотренные альтернативы. Практическое устранение явления не тождественно его объяснению. Анализандум употребляется в этой книге в специальном, а не общепринятом академическом смысле.","acceptance":"Один пример, а не второй протокол; не приписывать академическим терминам специальное значение без маркировки."},{"id":"REV-14","priority":"P2","title":"Истина, феноменальный факт и отчёт","status":"сохранить","address":"§1.2; §2.4; §21.2; §23.2","pdf4":"32","pdf5":"32","print5":"31","ru5_note":"Сопоставлять с четырьмя уровнями в главе 21.","anchor":"Какой тезис об истине нужен этой книге","operation":"Без новой вставки","proposal":"Сохранить существующую архитектуру корреспондентного реализма; при вычитке проверить, что истинность, обоснованность, уверенность и наличие феноменального факта не используются как синонимы. Дополнительный абзац не требуется: соответствующие различия уже раскрыты в главах 1–2 и 21.","acceptance":"Отсутствие знания не отождествляется с отсутствием факта."},{"id":"REV-15","priority":"P2","title":"Нигилизм и нормативный разрыв","status":"правка","address":"§23.5; §25; §30.6.1","pdf4":"196","pdf5":"195","print5":"194","ru5_note":"Для положительного обоснования нормы — §30.6.1.","anchor":"Телеологический нигилизм не ведёт к аксиологическому нигилизму","operation":"Дополнение к разграничению","proposal":"Отрицание космической цели не устанавливает отсутствия ценности опыта. Апелляция к естественности, разрыв между описанием и предписанием и вопрос о сведении ценности к естественным свойствам представляют разные философские задачи. Опровержение одного аргумента не является доказательством противоположной нормативной позиции.","acceptance":"Негативная критика не выдается за позитивное обоснование нормы."},{"id":"REV-16","priority":"P2","title":"Физикализм, законы и уровни организации","status":"правка","address":"§7.4–7.7; §8; §9; §11.4","pdf4":"98","pdf5":"97","print5":"96","ru5_note":"Параграф продолжается на PDF 98.","anchor":"Минимальная номологическая необходимость","operation":"Добавление контрпримера","proposal":"Пусть в мире A действует ограничение L1, а в мире B — только L2. В каждом мире существует ограничение, но из этого не следует существование одного конкретного ограничения, общего для обоих. Необходимость некоторого ограничения отличается от необходимости определённого закона.","acceptance":"Не выводить конкретные необходимые законы или единственную интерпретацию квантовой механики."},{"id":"REV-17","priority":"P2","title":"Сентиентность и нейрофилософские модели","status":"правка","address":"§19–21","pdf4":"167","pdf5":"166","print5":"165","ru5_note":"Прозрачность самомодели: §§20.5, 21.2.1 (PDF 175–176, 184); Метцингер [S05].","anchor":"Почему между регуляцией и страданием нельзя делать словесный","operation":"Дополнение к главе 19/20","proposal":"Нейрофизиологические и поведенческие показатели служат свидетельствами опыта, но не тождественны самому опыту. Сравнительное испытание IIT и GNWT (Cogitate Consortium, 2025) поставило под вопрос отдельные предсказания обеих моделей; это не отменяет физической зависимости сознания и не устанавливает окончательного механизма его реализации. Феноменальная прозрачность в теории Метцингера не означает истинности внешнего содержания.","acceptance":"Проверить первоисточник Метцингера и актуальность исследования Cogitate до публикации."},{"id":"REV-18","priority":"P2","title":"Численное тождество субъекта","status":"правка","address":"PDF 177; §20","pdf4":"177","pdf5":"175","print5":"174","ru5_note":"Отдельные носители сопоставимой уязвимости.","anchor":"функционально каждое новое брошенное в мир сознание — то же самое беззащитное «Я», запертое один на один с болью.","operation":"Замена предложения/части предложения","proposal":"функциональное сходство разных сознательных систем означает возможность сходной уязвимости к переживаемому вреду, но не численное тождество их субъектов.","acceptance":"Проверить оригинальную фразу и соседние абзацы; не выводить общую субъективность из сходства."},{"id":"REV-19","priority":"P2","title":"Абиогенез и причинная логика отбора","status":"правка","address":"§14.7; §15.3; глава 16","pdf4":"144","pdf5":"143","print5":"142","ru5_note":"Смена стадий на PDF 144; §16.5 (PDF 153) отделяет благополучие от приспособленности.","anchor":"Абиогенез как историческая область переходов","operation":"Дополнение и пример к главе 16","proposal":"Последовательность предбиологических переходов остаётся предметом исследования. Самоподдержание, репликация и наследуемость не равнозначны сентиентности. Уравнение Прайса позволяет разграничить изменение среднего признака вследствие дифференциального репродуктивного вклада и изменения при передаче. Знак изменения показателя благополучия зависит от ковариации с репродуктивным вкладом и от изменений при передаче; заранее он не определён.","acceptance":"Отделить репродуктивный успех от благополучия, проверить научные ссылки."},{"id":"REV-20","priority":"P2","title":"Нужда, биологическая функция и первичная дисфункция","status":"правка","address":"§17–19; PDF 155; §24","pdf4":"155","pdf5":"154","print5":"153","ru5_note":"Согласовать с §§17.1–17.2 и §24.1.","anchor":"Следовательно, репликация ДНК — это не функция, а «дисфункция, которая просто поддерживает саму себя».","operation":"Замена предложения","proposal":"Репликация ДНК успешно выполняет биологическую функцию воспроизведения наследуемой организации, но может одновременно поддерживать проблемную причинную архитектуру. В специальном оценочном смысле первичная дисфункция относится именно к этой архитектуре относительно сентиоцентрического критерия, а не к нарушению биологической функции как таковой.","acceptance":"Сохранить реальные кооперативные процессы и различие функциональной нужды и переживаемого вреда."},{"id":"REV-21","priority":"P2","title":"Симметрия когнитивного аудита","status":"правка","address":"§3.3; §34.1–4; §28.1","pdf4":"286","pdf5":"285","print5":"284","ru5_note":"Симметрия когнитивного аудита.","anchor":"Мотивированное мышление и избирательное обновление убеждений","operation":"Добавление теста","proposal":"При одинаковой релевантности и качестве свидетельств смена групповой принадлежности источника не должна сама по себе менять критерий оценки. Обвинение в оптимистическом или негативном смещении требует показать отклонение от обоснованного стандарта; нормативный вес тяжёлого исхода не тождествен ошибочной оценке его вероятности.","acceptance":"Не диагностировать убеждения по содержанию вывода; не применять формальные примеры как психометрический тест."},{"id":"REV-22","priority":"P2","title":"Рационализация и гипернормализация","status":"правка","address":"§34.3–4; PDF 293","pdf4":"293","pdf5":"291","print5":"290","ru5_note":"Устранить повтор заголовка о Беккере [S175].","anchor":"Защитное вытеснение страха смерти (Э. Беккер [S175]) и перенос ярости на вестника:[S175]) и перенос ярости на вестника:","operation":"Замена повторённого заголовка и уточнение ниже","proposal":"Защитное вытеснение страха смерти (Э. Беккер [S175]) и перенос ярости на вестника:","acceptance":"Для конкретного случая требуются независимые свидетельства; частота не означает допустимость."},{"id":"REV-23","priority":"P3","title":"Социальные нормы и парохиализм","status":"правка","address":"§35.1; §30.1","pdf4":"294","pdf5":"292","print5":"291","ru5_note":"Контекст исследований Мичигана (2022, 2023).","anchor":"социальной асимметрией обоснования","operation":"Добавление эмпирического контекста","proposal":"Исследование Watling Neal и Neal (2022) и его репликация (2023) на выборках взрослых жителей Мичигана выявили различия в оценках межличностной теплоты между родителями и добровольно бездетными людьми. Эти результаты характеризуют конкретный социальный контекст; добровольная бездетность не тождественна антинатализму, а групповая оценка не устанавливает истинность этической позиции.","acceptance":"Проверить выборку, эффект и репликацию; не обобщать на всё человечество."},{"id":"REV-24","priority":"P3","title":"Терминология рисков","status":"правка","address":"глава 46; справочный аппарат","pdf4":"376","pdf5":"377","print5":"376","ru5_note":"Термин s-risk введён в §45.3 (PDF 370); не опираться на [S38; S85] как на определение.","anchor":"Два смысла универсальности, три задачи завершения","operation":"Справочное примечание","proposal":"Риски масштабного страдания и экзистенциальные риски описывают разные измерения возможных последствий. Первое понятие акцентирует масштаб переживаемого вреда, второе — угрозу существованию и долгосрочным возможностям человечества в определении Бострома. Категории могут пересекаться, но не тождественны; классификация риска не предоставляет полномочий причинять вред или ограничивать права существующих субъектов.","acceptance":"Проверить дефиниции по первоисточникам; не выводить практических разрешений из классификации."}]};
+
+    const state = {
+      tab: 'lexicon',
+      query: '',
+      filter: 'all',
+      openIds: new Set(),
+      allExpanded: false
+    };
+
+    const elSearch = document.getElementById('searchInput');
+    const elClear = document.getElementById('clearSearch');
+    const elTabs = document.getElementById('tabsBar');
+    const elChips = document.getElementById('filterChips');
+    const elBanner = document.getElementById('sectionBanner');
+    const elCards = document.getElementById('cardsContainer');
+    const elToggleAll = document.getElementById('toggleAllBtn');
+    const elToast = document.getElementById('toast');
+
+    function esc(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function showToast(msg) {
+      elToast.textContent = msg;
+      elToast.classList.add('show');
+      clearTimeout(showToast._t);
+      showToast._t = setTimeout(() => elToast.classList.remove('show'), 1800);
+    }
+
+    function copyLink(id) {
+      const base = window.location.href.split('#')[0];
+      const url = base + '#' + encodeURIComponent(id);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => showToast('Ссылка на ' + id + ' скопирована')).catch(() => fallbackCopy(url, id));
+      } else {
+        fallbackCopy(url, id);
+      }
+    }
+
+    function fallbackCopy(text, id) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); showToast('Ссылка на ' + id + ' скопирована'); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+
+    function matchQuery(item, tab, q) {
+      if (!q) return true;
+      const hay = JSON.stringify(item).toLowerCase();
+      return hay.includes(q);
+    }
+
+    function getFiltered(tab) {
+      const q = state.query.trim().toLowerCase();
+      let list = DATA[tab].filter(item => matchQuery(item, tab, q));
+      if (tab === state.tab && state.filter !== 'all') {
+        if (tab === 'lexicon') list = list.filter(x => x.group === state.filter);
+        else if (tab === 'arguments') list = list.filter(x => x.status === state.filter);
+        else if (tab === 'amendments') list = list.filter(x => x.priority === state.filter);
+      }
+      return list;
+    }
+
+    function updateCounts() {
+      const q = state.query.trim().toLowerCase();
+      ['lexicon', 'principles', 'arguments', 'objections', 'bibliography', 'amendments'].forEach(t => {
+        const cnt = DATA[t].filter(item => matchQuery(item, t, q)).length;
+        const badge = document.getElementById('cnt-' + t);
+        if (badge) badge.textContent = cnt;
+      });
+    }
+
+    function renderChips() {
+      let options = [];
+      if (state.tab === 'lexicon') {
+        const groups = Array.from(new Set(DATA.lexicon.map(x => x.group))).sort();
+        options = ['all', ...groups];
+      } else if (state.tab === 'arguments') {
+        const statuses = Array.from(new Set(DATA.arguments.map(x => x.status)));
+        options = ['all', ...statuses];
+      } else if (state.tab === 'amendments') {
+        options = ['all', 'P1', 'P2', 'P3'];
+      }
+
+      if (!options.length) {
+        elChips.innerHTML = '';
+        return;
+      }
+
+      elChips.innerHTML = options.map(opt => {
+        const label = opt === 'all' ? 'Все' : opt;
+        const active = state.filter === opt ? ' active' : '';
+        return '<button type="button" class="chip' + active + '" data-filter="' + esc(opt) + '">' + esc(label) + '</button>';
+      }).join('');
+    }
+
+    function renderBanner() {
+      if (state.tab === 'amendments') {
+        elBanner.innerHTML = '<div class="banner-note"><strong>Рабочая очередь редактора:</strong> это предложения для доработки рукописи, а не действующий текст книги. Указаны актуальные страницы PDF для редакции <code>ru(5)</code> (536 стр.) и старые адреса <code>ru(4)</code> (529 стр.).</div>';
+      } else {
+        elBanner.innerHTML = '';
+      }
+    }
+
+    function renderCardBody(item, tab) {
+      if (tab === 'lexicon') {
+        let html = '<div class="field"><div class="field-label">Определение</div><div>' + esc(item.def) + '</div></div>';
+        if (item.bound) html += '<div class="field"><div class="field-label">Граница применения</div><div>' + esc(item.bound) + '</div></div>';
+        if (item.app) html += '<div class="field"><div class="field-label">Применение</div><div>' + esc(item.app) + '</div></div>';
+        if (item.pages && item.pages.length) html += '<div class="field"><div class="field-label">Страницы в книге (ru4)</div><div>PDF ' + esc(item.pages.join(', ')) + '</div></div>';
+        if (item.args && item.args.length) {
+          html += '<div class="ref-row"><span class="field-label" style="margin:0;">Связанные аргументы:</span>' +
+            item.args.map(a => '<button type="button" class="ref-chip" data-jump="' + esc(a) + '">' + esc(a) + '</button>').join('') + '</div>';
+        }
+        html += '<button type="button" class="copy-btn" data-copy="' + esc(item.id) + '">Копировать ссылку</button>';
+        return html;
+      }
+
+      if (tab === 'principles') {
+        let html = '<div class="field"><div class="field-label">Формулировка принципа</div><div>' + esc(item.body) + '</div></div>';
+        if (item.related) html += '<div class="field"><div class="field-label">Связанное досье</div><div>' + esc(item.related) + '</div></div>';
+        html += '<button type="button" class="copy-btn" data-copy="' + esc(item.id) + '">Копировать ссылку</button>';
+        return html;
+      }
+
+      if (tab === 'arguments') {
+        let html = '<div class="field"><div class="field-label">Вывод</div><div>' + esc(item.conclusion) + '</div></div>';
+        if (item.rule) html += '<div class="field"><div class="field-label">Правило перехода</div><div>' + esc(item.rule) + '</div></div>';
+        if (item.objection) html += '<div class="field"><div class="field-label">Сильное возражение</div><div>' + esc(item.objection) + '</div></div>';
+        if (item.reply) html += '<div class="field"><div class="field-label">Ответ</div><div>' + esc(item.reply) + '</div></div>';
+        if (item.limit) html += '<div class="field"><div class="field-label">Граница доказательности</div><div>' + esc(item.limit) + '</div></div>';
+        if (item.depends && item.depends.length) {
+          html += '<div class="ref-row"><span class="field-label" style="margin:0;">Опирается на:</span>' +
+            item.depends.map(d => '<button type="button" class="ref-chip" data-jump="' + esc(d) + '">' + esc(d) + '</button>').join('') + '</div>';
+        }
+        html += '<button type="button" class="copy-btn" data-copy="' + esc(item.id) + '">Копировать ссылку</button>';
+        return html;
+      }
+
+      if (tab === 'objections') {
+        let html = '<div class="field"><div class="field-label">Суть возражения</div><div>' + esc(item.objection) + '</div></div>';
+        if (item.reply) html += '<div class="field"><div class="field-label">Ответ и разграничение</div><div>' + esc(item.reply) + '</div></div>';
+        if (item.obligation) html += '<div class="field"><div class="field-label">Открытое обязательство</div><div>' + esc(item.obligation) + '</div></div>';
+        if (item.survives) html += '<div class="field"><div class="field-label">Что сохраняет силу</div><div>' + esc(item.survives) + '</div></div>';
+        const refs = [...(item.principles || []), ...(item.arguments || [])];
+        if (refs.length) {
+          html += '<div class="ref-row"><span class="field-label" style="margin:0;">Связанные узлы:</span>' +
+            refs.map(r => '<button type="button" class="ref-chip" data-jump="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div>';
+        }
+        html += '<button type="button" class="copy-btn" data-copy="' + esc(item.id) + '">Копировать ссылку</button>';
+        return html;
+      }
+
+      if (tab === 'bibliography') {
+        let html = '<div class="field"><div class="field-label">Ссылка на первоисточник</div><div><a href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.url) + '</a></div></div>';
+        if (item.scope) html += '<div class="field"><div class="field-label">Контекст использования</div><div>' + esc(item.scope) + '</div></div>';
+        html += '<button type="button" class="copy-btn" data-copy="' + esc(item.id) + '">Копировать ссылку</button>';
+        return html;
+      }
+
+      if (tab === 'amendments') {
+        let html = '';
+        if (item.pdf5) {
+          html += '<div class="field"><div class="field-label">Актуальный адрес (книга ru5, 536 стр.)</div><div>' + esc(item.address) + ' · <strong>PDF ' + esc(item.pdf5) + '</strong> (печ. ' + esc(item.print5) + ') · старый адрес ru4: PDF ' + esc(item.pdf4) + '</div></div>';
+        } else {
+          html += '<div class="field"><div class="field-label">Адрес в книге</div><div>' + esc(item.address) + ' · PDF ' + esc(item.pdf4) + '</div></div>';
+        }
+        if (item.ru5_note) html += '<div class="field"><div class="field-label">Сверка по актуальной рукописи</div><div>' + esc(item.ru5_note) + '</div></div>';
+        if (item.anchor) html += '<div class="field"><div class="field-label">Текстовый якорь</div><div>«' + esc(item.anchor) + '»</div></div>';
+        if (item.proposal) html += '<div class="field"><div class="field-label">Проект уточнения</div><div>' + esc(item.proposal) + '</div></div>';
+        if (item.acceptance) html += '<div class="field"><div class="field-label">Критерий приёмки</div><div>' + esc(item.acceptance) + '</div></div>';
+        html += '<button type="button" class="copy-btn" data-copy="' + esc(item.id) + '">Копировать ссылку</button>';
+        return html;
+      }
+      return '';
+    }
+
+    function renderCards() {
+      const list = getFiltered(state.tab);
+      elToggleAll.textContent = state.allExpanded ? 'Свернуть все' : 'Раскрыть все';
+
+      if (!list.length) {
+        elCards.innerHTML = '<div class="empty-state">Ничего не найдено по запросу. Попробуйте другое слово или сбросьте фильтр.</div>';
+        return;
+      }
+
+      elCards.innerHTML = list.map(item => {
+        const isOpen = state.allExpanded || state.openIds.has(item.id);
+        let badges = '<span class="badge">' + esc(item.id) + '</span>';
+        let sub = '';
+
+        if (state.tab === 'lexicon') {
+          badges += '<span class="badge">' + esc(item.group) + '</span>';
+          if (item.status) badges += '<span class="badge badge-ok">' + esc(item.status) + '</span>';
+          sub = item.en ? item.en : '';
+        } else if (state.tab === 'principles') {
+          if (item.status) badges += '<span class="badge badge-warn">' + esc(item.status) + '</span>';
+        } else if (state.tab === 'arguments') {
+          badges += '<span class="badge badge-warn">' + esc(item.status) + '</span>';
+          sub = item.conclusion;
+        } else if (state.tab === 'objections') {
+          sub = item.objection;
+        } else if (state.tab === 'bibliography') {
+          badges += '<span class="badge">упоминаний: ' + esc(item.count) + '</span>';
+          sub = item.url;
+        } else if (state.tab === 'amendments') {
+          const pClass = item.priority === 'P1' ? 'badge-p1' : 'badge-warn';
+          badges += '<span class="badge ' + pClass + '">' + esc(item.priority) + '</span>';
+          badges += '<span class="badge">' + esc(item.status) + '</span>';
+          sub = item.address + (item.pdf5 ? ' · PDF ' + item.pdf5 + ' (ru5)' : '');
+        }
+
+        return (
+          '<article class="item-card' + (isOpen ? ' open' : '') + '" id="card-' + esc(item.id) + '">' +
+            '<button type="button" class="item-summary" data-toggle="' + esc(item.id) + '">' +
+              '<div class="item-head">' +
+                '<div class="item-badges">' + badges + '</div>' +
+                '<div class="item-title">' + esc(item.title) + '</div>' +
+                (sub ? '<div class="item-sub">' + esc(sub.length > 140 ? sub.slice(0, 140) + '…' : sub) + '</div>' : '') +
+              '</div>' +
+              '<span class="chevron" aria-hidden="true">▾</span>' +
+            '</button>' +
+            '<div class="item-body">' + renderCardBody(item, state.tab) + '</div>' +
+          '</article>'
+        );
+      }).join('');
+    }
+
+    function renderAll() {
+      updateCounts();
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === state.tab);
+      });
+      renderChips();
+      renderBanner();
+      renderCards();
+    }
+
+    function jumpToId(rawId) {
+      const id = decodeURIComponent(rawId || '').replace(/^#/, '').trim();
+      if (!id) return;
+      for (const tab of ['lexicon', 'principles', 'arguments', 'objections', 'bibliography', 'amendments']) {
+        const found = DATA[tab].find(x => x.id.toLowerCase() === id.toLowerCase());
+        if (found) {
+          state.tab = tab;
+          state.filter = 'all';
+          state.query = '';
+          elSearch.value = '';
+          elClear.classList.remove('visible');
+          state.openIds.add(found.id);
+          renderAll();
+          const card = document.getElementById('card-' + found.id);
+          if (card) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.classList.add('highlight');
+            setTimeout(() => card.classList.remove('highlight'), 2200);
+          }
+          return;
+        }
+      }
+    }
+
+    elSearch.addEventListener('input', () => {
+      state.query = elSearch.value;
+      elClear.classList.toggle('visible', Boolean(state.query));
+      renderAll();
+    });
+
+    elClear.addEventListener('click', () => {
+      state.query = '';
+      elSearch.value = '';
+      elClear.classList.remove('visible');
+      renderAll();
+      elSearch.focus();
+    });
+
+    elTabs.addEventListener('click', (e) => {
+      const btn = e.target.closest('.tab-btn');
+      if (!btn) return;
+      state.tab = btn.dataset.tab;
+      state.filter = 'all';
+      state.allExpanded = false;
+      renderAll();
+    });
+
+    elChips.addEventListener('click', (e) => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      state.filter = chip.dataset.filter;
+      renderAll();
+    });
+
+    elToggleAll.addEventListener('click', () => {
+      state.allExpanded = !state.allExpanded;
+      if (!state.allExpanded) state.openIds.clear();
+      renderCards();
+    });
+
+    elCards.addEventListener('click', (e) => {
+      const copyBtn = e.target.closest('[data-copy]');
+      if (copyBtn) {
+        copyLink(copyBtn.dataset.copy);
+        return;
+      }
+      const jumpBtn = e.target.closest('[data-jump]');
+      if (jumpBtn) {
+        jumpToId(jumpBtn.dataset.jump);
+        return;
+      }
+      const toggleBtn = e.target.closest('[data-toggle]');
+      if (toggleBtn) {
+        const id = toggleBtn.dataset.toggle;
+        const card = document.getElementById('card-' + id);
+        if (state.allExpanded) {
+          state.allExpanded = false;
+          getFiltered(state.tab).forEach(x => state.openIds.add(x.id));
+          state.openIds.delete(id);
+          renderCards();
+        } else {
+          if (state.openIds.has(id)) {
+            state.openIds.delete(id);
+            if (card) card.classList.remove('open');
+          } else {
+            state.openIds.add(id);
+            if (card) card.classList.add('open');
+          }
+        }
+      }
+    });
+
+    (function initTheme() {
+      const key = 'efilism_atlas_theme';
+      const root = document.documentElement;
+      const btn = document.getElementById('themeToggle');
       function apply(mode) {
         if (mode === 'dark') {
           root.setAttribute('data-theme', 'dark');
@@ -546,18 +997,25 @@
           btn.textContent = 'Тёмная';
         }
       }
-      var saved = null;
+      let saved = null;
       try { saved = localStorage.getItem(key); } catch (e) {}
       if (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         saved = 'dark';
       }
       apply(saved === 'dark' ? 'dark' : 'light');
-      btn.addEventListener('click', function () {
-        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      btn.addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         try { localStorage.setItem(key, next); } catch (e) {}
         apply(next);
       });
     })();
+
+    window.addEventListener('hashchange', () => jumpToId(window.location.hash));
+
+    renderAll();
+    if (window.location.hash) {
+      jumpToId(window.location.hash);
+    }
   </script>
 </body>
 </html>

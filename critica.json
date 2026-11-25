@@ -1,0 +1,2458 @@
+{
+  "version": "1.6",
+  "scope": "Аналитические возражения и абляция правил v1.5. Профили не являются формализацией полных теорий. Данные гипотетические; неопределённость не равна разрешению.",
+  "modules": {
+    "AX": [
+      "Critica Axiologiae",
+      "Различие фактичности и антиценности."
+    ],
+    "NO": [
+      "Critica Normativitatis",
+      "Скептицизм, конкурирующие этические основания и ограничения средств."
+    ],
+    "NA": [
+      "Critica Natalismi",
+      "Сильные возражения к универсальности запрета создания."
+    ],
+    "RA": [
+      "Critica Rationalitatis",
+      "Мотивация, инструментальная и содержательная рациональность."
+    ],
+    "RO": [
+      "Robustitas Efilismi",
+      "Проверка зависимости выводов от кандидатных принципов."
+    ]
+  },
+  "objections": [
+    {
+      "id": "CRI:O01",
+      "module": "AX",
+      "title": "Открытый вопрос Мура",
+      "principles": [
+        "A1"
+      ],
+      "arguments": [
+        "ARG-13"
+      ],
+      "references": [
+        "CRI:R2"
+      ],
+      "objection": "Даже если опыт имеет отрицательную окраску, можно осмысленно спросить, является ли эта окраска этически значимой. Факт не тождествен оценке по одному определению.",
+      "reply": "Различить аналитическое определение и синтетическое тождество. Отсутствие аналитического тождества не исключает натуралистического объяснения, но не доказывает его.",
+      "obligation": "Обосновать критерий тождества либо независимую аксиологическую посылку.",
+      "survives": "Локальная фактичность опыта сохраняется.",
+      "status": "open",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O02",
+      "module": "AX",
+      "title": "Релятивизм и различие субъектов",
+      "principles": [
+        "A1",
+        "A4"
+      ],
+      "arguments": [
+        "ARG-01",
+        "ARG-11"
+      ],
+      "references": [
+        "CRI:R1"
+      ],
+      "objection": "Одинаковый стимул может оцениваться людьми по-разному; независимый от субъекта универсальный рейтинг стимулов не установлен.",
+      "reply": "Критерий относится к переживанию данного субъекта, а не стимулу в отрыве от контекста. Различие опыта совместимо с общим критерием сопоставимых свойств.",
+      "obligation": "Доказать межсубъектную применимость критерия, не постулируя точную общую шкалу интенсивности.",
+      "survives": "Различие факта и мнения сохраняется.",
+      "status": "partial",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O03",
+      "module": "AX",
+      "title": "Положительный опыт и компенсация",
+      "principles": [
+        "A1",
+        "A6"
+      ],
+      "arguments": [
+        "ARG-16",
+        "ARG-18"
+      ],
+      "references": [
+        "CRI:R4",
+        "CRI:R13"
+      ],
+      "objection": "Наличие самостоятельных благ может сделать жизнь в целом предпочтительной, даже если отдельные эпизоды неблагоприятны.",
+      "reply": "Локальный вред не исчезает от общей положительной оценки. Но отдельный защитный принцип необходим, чтобы от непрекращающегося локального вреда перейти к ограничению обмена благами на риск.",
+      "obligation": "Обосновать силу защитного принципа независимо от тезиса, что всё удовольствие является снятием дефицита.",
+      "survives": "Локальная антиценность и оценка риска остаются предметом анализа.",
+      "status": "open",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O04",
+      "module": "NO",
+      "title": "Теория этической ошибки",
+      "principles": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "arguments": [
+        "ARG-13",
+        "ARG-14"
+      ],
+      "references": [
+        "CRI:R1"
+      ],
+      "objection": "Нормативные утверждения претендуют на объективные предписания, однако таких свойств может не существовать. Реальность боли совместима с этой гипотезой.",
+      "reply": "Не отождествлять антиреализм с отрицанием переживания; сначала установить, какого рода объективность необходима аргументу. Условные рекомендации остаются возможны при принятом стандарте.",
+      "obligation": "Защитить метаэтическое основание против онтологической и семантической частей теории ошибки.",
+      "survives": "Феноменальные и причинные факты сохраняются, категорическое предписание нет.",
+      "status": "open",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O05",
+      "module": "NO",
+      "title": "Агрегативная альтернатива",
+      "principles": [
+        "A6"
+      ],
+      "arguments": [
+        "ARG-09",
+        "ARG-18"
+      ],
+      "references": [
+        "CRI:R8",
+        "CRI:R4"
+      ],
+      "objection": "Если общий выигрыш велик, суммарная оценка может оправдывать распределение риска, даже при наличии отдельного проигрывающего субъекта.",
+      "reply": "Различить оценку совокупного результата и индивидуальную допустимость; договорная этика даёт пример анализа индивидуальных оснований без прямой агрегации. Это аналогия, а не доказательство применимости к созданию.",
+      "obligation": "Обосновать, когда и почему индивидуальное ограничение имеет приоритет над совокупной выгодой.",
+      "survives": "Сам факт распределения риска сохраняется.",
+      "status": "open",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O06",
+      "module": "NO",
+      "title": "Этика средств и конфликт обязанностей",
+      "principles": [
+        "A7",
+        "A8"
+      ],
+      "arguments": [
+        "ARG-12",
+        "ARG-18"
+      ],
+      "references": [
+        "CRI:R7",
+        "CRI:R8"
+      ],
+      "objection": "Если нормативная цель объявлена универсальной, может возникнуть соблазн считать любое средство её достижения оправданным.",
+      "reply": "Запрет действия и полномочие принуждать логически различны. Помощь существующим субъектам имеет самостоятельные основания, включая автономию, согласие и соразмерность.",
+      "obligation": "Проверить этические статусы конкретных вмешательств независимо от целей; не считать принуждение допустимым по умолчанию.",
+      "survives": "Добровольный отказ и ненасильственная помощь совместимы с независимой проверкой средств.",
+      "status": "partial",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O07",
+      "module": "NA",
+      "title": "Асимметрия без универсального запрета",
+      "principles": [
+        "A5",
+        "A6"
+      ],
+      "arguments": [
+        "ARG-07",
+        "ARG-18"
+      ],
+      "references": [
+        "CRI:R4",
+        "CRI:R5",
+        "CRI:R13"
+      ],
+      "objection": "Из того, что несоздание не лишает будущего человека блага, не следует, что создание при благоприятных ожиданиях всегда недопустимо.",
+      "reply": "A5 описывает отсутствие определённого притязания, а A6 добавляет отдельное ограничение. Нельзя вывести A6 из A5 только переименованием асимметрии.",
+      "obligation": "Нужен независимый аргумент в пользу защитного порога и доказательство покрытия области создания.",
+      "survives": "Асимметрия в указанном смысле не опровергнута этим возражением.",
+      "status": "open",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O08",
+      "module": "NA",
+      "title": "Проблема нетождества",
+      "principles": [
+        "A2",
+        "A5"
+      ],
+      "arguments": [
+        "ARG-07",
+        "ARG-08"
+      ],
+      "references": [
+        "CRI:R6",
+        "CRI:R7"
+      ],
+      "objection": "При несоздании тот же человек не существовал бы; поэтому трудно показать, что он оказался в худшем положении по сравнению с альтернативой.",
+      "reply": "Несравнительное неблагоприятное состояние и сравнительное ухудшение — различные понятия. Первое может обосновывать исследование вреда без сравнения с небытием.",
+      "obligation": "Обосновать нормативную значимость несравнительного вреда и критерий ответственности за создание.",
+      "survives": "Реальность неблагоприятных состояний не зависит от решения проблемы нетождества.",
+      "status": "open",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O09",
+      "module": "NA",
+      "title": "Согласие и оправдание без предварительной авторизации",
+      "principles": [
+        "A6",
+        "A7"
+      ],
+      "arguments": [
+        "ARG-08",
+        "ARG-12"
+      ],
+      "references": [
+        "CRI:R4",
+        "CRI:R7"
+      ],
+      "objection": "Невозможность предварительного согласия не всегда делает действие недопустимым: помощь при утрате дееспособности может быть оправдана.",
+      "reply": "Различить создание и защиту интересов уже существующего субъекта. В помощи может существовать независимое основание, которого нет в случае чистого создания.",
+      "obligation": "Установить границы чистого создания, включая смешанные случаи и независимые притязания; доказать силу ограничения.",
+      "survives": "Невозможность согласия сама по себе не выдаёт разрешения и не устанавливает запрет.",
+      "status": "open",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O10",
+      "module": "NA",
+      "title": "Условная допустимость риска",
+      "principles": [
+        "A6",
+        "A9"
+      ],
+      "arguments": [
+        "ARG-09",
+        "ARG-18"
+      ],
+      "references": [
+        "CRI:R4",
+        "CRI:R13"
+      ],
+      "objection": "Разумные благоприятные ожидания могут служить аргументом в пользу допустимости риска; наличие любого риска не равнозначно недопустимости.",
+      "reply": "Разграничить положительное ожидание и защитный порог. При недостатке данных A9 требует оценки, не предрешая результат; A6 работает только при заданных условиях.",
+      "obligation": "Обосновать порог, его измеримость и охват реальных случаев, не заменяя неопределённость утверждением о гарантии.",
+      "survives": "Требование оценки риска сохраняется при отказе от категорического запрета.",
+      "status": "open",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O11",
+      "module": "RA",
+      "title": "Интернализм практических оснований",
+      "principles": [
+        "A2",
+        "A3"
+      ],
+      "arguments": [
+        "ARG-14"
+      ],
+      "references": [
+        "CRI:R3",
+        "CRI:R12"
+      ],
+      "objection": "Если основания действия зависят от мотивационного набора агента, признание чужого вреда не гарантирует наличия основания для его предотвращения у любого агента.",
+      "reply": "Различить причины поведения, мотивацию и оправдание. Экстернализм является возможной альтернативой, но не опровержением интернализма по определению.",
+      "obligation": "Дать независимую защиту оснований, не сводимых к текущим желаниям агента.",
+      "survives": "Причинное объяснение и проверка согласованности убеждений остаются возможны.",
+      "status": "open",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    },
+    {
+      "id": "CRI:O12",
+      "module": "RA",
+      "title": "Инструментализм и возражение Эноха",
+      "principles": [
+        "A3"
+      ],
+      "arguments": [
+        "ARG-14"
+      ],
+      "references": [
+        "CRI:R9",
+        "CRI:R10",
+        "CRI:R11",
+        "CRI:R12"
+      ],
+      "objection": "Стандарт, определяющий рациональную деятельность, может не давать причины следовать ему. Эффективность средств относительно цели не устанавливает ценность цели.",
+      "reply": "Требование согласованности допускает пересмотр цели. Для содержательного требования нужны самостоятельные практические основания; конститутивная стратегия может помочь описать требования, но не заменить их обоснование.",
+      "obligation": "Защитить переход от объективного основания к требованию его учёта и его нормативную силу.",
+      "survives": "Критика ошибочных убеждений и инструментальной несогласованности сохраняется.",
+      "status": "open",
+      "scope": "Авторская реконструкция возражения; не буквальная позиция всех указанных авторов."
+    }
+  ],
+  "references": [
+    {
+      "id": "CRI:R1",
+      "title": "SEP: Moral Anti-Realism",
+      "url": "https://plato.stanford.edu/entries/moral-anti-realism/",
+      "scope": "Различие теории ошибки, некогнитивизма и других вариантов антиреализма.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R2",
+      "title": "SEP: Moral Naturalism",
+      "url": "https://plato.stanford.edu/entries/naturalism-moral/",
+      "scope": "Открытый вопрос Мура и возможность синтетического натурализма.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R3",
+      "title": "SEP: Reasons for Action: Internal vs. External",
+      "url": "https://plato.stanford.edu/archives/fall2024/entries/reasons-internal-external/",
+      "scope": "Зависимость практических оснований от мотиваций и альтернативные позиции.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R4",
+      "title": "Wasserman (2015): Against Anti-Natalism",
+      "url": "https://academic.oup.com/book/25806/chapter-abstract/193420320",
+      "scope": "Аннотация главы: критика категорических аргументов асимметрии, согласия и риска.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R5",
+      "title": "Benatar (2015): The Asymmetry Argument",
+      "url": "https://academic.oup.com/book/25806/chapter-abstract/193414324",
+      "scope": "Аннотация главы: асимметрия и проблема нетождества.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R6",
+      "title": "SEP: The Nonidentity Problem",
+      "url": "https://plato.stanford.edu/entries/nonidentity-problem/",
+      "scope": "Проблема сравнительного вреда и обязанностей в отношении будущих людей.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R7",
+      "title": "SEP: Parenthood and Procreation",
+      "url": "https://plato.stanford.edu/entries/parenthood/",
+      "scope": "Обзор альтернативных подходов к допустимости создания и родительству.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R8",
+      "title": "SEP: Contractualism",
+      "url": "https://plato.stanford.edu/archives/sum2019/entries/contractualism/",
+      "scope": "Индивидуальные основания и сопоставление бремени без прямой агрегации.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R9",
+      "title": "SEP: Instrumental Rationality",
+      "url": "https://plato.stanford.edu/entries/rationality-instrumental/",
+      "scope": "Согласованность средств и целей и широкая область требования.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R10",
+      "title": "Enoch (2006): Agency, Shmagency",
+      "url": "https://cris.huji.ac.il/en/publications/agency-shmagency-why-normativity-wont-come-what-is-constitut/",
+      "scope": "Библиографические сведения; основное возражение сверено с аннотацией продолжения (R11).",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R11",
+      "title": "Enoch (2010): Shmagency Revisited",
+      "url": "https://cris.huji.ac.il/en/publications/shmagency-revisited/",
+      "scope": "Аннотация: необходимость независимого основания для нормативной силы конститутивных стандартов.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R12",
+      "title": "SEP: Practical Reason",
+      "url": "https://plato.stanford.edu/entries/practical-reason/",
+      "scope": "Различие структурной рациональности и содержательных практических оснований.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    },
+    {
+      "id": "CRI:R13",
+      "title": "Anti-natalism, Pollyannaism, and Asymmetry: A Defence of Cheery Optimism",
+      "url": "https://link.springer.com/article/10.1007/s10790-022-09884-8",
+      "scope": "Доступная выдержка: принятие интуиций асимметрии без общего запрета.",
+      "access": "Поисковая выдержка / аннотация, не полный текст"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "BASE",
+      "title": "Все девять принципов",
+      "removed": [],
+      "note": "Исходная модель v1.5."
+    },
+    {
+      "id": "AX",
+      "title": "Отказ от аксиологического моста",
+      "removed": [
+        "A1"
+      ],
+      "note": "Проверка локальной антиценности."
+    },
+    {
+      "id": "NR",
+      "title": "Отказ от независимого практического основания",
+      "removed": [
+        "A2"
+      ],
+      "note": "Не полноценная модель интернализма."
+    },
+    {
+      "id": "RA",
+      "title": "Отказ от долга рационального учёта",
+      "removed": [
+        "A3"
+      ],
+      "note": "Сохраняет остальные правила условно."
+    },
+    {
+      "id": "SUB",
+      "title": "Отказ от равного критерия",
+      "removed": [
+        "A4"
+      ],
+      "note": "Проверка универсальности критерия."
+    },
+    {
+      "id": "ASY",
+      "title": "Отказ от асимметрии",
+      "removed": [
+        "A5"
+      ],
+      "note": "Проверка независимости защитного правила."
+    },
+    {
+      "id": "AGG",
+      "title": "Отказ от защитного порога",
+      "removed": [
+        "A6"
+      ],
+      "note": "Не добавляет разрешение и не моделирует утилитаризм целиком."
+    },
+    {
+      "id": "HELP",
+      "title": "Отказ от правила помощи",
+      "removed": [
+        "A7"
+      ],
+      "note": "Не утверждает запрет помощи."
+    },
+    {
+      "id": "MEANS",
+      "title": "Отказ от ограничения средств",
+      "removed": [
+        "A8"
+      ],
+      "note": "Не утверждает допустимость принуждения."
+    },
+    {
+      "id": "RISK",
+      "title": "Отказ от предосторожности",
+      "removed": [
+        "A9"
+      ],
+      "note": "Не утверждает безопасность."
+    },
+    {
+      "id": "SK",
+      "title": "Радикальный скептический стресс-тест",
+      "removed": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A6",
+        "A7",
+        "A8",
+        "A9"
+      ],
+      "note": "Механическое снятие нормативных правил, не полная теория ошибки."
+    }
+  ],
+  "cases": [
+    {
+      "id": "C1",
+      "title": "Наблюдаемое отрицательное переживание",
+      "facts": [
+        "negative_experience",
+        "observer_invariant",
+        "causal_link",
+        "agent_can_reason",
+        "evidence_available"
+      ],
+      "body": "Фиксированный случай уже происходящего вреда; причинная связь условно задана."
+    },
+    {
+      "id": "C2",
+      "title": "Несоздание без независимого притязания",
+      "facts": [
+        "no_subject",
+        "no_independent_claim"
+      ],
+      "body": "Речь только о рассматриваемом отсутствии субъекта, не об интересах других людей."
+    },
+    {
+      "id": "C3",
+      "title": "Создание: заданные условия защитного порога",
+      "facts": [
+        "creation",
+        "severe_risk",
+        "no_prior_authorization",
+        "no_independent_claim",
+        "abstention_feasible"
+      ],
+      "body": "Условия заданы гипотетически, их универсальность не предполагается."
+    },
+    {
+      "id": "C4",
+      "title": "Создание: существенная неопределённость",
+      "facts": [
+        "creation",
+        "risk_unresolved",
+        "no_prior_authorization",
+        "no_independent_claim",
+        "abstention_feasible"
+      ],
+      "body": "Недостаток информации; не подразумевается ни безопасность, ни невозможность вреда."
+    },
+    {
+      "id": "C5",
+      "title": "Существующий субъект: допустимая помощь",
+      "facts": [
+        "negative_experience",
+        "observer_invariant",
+        "causal_link",
+        "agent_can_reason",
+        "evidence_available",
+        "existing_subject",
+        "help",
+        "authorized_help",
+        "proportionate_help",
+        "independent_permission"
+      ],
+      "body": "Оценка относится к конкретному действию; наличие основания против его отрицательного аспекта не противоречит разрешению при отдельном оправдании."
+    },
+    {
+      "id": "C6",
+      "title": "Существующий субъект: принуждение без основания",
+      "facts": [
+        "existing_subject",
+        "coercive_means",
+        "no_independent_permission"
+      ],
+      "body": "Недопустимость средства не выводится из запрета другого действия; здесь задано отдельное условие."
+    },
+    {
+      "id": "C7",
+      "title": "Сопоставимый опыт другого вида",
+      "facts": [
+        "comparable_experience",
+        "negative_experience",
+        "observer_invariant"
+      ],
+      "body": "Проверка применения одинакового критерия, не конкретной политики."
+    },
+    {
+      "id": "C8",
+      "title": "Сопоставимый опыт иного физического субстрата",
+      "facts": [
+        "comparable_experience",
+        "negative_experience",
+        "observer_invariant"
+      ],
+      "body": "Абстрактный случай условной чувствительности, не утверждение о сознании какой-либо реальной технологии."
+    },
+    {
+      "id": "C9",
+      "title": "Создание: существенный риск не установлен",
+      "facts": [
+        "creation",
+        "no_prior_authorization",
+        "no_independent_claim",
+        "abstention_feasible"
+      ],
+      "body": "Гипотетический пробел покрытия. Отсутствие факта severe_risk не означает доказанную безопасность."
+    },
+    {
+      "id": "C10",
+      "title": "Создание при заявленном независимом притязании",
+      "facts": [
+        "creation",
+        "severe_risk",
+        "no_prior_authorization",
+        "abstention_feasible"
+      ],
+      "body": "Нельзя автоматически считать, что no_independent_claim истинно; требуется отдельная квалификация."
+    },
+    {
+      "id": "C11",
+      "title": "Совмещение создания и помощи: стресс-тест",
+      "facts": [
+        "abstention_feasible",
+        "agent_can_reason",
+        "authorized_help",
+        "causal_link",
+        "creation",
+        "evidence_available",
+        "existing_subject",
+        "help",
+        "independent_permission",
+        "negative_experience",
+        "no_independent_claim",
+        "no_prior_authorization",
+        "observer_invariant",
+        "proportionate_help",
+        "severe_risk"
+      ],
+      "body": "Искусственная совместная маркировка для проверки конфликтов, не реальное разрешение."
+    },
+    {
+      "id": "C12",
+      "title": "Смешанная ситуация: раздельные действия",
+      "facts": [
+        "existing_subject",
+        "help",
+        "authorized_help",
+        "proportionate_help",
+        "independent_permission"
+      ],
+      "body": "Проверка только действия помощи; создание должно анализироваться отдельно. Не автоматически решает конфликт, когда действия неразделимы."
+    }
+  ],
+  "output_labels": {
+    "local_disvalue": "Локальная антиценность",
+    "reason_against": "Первоначальное основание против действия",
+    "consider_reason": "Требование учесть основание",
+    "equal_criterion": "Единый критерий оценки",
+    "no_deprivation_claim": "Нет заданного притязания на создание",
+    "forbid_action": "Запрет действия по защитному принципу",
+    "permit_action": "Разрешение конкретной помощи",
+    "forbid_means": "Запрет независимо не оправданного принуждения",
+    "require_assessment": "Требование оценки риска"
+  },
+  "computed": {
+    "matrix": [
+      {
+        "profile": "BASE",
+        "case": "C1",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "BASE",
+        "case": "C2",
+        "outputs": [
+          "no_deprivation_claim"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A5"
+        ]
+      },
+      {
+        "profile": "BASE",
+        "case": "C3",
+        "outputs": [
+          "forbid_action"
+        ],
+        "lost": [],
+        "status": "forbidden",
+        "trace": [
+          "A6"
+        ]
+      },
+      {
+        "profile": "BASE",
+        "case": "C4",
+        "outputs": [
+          "require_assessment"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A9"
+        ]
+      },
+      {
+        "profile": "BASE",
+        "case": "C5",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A1",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "BASE",
+        "case": "C6",
+        "outputs": [
+          "forbid_means"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A8"
+        ]
+      },
+      {
+        "profile": "BASE",
+        "case": "C7",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "BASE",
+        "case": "C8",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "BASE",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "BASE",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "BASE",
+        "case": "C11",
+        "outputs": [
+          "consider_reason",
+          "forbid_action",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "conflict",
+        "trace": [
+          "A1",
+          "A6",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "BASE",
+        "case": "C12",
+        "outputs": [
+          "permit_action"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A7"
+        ]
+      },
+      {
+        "profile": "AX",
+        "case": "C1",
+        "outputs": [],
+        "lost": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "AX",
+        "case": "C2",
+        "outputs": [
+          "no_deprivation_claim"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A5"
+        ]
+      },
+      {
+        "profile": "AX",
+        "case": "C3",
+        "outputs": [
+          "forbid_action"
+        ],
+        "lost": [],
+        "status": "forbidden",
+        "trace": [
+          "A6"
+        ]
+      },
+      {
+        "profile": "AX",
+        "case": "C4",
+        "outputs": [
+          "require_assessment"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A9"
+        ]
+      },
+      {
+        "profile": "AX",
+        "case": "C5",
+        "outputs": [
+          "permit_action"
+        ],
+        "lost": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "status": "permitted",
+        "trace": [
+          "A7"
+        ]
+      },
+      {
+        "profile": "AX",
+        "case": "C6",
+        "outputs": [
+          "forbid_means"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A8"
+        ]
+      },
+      {
+        "profile": "AX",
+        "case": "C7",
+        "outputs": [
+          "equal_criterion"
+        ],
+        "lost": [
+          "local_disvalue"
+        ],
+        "status": "undetermined",
+        "trace": [
+          "A4"
+        ]
+      },
+      {
+        "profile": "AX",
+        "case": "C8",
+        "outputs": [
+          "equal_criterion"
+        ],
+        "lost": [
+          "local_disvalue"
+        ],
+        "status": "undetermined",
+        "trace": [
+          "A4"
+        ]
+      },
+      {
+        "profile": "AX",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "AX",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "AX",
+        "case": "C11",
+        "outputs": [
+          "forbid_action",
+          "permit_action"
+        ],
+        "lost": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "status": "conflict",
+        "trace": [
+          "A6",
+          "A7"
+        ]
+      },
+      {
+        "profile": "AX",
+        "case": "C12",
+        "outputs": [
+          "permit_action"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A7"
+        ]
+      },
+      {
+        "profile": "NR",
+        "case": "C1",
+        "outputs": [
+          "local_disvalue"
+        ],
+        "lost": [
+          "consider_reason",
+          "reason_against"
+        ],
+        "status": "undetermined",
+        "trace": [
+          "A1"
+        ]
+      },
+      {
+        "profile": "NR",
+        "case": "C2",
+        "outputs": [
+          "no_deprivation_claim"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A5"
+        ]
+      },
+      {
+        "profile": "NR",
+        "case": "C3",
+        "outputs": [
+          "forbid_action"
+        ],
+        "lost": [],
+        "status": "forbidden",
+        "trace": [
+          "A6"
+        ]
+      },
+      {
+        "profile": "NR",
+        "case": "C4",
+        "outputs": [
+          "require_assessment"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A9"
+        ]
+      },
+      {
+        "profile": "NR",
+        "case": "C5",
+        "outputs": [
+          "local_disvalue",
+          "permit_action"
+        ],
+        "lost": [
+          "consider_reason",
+          "reason_against"
+        ],
+        "status": "permitted",
+        "trace": [
+          "A1",
+          "A7"
+        ]
+      },
+      {
+        "profile": "NR",
+        "case": "C6",
+        "outputs": [
+          "forbid_means"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A8"
+        ]
+      },
+      {
+        "profile": "NR",
+        "case": "C7",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "NR",
+        "case": "C8",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "NR",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "NR",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "NR",
+        "case": "C11",
+        "outputs": [
+          "forbid_action",
+          "local_disvalue",
+          "permit_action"
+        ],
+        "lost": [
+          "consider_reason",
+          "reason_against"
+        ],
+        "status": "conflict",
+        "trace": [
+          "A1",
+          "A6",
+          "A7"
+        ]
+      },
+      {
+        "profile": "NR",
+        "case": "C12",
+        "outputs": [
+          "permit_action"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A7"
+        ]
+      },
+      {
+        "profile": "RA",
+        "case": "C1",
+        "outputs": [
+          "local_disvalue",
+          "reason_against"
+        ],
+        "lost": [
+          "consider_reason"
+        ],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A2"
+        ]
+      },
+      {
+        "profile": "RA",
+        "case": "C2",
+        "outputs": [
+          "no_deprivation_claim"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A5"
+        ]
+      },
+      {
+        "profile": "RA",
+        "case": "C3",
+        "outputs": [
+          "forbid_action"
+        ],
+        "lost": [],
+        "status": "forbidden",
+        "trace": [
+          "A6"
+        ]
+      },
+      {
+        "profile": "RA",
+        "case": "C4",
+        "outputs": [
+          "require_assessment"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A9"
+        ]
+      },
+      {
+        "profile": "RA",
+        "case": "C5",
+        "outputs": [
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [
+          "consider_reason"
+        ],
+        "status": "permitted",
+        "trace": [
+          "A1",
+          "A7",
+          "A2"
+        ]
+      },
+      {
+        "profile": "RA",
+        "case": "C6",
+        "outputs": [
+          "forbid_means"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A8"
+        ]
+      },
+      {
+        "profile": "RA",
+        "case": "C7",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "RA",
+        "case": "C8",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "RA",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "RA",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "RA",
+        "case": "C11",
+        "outputs": [
+          "forbid_action",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [
+          "consider_reason"
+        ],
+        "status": "conflict",
+        "trace": [
+          "A1",
+          "A6",
+          "A7",
+          "A2"
+        ]
+      },
+      {
+        "profile": "RA",
+        "case": "C12",
+        "outputs": [
+          "permit_action"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A7"
+        ]
+      },
+      {
+        "profile": "SUB",
+        "case": "C1",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "SUB",
+        "case": "C2",
+        "outputs": [
+          "no_deprivation_claim"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A5"
+        ]
+      },
+      {
+        "profile": "SUB",
+        "case": "C3",
+        "outputs": [
+          "forbid_action"
+        ],
+        "lost": [],
+        "status": "forbidden",
+        "trace": [
+          "A6"
+        ]
+      },
+      {
+        "profile": "SUB",
+        "case": "C4",
+        "outputs": [
+          "require_assessment"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A9"
+        ]
+      },
+      {
+        "profile": "SUB",
+        "case": "C5",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A1",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "SUB",
+        "case": "C6",
+        "outputs": [
+          "forbid_means"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A8"
+        ]
+      },
+      {
+        "profile": "SUB",
+        "case": "C7",
+        "outputs": [
+          "local_disvalue"
+        ],
+        "lost": [
+          "equal_criterion"
+        ],
+        "status": "undetermined",
+        "trace": [
+          "A1"
+        ]
+      },
+      {
+        "profile": "SUB",
+        "case": "C8",
+        "outputs": [
+          "local_disvalue"
+        ],
+        "lost": [
+          "equal_criterion"
+        ],
+        "status": "undetermined",
+        "trace": [
+          "A1"
+        ]
+      },
+      {
+        "profile": "SUB",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SUB",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SUB",
+        "case": "C11",
+        "outputs": [
+          "consider_reason",
+          "forbid_action",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "conflict",
+        "trace": [
+          "A1",
+          "A6",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "SUB",
+        "case": "C12",
+        "outputs": [
+          "permit_action"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A7"
+        ]
+      },
+      {
+        "profile": "ASY",
+        "case": "C1",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "ASY",
+        "case": "C2",
+        "outputs": [],
+        "lost": [
+          "no_deprivation_claim"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "ASY",
+        "case": "C3",
+        "outputs": [
+          "forbid_action"
+        ],
+        "lost": [],
+        "status": "forbidden",
+        "trace": [
+          "A6"
+        ]
+      },
+      {
+        "profile": "ASY",
+        "case": "C4",
+        "outputs": [
+          "require_assessment"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A9"
+        ]
+      },
+      {
+        "profile": "ASY",
+        "case": "C5",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A1",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "ASY",
+        "case": "C6",
+        "outputs": [
+          "forbid_means"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A8"
+        ]
+      },
+      {
+        "profile": "ASY",
+        "case": "C7",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "ASY",
+        "case": "C8",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "ASY",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "ASY",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "ASY",
+        "case": "C11",
+        "outputs": [
+          "consider_reason",
+          "forbid_action",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "conflict",
+        "trace": [
+          "A1",
+          "A6",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "ASY",
+        "case": "C12",
+        "outputs": [
+          "permit_action"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A7"
+        ]
+      },
+      {
+        "profile": "AGG",
+        "case": "C1",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "AGG",
+        "case": "C2",
+        "outputs": [
+          "no_deprivation_claim"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A5"
+        ]
+      },
+      {
+        "profile": "AGG",
+        "case": "C3",
+        "outputs": [],
+        "lost": [
+          "forbid_action"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "AGG",
+        "case": "C4",
+        "outputs": [
+          "require_assessment"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A9"
+        ]
+      },
+      {
+        "profile": "AGG",
+        "case": "C5",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A1",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "AGG",
+        "case": "C6",
+        "outputs": [
+          "forbid_means"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A8"
+        ]
+      },
+      {
+        "profile": "AGG",
+        "case": "C7",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "AGG",
+        "case": "C8",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "AGG",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "AGG",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "AGG",
+        "case": "C11",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [
+          "forbid_action"
+        ],
+        "status": "permitted",
+        "trace": [
+          "A1",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "AGG",
+        "case": "C12",
+        "outputs": [
+          "permit_action"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A7"
+        ]
+      },
+      {
+        "profile": "HELP",
+        "case": "C1",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "HELP",
+        "case": "C2",
+        "outputs": [
+          "no_deprivation_claim"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A5"
+        ]
+      },
+      {
+        "profile": "HELP",
+        "case": "C3",
+        "outputs": [
+          "forbid_action"
+        ],
+        "lost": [],
+        "status": "forbidden",
+        "trace": [
+          "A6"
+        ]
+      },
+      {
+        "profile": "HELP",
+        "case": "C4",
+        "outputs": [
+          "require_assessment"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A9"
+        ]
+      },
+      {
+        "profile": "HELP",
+        "case": "C5",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "lost": [
+          "permit_action"
+        ],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "HELP",
+        "case": "C6",
+        "outputs": [
+          "forbid_means"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A8"
+        ]
+      },
+      {
+        "profile": "HELP",
+        "case": "C7",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "HELP",
+        "case": "C8",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "HELP",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "HELP",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "HELP",
+        "case": "C11",
+        "outputs": [
+          "consider_reason",
+          "forbid_action",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "lost": [
+          "permit_action"
+        ],
+        "status": "forbidden",
+        "trace": [
+          "A1",
+          "A6",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "HELP",
+        "case": "C12",
+        "outputs": [],
+        "lost": [
+          "permit_action"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "MEANS",
+        "case": "C1",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "MEANS",
+        "case": "C2",
+        "outputs": [
+          "no_deprivation_claim"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A5"
+        ]
+      },
+      {
+        "profile": "MEANS",
+        "case": "C3",
+        "outputs": [
+          "forbid_action"
+        ],
+        "lost": [],
+        "status": "forbidden",
+        "trace": [
+          "A6"
+        ]
+      },
+      {
+        "profile": "MEANS",
+        "case": "C4",
+        "outputs": [
+          "require_assessment"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A9"
+        ]
+      },
+      {
+        "profile": "MEANS",
+        "case": "C5",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A1",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "MEANS",
+        "case": "C6",
+        "outputs": [],
+        "lost": [
+          "forbid_means"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "MEANS",
+        "case": "C7",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "MEANS",
+        "case": "C8",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "MEANS",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "MEANS",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "MEANS",
+        "case": "C11",
+        "outputs": [
+          "consider_reason",
+          "forbid_action",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "conflict",
+        "trace": [
+          "A1",
+          "A6",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "MEANS",
+        "case": "C12",
+        "outputs": [
+          "permit_action"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A7"
+        ]
+      },
+      {
+        "profile": "RISK",
+        "case": "C1",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "RISK",
+        "case": "C2",
+        "outputs": [
+          "no_deprivation_claim"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A5"
+        ]
+      },
+      {
+        "profile": "RISK",
+        "case": "C3",
+        "outputs": [
+          "forbid_action"
+        ],
+        "lost": [],
+        "status": "forbidden",
+        "trace": [
+          "A6"
+        ]
+      },
+      {
+        "profile": "RISK",
+        "case": "C4",
+        "outputs": [],
+        "lost": [
+          "require_assessment"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "RISK",
+        "case": "C5",
+        "outputs": [
+          "consider_reason",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A1",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "RISK",
+        "case": "C6",
+        "outputs": [
+          "forbid_means"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A8"
+        ]
+      },
+      {
+        "profile": "RISK",
+        "case": "C7",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "RISK",
+        "case": "C8",
+        "outputs": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A1",
+          "A4"
+        ]
+      },
+      {
+        "profile": "RISK",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "RISK",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "RISK",
+        "case": "C11",
+        "outputs": [
+          "consider_reason",
+          "forbid_action",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "lost": [],
+        "status": "conflict",
+        "trace": [
+          "A1",
+          "A6",
+          "A7",
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "profile": "RISK",
+        "case": "C12",
+        "outputs": [
+          "permit_action"
+        ],
+        "lost": [],
+        "status": "permitted",
+        "trace": [
+          "A7"
+        ]
+      },
+      {
+        "profile": "SK",
+        "case": "C1",
+        "outputs": [],
+        "lost": [
+          "consider_reason",
+          "local_disvalue",
+          "reason_against"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SK",
+        "case": "C2",
+        "outputs": [
+          "no_deprivation_claim"
+        ],
+        "lost": [],
+        "status": "undetermined",
+        "trace": [
+          "A5"
+        ]
+      },
+      {
+        "profile": "SK",
+        "case": "C3",
+        "outputs": [],
+        "lost": [
+          "forbid_action"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SK",
+        "case": "C4",
+        "outputs": [],
+        "lost": [
+          "require_assessment"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SK",
+        "case": "C5",
+        "outputs": [],
+        "lost": [
+          "consider_reason",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SK",
+        "case": "C6",
+        "outputs": [],
+        "lost": [
+          "forbid_means"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SK",
+        "case": "C7",
+        "outputs": [],
+        "lost": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SK",
+        "case": "C8",
+        "outputs": [],
+        "lost": [
+          "equal_criterion",
+          "local_disvalue"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SK",
+        "case": "C9",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SK",
+        "case": "C10",
+        "outputs": [],
+        "lost": [],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SK",
+        "case": "C11",
+        "outputs": [],
+        "lost": [
+          "consider_reason",
+          "forbid_action",
+          "local_disvalue",
+          "permit_action",
+          "reason_against"
+        ],
+        "status": "undetermined",
+        "trace": []
+      },
+      {
+        "profile": "SK",
+        "case": "C12",
+        "outputs": [],
+        "lost": [
+          "permit_action"
+        ],
+        "status": "undetermined",
+        "trace": []
+      }
+    ],
+    "subset_statistics": {
+      "C1": {
+        "statuses": {
+          "undetermined": 512
+        },
+        "output_counts": {
+          "consider_reason": 64,
+          "local_disvalue": 256,
+          "reason_against": 128
+        }
+      },
+      "C2": {
+        "statuses": {
+          "undetermined": 512
+        },
+        "output_counts": {
+          "no_deprivation_claim": 256
+        }
+      },
+      "C3": {
+        "statuses": {
+          "forbidden": 256,
+          "undetermined": 256
+        },
+        "output_counts": {
+          "forbid_action": 256
+        }
+      },
+      "C4": {
+        "statuses": {
+          "undetermined": 512
+        },
+        "output_counts": {
+          "require_assessment": 256
+        }
+      },
+      "C5": {
+        "statuses": {
+          "permitted": 256,
+          "undetermined": 256
+        },
+        "output_counts": {
+          "consider_reason": 64,
+          "local_disvalue": 256,
+          "permit_action": 256,
+          "reason_against": 128
+        }
+      },
+      "C6": {
+        "statuses": {
+          "undetermined": 512
+        },
+        "output_counts": {
+          "forbid_means": 256
+        }
+      },
+      "C7": {
+        "statuses": {
+          "undetermined": 512
+        },
+        "output_counts": {
+          "equal_criterion": 256,
+          "local_disvalue": 256
+        }
+      },
+      "C8": {
+        "statuses": {
+          "undetermined": 512
+        },
+        "output_counts": {
+          "equal_criterion": 256,
+          "local_disvalue": 256
+        }
+      },
+      "C9": {
+        "statuses": {
+          "undetermined": 512
+        },
+        "output_counts": {}
+      },
+      "C10": {
+        "statuses": {
+          "undetermined": 512
+        },
+        "output_counts": {}
+      },
+      "C11": {
+        "statuses": {
+          "conflict": 128,
+          "forbidden": 128,
+          "permitted": 128,
+          "undetermined": 128
+        },
+        "output_counts": {
+          "consider_reason": 64,
+          "forbid_action": 256,
+          "local_disvalue": 256,
+          "permit_action": 256,
+          "reason_against": 128
+        }
+      },
+      "C12": {
+        "statuses": {
+          "permitted": 256,
+          "undetermined": 256
+        },
+        "output_counts": {
+          "permit_action": 256
+        }
+      }
+    },
+    "subset_evaluations": 6144,
+    "profile_evaluations": 132
+  }
+}

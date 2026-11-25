@@ -1,0 +1,798 @@
+{
+  "version": "1.5",
+  "scope": "Редакторская реконструкция, конечная контекстная модель Horn; не аксиоматизация всей философии.",
+  "principles": [
+    {
+      "id": "A1",
+      "title": "Феноменальная антиценность",
+      "antecedents": [
+        "negative_experience",
+        "observer_invariant"
+      ],
+      "conclusion": "local_disvalue",
+      "body": "Отрицательное качество опыта составляет неблагоприятный аспект для его носителя. Аксиологическая гипотеза, не вывод из физикализма.",
+      "related": "DEM-01",
+      "independence_witnesses": [
+        {
+          "case": "C1",
+          "lost": [
+            "consider_reason",
+            "local_disvalue",
+            "reason_against"
+          ]
+        },
+        {
+          "case": "C5",
+          "lost": [
+            "consider_reason",
+            "local_disvalue",
+            "reason_against"
+          ]
+        },
+        {
+          "case": "C7",
+          "lost": [
+            "local_disvalue"
+          ]
+        },
+        {
+          "case": "C8",
+          "lost": [
+            "local_disvalue"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "title": "Практическое основание",
+      "antecedents": [
+        "local_disvalue",
+        "causal_link"
+      ],
+      "conclusion": "reason_against",
+      "body": "Причинение локальной антиценности создаёт первоначальное основание против действия. Не итоговый запрет.",
+      "related": "DEM-02",
+      "independence_witnesses": [
+        {
+          "case": "C1",
+          "lost": [
+            "consider_reason",
+            "reason_against"
+          ]
+        },
+        {
+          "case": "C5",
+          "lost": [
+            "consider_reason",
+            "reason_against"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "title": "Долг рационального учёта",
+      "antecedents": [
+        "reason_against",
+        "agent_can_reason",
+        "evidence_available"
+      ],
+      "conclusion": "consider_reason",
+      "body": "Способный рассуждать агент должен учитывать доступное основание. Не утверждает, что оно всегда побеждает.",
+      "related": "DEM-03",
+      "independence_witnesses": [
+        {
+          "case": "C1",
+          "lost": [
+            "consider_reason"
+          ]
+        },
+        {
+          "case": "C5",
+          "lost": [
+            "consider_reason"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A4",
+      "title": "Независимость критерия от носителя",
+      "antecedents": [
+        "comparable_experience"
+      ],
+      "conclusion": "equal_criterion",
+      "body": "При сопоставимых свойствах опыта применяется одинаковый критерий без видовой или субстратной скидки. Не тождество решений при разных обстоятельствах.",
+      "related": "ARG-11",
+      "independence_witnesses": [
+        {
+          "case": "C7",
+          "lost": [
+            "equal_criterion"
+          ]
+        },
+        {
+          "case": "C8",
+          "lost": [
+            "equal_criterion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A5",
+      "title": "Асимметрия несоздания",
+      "antecedents": [
+        "no_subject",
+        "no_independent_claim"
+      ],
+      "conclusion": "no_deprivation_claim",
+      "body": "В рассматриваемом случае несоздание не лишает уже существующего субъекта блага и не нарушает независимое притязание. Не утверждение об отсутствии всех внешних последствий.",
+      "related": "ARG-07",
+      "independence_witnesses": [
+        {
+          "case": "C2",
+          "lost": [
+            "no_deprivation_claim"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A6",
+      "title": "Антижертвенный защитный принцип",
+      "antecedents": [
+        "creation",
+        "severe_risk",
+        "no_prior_authorization",
+        "no_independent_claim",
+        "abstention_feasible"
+      ],
+      "conclusion": "forbid_action",
+      "body": "Кандидатный принцип: добровольное несоздание предпочтительно, когда создание навязывает существенный риск крайнего вреда без предварительной авторизации и независимой необходимости. Условия требуют проверки, принцип не доказан перечислением.",
+      "related": "ARG-09",
+      "independence_witnesses": [
+        {
+          "case": "C3",
+          "lost": [
+            "forbid_action"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A7",
+      "title": "Допустимость помощи",
+      "antecedents": [
+        "existing_subject",
+        "help",
+        "authorized_help",
+        "proportionate_help",
+        "independent_permission"
+      ],
+      "conclusion": "permit_action",
+      "body": "Разрешение конкретного средства требует независимого обоснования, согласия либо надлежащей защиты интересов, и соразмерности. Не лицензия на вмешательство.",
+      "related": "ARG-12",
+      "independence_witnesses": [
+        {
+          "case": "C5",
+          "lost": [
+            "permit_action"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A8",
+      "title": "Независимость допустимости средств",
+      "antecedents": [
+        "coercive_means",
+        "no_independent_permission"
+      ],
+      "conclusion": "forbid_means",
+      "body": "Этическое несогласие с действием не разрешает принуждение. В данном случае средство без независимого оправдания запрещено.",
+      "related": "LOG-T12",
+      "independence_witnesses": [
+        {
+          "case": "C6",
+          "lost": [
+            "forbid_means"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A9",
+      "title": "Предосторожность при неопределённости",
+      "antecedents": [
+        "creation",
+        "risk_unresolved"
+      ],
+      "conclusion": "require_assessment",
+      "body": "Неопределённость существенного риска создаёт требование дополнительной оценки; отсутствие данных не означает безопасность и само по себе не устанавливает категорический запрет.",
+      "related": "LOG-T18",
+      "independence_witnesses": [
+        {
+          "case": "C4",
+          "lost": [
+            "require_assessment"
+          ]
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "C1",
+      "title": "Наблюдаемое отрицательное переживание",
+      "facts": [
+        "negative_experience",
+        "observer_invariant",
+        "causal_link",
+        "agent_can_reason",
+        "evidence_available"
+      ],
+      "body": "Фиксированный случай уже происходящего вреда; причинная связь условно задана.",
+      "derived": [
+        "consider_reason",
+        "local_disvalue",
+        "reason_against"
+      ],
+      "trace": [
+        "A1",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "id": "C2",
+      "title": "Несоздание без независимого притязания",
+      "facts": [
+        "no_subject",
+        "no_independent_claim"
+      ],
+      "body": "Речь только о рассматриваемом отсутствии субъекта, не об интересах других людей.",
+      "derived": [
+        "no_deprivation_claim"
+      ],
+      "trace": [
+        "A5"
+      ]
+    },
+    {
+      "id": "C3",
+      "title": "Создание: заданные условия защитного порога",
+      "facts": [
+        "creation",
+        "severe_risk",
+        "no_prior_authorization",
+        "no_independent_claim",
+        "abstention_feasible"
+      ],
+      "body": "Условия заданы гипотетически, их универсальность не предполагается.",
+      "derived": [
+        "forbid_action"
+      ],
+      "trace": [
+        "A6"
+      ]
+    },
+    {
+      "id": "C4",
+      "title": "Создание: существенная неопределённость",
+      "facts": [
+        "creation",
+        "risk_unresolved",
+        "no_prior_authorization",
+        "no_independent_claim",
+        "abstention_feasible"
+      ],
+      "body": "Недостаток информации; не подразумевается ни безопасность, ни невозможность вреда.",
+      "derived": [
+        "require_assessment"
+      ],
+      "trace": [
+        "A9"
+      ]
+    },
+    {
+      "id": "C5",
+      "title": "Существующий субъект: допустимая помощь",
+      "facts": [
+        "negative_experience",
+        "observer_invariant",
+        "causal_link",
+        "agent_can_reason",
+        "evidence_available",
+        "existing_subject",
+        "help",
+        "authorized_help",
+        "proportionate_help",
+        "independent_permission"
+      ],
+      "body": "Оценка относится к конкретному действию; наличие основания против его отрицательного аспекта не противоречит разрешению при отдельном оправдании.",
+      "derived": [
+        "consider_reason",
+        "local_disvalue",
+        "permit_action",
+        "reason_against"
+      ],
+      "trace": [
+        "A1",
+        "A2",
+        "A3",
+        "A7"
+      ]
+    },
+    {
+      "id": "C6",
+      "title": "Существующий субъект: принуждение без основания",
+      "facts": [
+        "existing_subject",
+        "coercive_means",
+        "no_independent_permission"
+      ],
+      "body": "Недопустимость средства не выводится из запрета другого действия; здесь задано отдельное условие.",
+      "derived": [
+        "forbid_means"
+      ],
+      "trace": [
+        "A8"
+      ]
+    },
+    {
+      "id": "C7",
+      "title": "Сопоставимый опыт другого вида",
+      "facts": [
+        "comparable_experience",
+        "negative_experience",
+        "observer_invariant"
+      ],
+      "body": "Проверка применения одинакового критерия, не конкретной политики.",
+      "derived": [
+        "equal_criterion",
+        "local_disvalue"
+      ],
+      "trace": [
+        "A1",
+        "A4"
+      ]
+    },
+    {
+      "id": "C8",
+      "title": "Сопоставимый опыт иного физического субстрата",
+      "facts": [
+        "comparable_experience",
+        "negative_experience",
+        "observer_invariant"
+      ],
+      "body": "Абстрактный случай условной чувствительности, не утверждение о сознании какой-либо реальной технологии.",
+      "derived": [
+        "equal_criterion",
+        "local_disvalue"
+      ],
+      "trace": [
+        "A1",
+        "A4"
+      ]
+    }
+  ],
+  "output_labels": {
+    "local_disvalue": "Локальная антиценность",
+    "reason_against": "Первоначальное основание против действия",
+    "consider_reason": "Требование учесть основание",
+    "equal_criterion": "Единый критерий оценки",
+    "no_deprivation_claim": "Нет заданного притязания на создание",
+    "forbid_action": "Запрет действия по защитному принципу",
+    "permit_action": "Разрешение конкретной помощи",
+    "forbid_means": "Запрет независимо не оправданного принуждения",
+    "require_assessment": "Требование оценки риска"
+  },
+  "tests": [
+    {
+      "id": "T01",
+      "case": "C1",
+      "target": "consider_reason",
+      "minimal_sets": [
+        [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      ],
+      "successful_subsets": 64,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T02",
+      "case": "C1",
+      "target": "local_disvalue",
+      "minimal_sets": [
+        [
+          "A1"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T03",
+      "case": "C1",
+      "target": "reason_against",
+      "minimal_sets": [
+        [
+          "A1",
+          "A2"
+        ]
+      ],
+      "successful_subsets": 128,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T04",
+      "case": "C2",
+      "target": "no_deprivation_claim",
+      "minimal_sets": [
+        [
+          "A5"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T05",
+      "case": "C3",
+      "target": "forbid_action",
+      "minimal_sets": [
+        [
+          "A6"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T06",
+      "case": "C4",
+      "target": "require_assessment",
+      "minimal_sets": [
+        [
+          "A9"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T07",
+      "case": "C5",
+      "target": "consider_reason",
+      "minimal_sets": [
+        [
+          "A1",
+          "A2",
+          "A3"
+        ]
+      ],
+      "successful_subsets": 64,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T08",
+      "case": "C5",
+      "target": "local_disvalue",
+      "minimal_sets": [
+        [
+          "A1"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T09",
+      "case": "C5",
+      "target": "permit_action",
+      "minimal_sets": [
+        [
+          "A7"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T10",
+      "case": "C5",
+      "target": "reason_against",
+      "minimal_sets": [
+        [
+          "A1",
+          "A2"
+        ]
+      ],
+      "successful_subsets": 128,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T11",
+      "case": "C6",
+      "target": "forbid_means",
+      "minimal_sets": [
+        [
+          "A8"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T12",
+      "case": "C7",
+      "target": "equal_criterion",
+      "minimal_sets": [
+        [
+          "A4"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T13",
+      "case": "C7",
+      "target": "local_disvalue",
+      "minimal_sets": [
+        [
+          "A1"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T14",
+      "case": "C8",
+      "target": "equal_criterion",
+      "minimal_sets": [
+        [
+          "A4"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    },
+    {
+      "id": "T15",
+      "case": "C8",
+      "target": "local_disvalue",
+      "minimal_sets": [
+        [
+          "A1"
+        ]
+      ],
+      "successful_subsets": 256,
+      "checked_subsets": 512
+    }
+  ],
+  "subset_evaluations": 4096,
+  "semantic_evaluations": 4096,
+  "semantic_checks": [
+    {
+      "case": "C1",
+      "satisfying_models": 64,
+      "entailed": [
+        "consider_reason",
+        "local_disvalue",
+        "reason_against"
+      ],
+      "example_countermodel": {
+        "local_disvalue": true,
+        "reason_against": true,
+        "consider_reason": true,
+        "equal_criterion": false,
+        "no_deprivation_claim": false,
+        "forbid_action": false,
+        "permit_action": false,
+        "forbid_means": false,
+        "require_assessment": false
+      }
+    },
+    {
+      "case": "C2",
+      "satisfying_models": 256,
+      "entailed": [
+        "no_deprivation_claim"
+      ],
+      "example_countermodel": {
+        "local_disvalue": false,
+        "reason_against": false,
+        "consider_reason": false,
+        "equal_criterion": false,
+        "no_deprivation_claim": true,
+        "forbid_action": false,
+        "permit_action": false,
+        "forbid_means": false,
+        "require_assessment": false
+      }
+    },
+    {
+      "case": "C3",
+      "satisfying_models": 256,
+      "entailed": [
+        "forbid_action"
+      ],
+      "example_countermodel": {
+        "local_disvalue": false,
+        "reason_against": false,
+        "consider_reason": false,
+        "equal_criterion": false,
+        "no_deprivation_claim": false,
+        "forbid_action": true,
+        "permit_action": false,
+        "forbid_means": false,
+        "require_assessment": false
+      }
+    },
+    {
+      "case": "C4",
+      "satisfying_models": 256,
+      "entailed": [
+        "require_assessment"
+      ],
+      "example_countermodel": {
+        "local_disvalue": false,
+        "reason_against": false,
+        "consider_reason": false,
+        "equal_criterion": false,
+        "no_deprivation_claim": false,
+        "forbid_action": false,
+        "permit_action": false,
+        "forbid_means": false,
+        "require_assessment": true
+      }
+    },
+    {
+      "case": "C5",
+      "satisfying_models": 32,
+      "entailed": [
+        "consider_reason",
+        "local_disvalue",
+        "permit_action",
+        "reason_against"
+      ],
+      "example_countermodel": {
+        "local_disvalue": true,
+        "reason_against": true,
+        "consider_reason": true,
+        "equal_criterion": false,
+        "no_deprivation_claim": false,
+        "forbid_action": false,
+        "permit_action": true,
+        "forbid_means": false,
+        "require_assessment": false
+      }
+    },
+    {
+      "case": "C6",
+      "satisfying_models": 256,
+      "entailed": [
+        "forbid_means"
+      ],
+      "example_countermodel": {
+        "local_disvalue": false,
+        "reason_against": false,
+        "consider_reason": false,
+        "equal_criterion": false,
+        "no_deprivation_claim": false,
+        "forbid_action": false,
+        "permit_action": false,
+        "forbid_means": true,
+        "require_assessment": false
+      }
+    },
+    {
+      "case": "C7",
+      "satisfying_models": 128,
+      "entailed": [
+        "equal_criterion",
+        "local_disvalue"
+      ],
+      "example_countermodel": {
+        "local_disvalue": true,
+        "reason_against": false,
+        "consider_reason": false,
+        "equal_criterion": true,
+        "no_deprivation_claim": false,
+        "forbid_action": false,
+        "permit_action": false,
+        "forbid_means": false,
+        "require_assessment": false
+      }
+    },
+    {
+      "case": "C8",
+      "satisfying_models": 128,
+      "entailed": [
+        "equal_criterion",
+        "local_disvalue"
+      ],
+      "example_countermodel": {
+        "local_disvalue": true,
+        "reason_against": false,
+        "consider_reason": false,
+        "equal_criterion": true,
+        "no_deprivation_claim": false,
+        "forbid_action": false,
+        "permit_action": false,
+        "forbid_means": false,
+        "require_assessment": false
+      }
+    }
+  ],
+  "coverage": {
+    "domain": [
+      "C3",
+      "C4"
+    ],
+    "covered": [
+      "C3"
+    ],
+    "uncovered": [
+      "C4"
+    ],
+    "note": "Невыводимость запрета не является доказательством разрешения. Для универсального тезиса нужна полнота покрытия области; эта модель её не устанавливает."
+  },
+  "stress_test": {
+    "title": "Искусственное наложение контекстов создания и помощи",
+    "facts": [
+      "abstention_feasible",
+      "agent_can_reason",
+      "authorized_help",
+      "causal_link",
+      "creation",
+      "evidence_available",
+      "existing_subject",
+      "help",
+      "independent_permission",
+      "negative_experience",
+      "no_independent_claim",
+      "no_prior_authorization",
+      "observer_invariant",
+      "proportionate_help",
+      "severe_risk"
+    ],
+    "derived": [
+      "consider_reason",
+      "forbid_action",
+      "local_disvalue",
+      "permit_action",
+      "reason_against"
+    ],
+    "conflict": true,
+    "interpretation": "Если одну и ту же абстрактную операцию без проверки квалифицировать одновременно как чистое создание и независимо оправданную помощь, правила дают несовместимые итоговые статусы. Требуется уточнить область действия, а не считать все правила автоматически согласованными. Отдельное первоначальное основание не является таким конфликтом."
+  },
+  "baseline_conflicts": [],
+  "references": [
+    {
+      "id": "AC-R1",
+      "title": "SEP: Classical Logic",
+      "url": "https://plato.stanford.edu/entries/logic-classical/",
+      "scope": "Поисковые выдержки: логическое следование и удовлетворимость."
+    },
+    {
+      "id": "AC-R2",
+      "title": "SEP: Reasons for Action: Justification, Motivation, Explanation",
+      "url": "https://plato.stanford.edu/entries/reasons-just-vs-expl/",
+      "scope": "Поисковые выдержки: первоначальные основания и итоговый нормативный статус."
+    },
+    {
+      "id": "AC-R3",
+      "title": "SEP: Deontological Ethics",
+      "url": "https://plato.stanford.edu/entries/ethics-deontological/",
+      "scope": "Поисковые выдержки: обязательность, запрет, разрешение, конфликт требований."
+    }
+  ]
+}

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Исследовательский атлас эфилизма · v3.7 | Efilism RUS</title>
+  <meta name="description" content="Исследовательский справочник и интерактивный граф понятий, аргументов, возражений и источников по монографии Efilism RUS (версия 3.7).">
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --surface-soft: #eef3f9;
+      --primary: #1b365d;
+      --primary-hover: #274c82;
+      --accent: #2b5b84;
+      --text: #1f2933;
+      --muted: #52606d;
+      --border: #d9e2ec;
+      --badge-bg: #e6eef8;
+      --badge-text: #1b365d;
+      --warn-bg: #fff8eb;
+      --warn-border: #e6c68b;
+      --shadow: 0 2px 10px rgba(27, 54, 93, 0.06);
+      --radius: 12px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f1722;
+      --surface: #172231;
+      --surface-soft: #1d2c40;
+      --primary: #6ea3e0;
+      --primary-hover: #8bb8eb;
+      --accent: #9cc2ec;
+      --text: #e6edf5;
+      --muted: #9fb0c4;
+      --border: #2a3b52;
+      --badge-bg: #20344d;
+      --badge-text: #b7d3f5;
+      --warn-bg: #262015;
+      --warn-border: #6e5832;
+      --shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+
+    .topbar-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 0.88rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .theme-btn {
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 5px 10px;
+      font-size: 0.84rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .theme-btn:hover {
+      border-color: var(--primary);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.5rem, 4vw, 2.05rem);
+      line-height: 1.2;
+      color: var(--primary);
+    }
+
+    .lead {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 70ch;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btn-primary {
+      background: #1b365d;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #274c82;
+      text-decoration: none;
+    }
+
+    [data-theme="dark"] .btn-primary {
+      background: #3b6ea5;
+      color: #ffffff;
+    }
+
+    [data-theme="dark"] .btn-primary:hover {
+      background: #4e83bd;
+    }
+
+    .btn-secondary {
+      background: var(--surface-soft);
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      text-decoration: none;
+    }
+
+    .meta-line {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    h2 {
+      font-size: 1.18rem;
+      margin: 26px 0 12px;
+      color: var(--primary);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+      color: var(--text);
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .card:hover {
+      border-color: var(--primary);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--primary);
+    }
+
+    .card-size {
+      font-size: 0.76rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      margin-top: 16px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .module-list {
+      list-style: none;
+      padding: 12px 0 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 8px 16px;
+      font-size: 0.88rem;
+    }
+
+    .module-list li {
+      padding: 4px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .notice {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin-top: 24px;
+      font-size: 0.88rem;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .notice ul {
+      margin: 6px 0 0;
+      padding-left: 18px;
+    }
+
+    .notice li {
+      margin-bottom: 4px;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 0.84rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Efilism RUS · Исследовательский атлас v3.7</div>
+      <nav class="nav-links" aria-label="Основные разделы проекта">
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/start.html">Начать здесь</a>
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/concept.html">За 5 минут</a>
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/">FAQ</a>
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/glossary.html">Глоссарий</a>
+        <button class="theme-btn" id="themeToggle" type="button" aria-label="Переключить тему">Тема</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="pill">Для продвинутых читателей и исследователей · v3.7</span>
+      <h1>Исследовательский атлас эфилизма</h1>
+      <p class="lead">
+        Аналитический справочник, граф понятий, разбор сильных возражений и аппарат проверки аргументов по монографии
+        «Эфилизм. Философия абсолютного антинатализма». Если вы только знакомитесь с темой, лучше начать со страницы
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/concept.html">«Эфилизм за 5 минут»</a> или
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/">Большого FAQ</a>.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="Corpus_Definitivum.html">Открыть справочник (849 КБ · быстро на телефоне)</a>
+        <a class="btn btn-secondary" href="Atlas_Efilismi.html">Полный граф и модули (4,25 МБ · лучше на ПК)</a>
+      </div>
+
+      <div class="meta-line">
+        <span>Базовая сверка: редакция книги от 23.11.2026 (529 PDF-стр.)</span>
+        <span>Автономный статический архив без внешних скриптов</span>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Состав справочника">
+      <div class="stat">
+        <div class="stat-num">137</div>
+        <div class="stat-label">понятий и терминов</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">18</div>
+        <div class="stat-label">разобранных аргументов</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">12</div>
+        <div class="stat-label">сильных возражений</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">139</div>
+        <div class="stat-label">библиографических URL</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">24</div>
+        <div class="stat-label">редакторских предложения</div>
+      </div>
+    </section>
+
+    <h2>Ключевые разделы атласа</h2>
+    <section class="cards">
+      <a class="card" href="Corpus_Definitivum.html">
+        <div class="card-top">
+          <span class="card-title">Единый справочник (v3.7)</span>
+          <span class="card-size">849 КБ</span>
+        </div>
+        <p class="card-desc">Главная точка входа: словарь, 9 принципов, 18 аргументов, 12 возражений, библиография и реестр 24 правок.</p>
+      </a>
+
+      <a class="card" href="Cartographia_Efilismi.html">
+        <div class="card-top">
+          <span class="card-title">Картография (95 карт)</span>
+          <span class="card-size">710 КБ</span>
+        </div>
+        <p class="card-desc">Интерактивные тематические карты связей между понятиями, посылками и главами монографии.</p>
+      </a>
+
+      <a class="card" href="Encyclopaedia_Efilismi.html">
+        <div class="card-top">
+          <span class="card-title">Энциклопедия понятий</span>
+          <span class="card-size">219 КБ</span>
+        </div>
+        <p class="card-desc">137 редакторских статей по 11 рубрикам с указателем пробелов и текстовыми локаторами.</p>
+      </a>
+
+      <a class="card" href="Systematica_Efilismi.html">
+        <div class="card-top">
+          <span class="card-title">Систематика и матрица</span>
+          <span class="card-size">248 КБ</span>
+        </div>
+        <p class="card-desc">Сводный реестр 24 задач, матрица 137 концепций, 9 принципов и 18 аргументов.</p>
+      </a>
+
+      <a class="card" href="Revisio_Definitiva.html">
+        <div class="card-top">
+          <span class="card-title">Реестр редакционных правок</span>
+          <span class="card-size">68 КБ</span>
+        </div>
+        <p class="card-desc">Приоритетная очередь правок (P1–P3) с якорями, критериями приёмки и зависимостями.</p>
+      </a>
+
+      <a class="card" href="Demonstratio_Fundamentalis.html">
+        <div class="card-top">
+          <span class="card-title">Фундаментальные проверки</span>
+          <span class="card-size">56 КБ</span>
+        </div>
+        <p class="card-desc">Пять досье минимальной поддержки посылок и воспроизводимые логические тесты.</p>
+      </a>
+    </section>
+
+    <details>
+      <summary>Все тематические модули (12 разделов) и набор для ИИ-помощника</summary>
+      <ul class="module-list">
+        <li><a href="Ethica_Efilismi.html">Ethica Efilismi</a> — совместимость этических требований</li>
+        <li><a href="Metaethica_Efilismi.html">Metaethica Efilismi</a> — сравнительные метаэтические позиции</li>
+        <li><a href="Ontologia_Valororum.html">Ontologia Valororum</a> — шкалы и асимметрии ценности</li>
+        <li><a href="Justificatio_Efilismi.html">Justificatio Efilismi</a> — обоснование посылок и тесты</li>
+        <li><a href="Epistemologia_Efilismi.html">Epistemologia Efilismi</a> — модель подтверждения и аудит</li>
+        <li><a href="Metaphysica_Efilismi.html">Metaphysica Efilismi</a> — законы, детерминизм, модели</li>
+        <li><a href="Phenomenologia_Efilismi.html">Phenomenologia Efilismi</a> — диагностические модели опыта</li>
+        <li><a href="Biologia_Efilismi.html">Biologia Efilismi</a> — биологическая функция и отбор</li>
+        <li><a href="Psychologia_Efilismi.html">Psychologia Efilismi</a> — когнитивный аудит и нормы</li>
+        <li><a href="Hermeneutica_Efilismi.html">Hermeneutica Efilismi</a> — 14 досье источникового сопоставления</li>
+        <li><a href="Concordantia_Efilismi.html">Concordantia Efilismi</a> — полнотекстовый лексический поиск</li>
+        <li><a href="Lacunae_Efilismi.html">Lacunae Efilismi</a> — 137 контекстных оценок и пробелы</li>
+      </ul>
+      <p style="margin: 12px 0 0; font-size: 0.86rem; color: var(--muted);">
+        Для работы с ИИ-помощником в репозитории лежит папка <code>Corpus_Kit/</code> (6 Markdown-файлов и инструкция
+        <a href="Corpus_Kit/00_Instructions.md">00_Instructions.md</a>), а полная история версий сохранена в
+        <a href="CHANGELOG_v3_7.md">CHANGELOG_v3_7.md</a>.
+      </p>
+    </details>
+
+    <section class="notice" aria-label="Статус и границы справочника">
+      <strong>Важно о статусе материалов и границах проверки</strong>
+      <ul>
+        <li>Справочник является исследовательской реконструкцией, а не авторски утверждённым каноном; проекты правок (REV-01–REV-24) не вносились автоматически в текст книги.</li>
+        <li>Номера страниц привязаны к редакции монографии от 23.11.2026 (529 PDF-страниц); в более поздних редакциях пагинация может отличаться — сверяйтесь по номеру параграфа (§).</li>
+        <li>Этическое обсуждение несоздания не допускает вреда, принуждения или вмешательства в автономию уже существующих субъектов.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div>© Efilism RUS · Atlas Efilismi v3.7</div>
+      <div class="footer-links">
+        <a href="https://bohdan19p-bit.github.io/efilism-faq/start.html">Все ссылки проекта</a>
+        <a href="https://t.me/efilism_RUS/1093">Монография</a>
+        <a href="https://t.me/efilism_RUS">Telegram-канал</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var key = 'efilism_atlas_theme';
+      var root = document.documentElement;
+      var btn = document.getElementById('themeToggle');
+      function apply(mode) {
+        if (mode === 'dark') {
+          root.setAttribute('data-theme', 'dark');
+          btn.textContent = 'Светлая';
+        } else {
+          root.removeAttribute('data-theme');
+          btn.textContent = 'Тёмная';
+        }
+      }
+      var saved = null;
+      try { saved = localStorage.getItem(key); } catch (e) {}
+      if (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        saved = 'dark';
+      }
+      apply(saved === 'dark' ? 'dark' : 'light');
+      btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        try { localStorage.setItem(key, next); } catch (e) {}
+        apply(next);
+      });
+    })();
+  </script>
+</body>
+</html>

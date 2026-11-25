@@ -1,0 +1,52 @@
+{
+  "version": "1.2",
+  "nodes": 2716,
+  "edges": 4444,
+  "added_nodes": 64,
+  "added_edges": 147,
+  "dossiers": 4,
+  "theories": 9,
+  "claims": 16,
+  "objections": 12,
+  "references": 14,
+  "tests": 9,
+  "countermodel_tests": 6,
+  "checks": {
+    "unique_ids": true,
+    "all_endpoints_resolve": true,
+    "previous_nodes_preserved": true,
+    "previous_edges_preserved": true,
+    "html_json_equal": true,
+    "javascript_syntax": true
+  },
+  "browser": {
+    "status": "passed",
+    "method": "System Chromium set_content; file:// blocked by administrator",
+    "results": [
+      {
+        "viewport": [
+          1280,
+          900
+        ],
+        "tab": true,
+        "dossier": true,
+        "graph": true,
+        "truth_table": true,
+        "global_search": true,
+        "js_errors": []
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "tab": true,
+        "dossier": true,
+        "graph": true,
+        "truth_table": true,
+        "global_search": true,
+        "js_errors": []
+      }
+    ]
+  }
+}

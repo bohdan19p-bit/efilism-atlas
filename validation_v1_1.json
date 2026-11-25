@@ -1,0 +1,51 @@
+{
+  "metrics": {
+    "nodes": 2652,
+    "edges": 4297,
+    "dossiers": 4,
+    "claims": 21,
+    "objections": 12,
+    "tests": 7,
+    "tests_with_countermodel": 6,
+    "catalogue": 137,
+    "catalogue_mapped": 39,
+    "candidate_edges": 40,
+    "archive_paragraphs": 952,
+    "archive_duplicate_matches": 951,
+    "archive_new_substantive": 0,
+    "references": 10
+  },
+  "checks": {
+    "unique_node_ids": true,
+    "unique_edge_ids": true,
+    "all_edges_resolve": true,
+    "embedded_json_matches": true,
+    "old_nodes_and_edges_preserved": true
+  },
+  "browser": {
+    "method": "Chromium set_content, offline local HTML; file:// navigation not tested",
+    "results": {
+      "1280x900": {
+        "research_tab": true,
+        "dossier_graph": true,
+        "catalogue_tab": true,
+        "catalogue_detail": true,
+        "global_search": true,
+        "errors": []
+      },
+      "390x844": {
+        "research_tab": true,
+        "dossier_graph": true,
+        "catalogue_tab": true,
+        "catalogue_detail": true,
+        "global_search": true,
+        "errors": []
+      }
+    }
+  },
+  "limitations": [
+    "Archive network retrieval unavailable",
+    "Academic source access selective",
+    "No new full PDF audit"
+  ]
+}

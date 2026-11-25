@@ -1,0 +1,556 @@
+{
+  "version": "3.0",
+  "title": "Phenomenologia Efilismi",
+  "book": {
+    "filename": "efilism_monograph_2026_ru(4).pdf",
+    "library_date": "2026-11-23",
+    "sha256": "1c27519aa47a76d894b4a3e89aedbe1af0d15a5e4472a4e8529ff8a51a6c0713",
+    "pages": 529,
+    "parts": 7,
+    "chapters": 49,
+    "text_recovery": "Временная корректировка ToUnicode по соответствию glyph ID установленным Noto Sans/Serif; проверен образец страницы 31, оригинал не изменён. Извлечение не гарантирует корректности каждого символа и формулы."
+  },
+  "dossiers": [
+    {
+      "id": "PH30-01",
+      "title": "Sentientia — сентиентность",
+      "pages": [
+        167,
+        173,
+        175,
+        181,
+        182
+      ],
+      "anchors": [
+        "OV:P0028",
+        "OV:P0030",
+        "OV:P0031",
+        "OV:P0083"
+      ],
+      "refs": [
+        "R1",
+        "R6",
+        "R10"
+      ],
+      "finding": "§19.1 и §20.1–20.3 отличают регуляцию, ноцицепцию, опыт, самосознание и агентность; §20.6 использует схождение свидетельств.",
+      "argument": "Признаки опыта являются свидетельствами, а не самим опытом. Профиль сознания многомерный; этическая значимость возможного отрицательного опыта не зависит от речевой способности.",
+      "objection": "Если реакция на стимул функциональна, почему она не достаточна для приписывания опыта?",
+      "response": "Одно и то же наблюдаемое поведение совместимо с несколькими механизмами. Совокупность независимых свидетельств повышает обоснованность, но ни один произвольный набор не является универсальным тестом.",
+      "decision": "Сохранить лестницу как дидактическую последовательность различений; уточнить, что она не является универсальной шкалой организмов и не задаёт необходимые ступени развития.",
+      "source_context": [
+        {
+          "id": "OV:P0028",
+          "text": "And as far as Phenomenology, that is the raw sensation of feelings -- or the instance of an experience taking place inside the brain -- these are physically forced generations of chemical reaction. These are also not just taking place inside the brain, they are taking place inside the universe. They are not a payload or claim about truths and falsehoods and cannot be refuted or denied once they occur. Even if, for instance, you felt pain by an object that didn't actually hit you. Even after realizing the fact the object didn't hit you, it does not follow that pain wasn't felt. Note you cannot go back and revise a phenomenological state and correct it, based on updates of information, like you can with epistemological claims. Note that placebo and psychosomatic and illusory effects exist, which allow experience to arise independent and even contrary to all other factors of reality; such as feeling better by taking a useless innocuous sugar pill, feeling worse by convincing yourself you can't do better, or experiencing a total disruption of all worldly coherence by taking intense hallucinogens. Note therefore phenomenology actually transcends \"understanding\" and \"misunderstanding\". "
+        },
+        {
+          "id": "OV:P0030",
+          "text": "Nociception and Negative Valence"
+        },
+        {
+          "id": "OV:P0031",
+          "text": "DNA life is the incident of deterministic chaos, has no reason to continue existing, serves no need or purpose while doing so. But DNA life is not just any code strung together by careless happenstance of physics - it also the code that invented every conceivable pain and harm. Since we don't want to commit ourselves to ambiguous babytalk, instead of \"bads, pains, ouches\", this can be signified as Nociception in biology or Negative Valencein affective neuroscience. This is \"objectively negative value\", not opinions of bad value. It does not rely on the subject to \"subjectively opine it with property\", because correctly: the property was determined for the subject, not by the subject. The values are not dice, and they are not wildcards -- they cannot be indeterminately or arbitrarily decided by the system they are instantiated in. These values are commenced by the universe's material determinism (just like literally everything else) - they are not commenced by any subject's discretion or whimsy. The values are galvanizing physical forces of truly distinct property. These values are not \"outside\" of reality, they cannot be discounted from reality's equation just because they happen in nerves and brains. It also doesn't matter if they are activated \"by\" or \"as\" or \"in\" non-identical substrata, catalysts, entities, or \"subjective\" systems -- IE."
+        },
+        {
+          "id": "OV:P0083",
+          "text": "Discovering the global NCC means discovering how these functions are implemented in the nervous system. This would also allow us to decide which other beings on this planet enjoy the appearance of a world; these beings will have a recognizable physical counterpart in their brains. On the most simple and fundamental level, the global NCC will be a dynamic brain state exhibiting large-scale coherence. It will be fully integrated with whatever generates the virtual window of presence, because in a sense it is this window. Finally, it will have to make earlier processing stages unavailable to high-level attention. Source."
+        }
+      ],
+      "book_context": [
+        {
+          "page": 167,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 166 Глава 19. От химической функции к переживаемой значимости 19.1. Почему между регуляцией и страданием нельзя делать словесный скачок На протяжении всей Третьей части мы намеренно удерживали строжайшую методологическую дисциплину: описывая самоподдержание клетки, копирование ДНК, эволюционный отбор, работу органов и цепи обратной связи гомеостаза, мы ни разу не приписали этим базовым биологическим процессам субъективного переживания боли или страдания. Почему эта сдержанность так важна для силы нашего общего доказательства? Потому что если бы мы с самого начала контрабандой вшили слова «боль», «мучение» или «вред» в простое химическое окисление глюкозы или в реакцию одноклеточной инфузории, вдумчивый критик тут же поймал бы нас за руку на антропоморфизме и подмене понятий. Чтобы этичес"
+        },
+        {
+          "page": 173,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 172 нейтральный характер переживания для самого субъекта; феноменальный факт — сам объективный факт того, что у отдельного субъекта в данный момент состоялось сознательное переживание (независимо от того, прав ли субъект относительно внешней причины этого состояния); переживаемый вред — состояние с отрицательной валентностью, которое реально присутствует для чувствующего существа как нечто мучительное, требующее прекращения, ослабления или избегания. На протяжении всей Четвёртой части мы будем строго удерживать четыре демаркационные границы: между ноцицепцией (сигналом угрозы) и болью (сознательным страданием); между самим наличием опыта и его валентным знаком; между первичной отрицательной валентностью и позднейшей смысловой переоценкой события; между объективной проблемой для субъекта "
+        },
+        {
+          "page": 175,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 174 личности и завтрашнем дне, — рассуждает иной обыватель, — значит, и настоящей боли они не чувствуют!» Чтобы навсегда закрыть эту антропоцентрическую уловку, разведём пять различных уровней психической организации: сентиентность — базовая способность иметь субъективные ощущения и переживания (минимальное присутствие того, «каково это — быть в данном состоянии»); сознание (в широком смысле) — общее поле субъективного опыта, включающее ощущения, перцептивные образы, эмоции и потоки мыслей (причём сам по себе факт сознательного восприятия логически отделён от его валентного знака, который устанавливается следующим шагом); самосознание — способность системы выделять и моделировать саму себя как отдельного, устойчивого во времени участника событий («это моя рука, моя биография, моё будущее"
+        },
+        {
+          "page": 181,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 180 не менее между самым детальным описанием работы нейронных цепей обратной связи и самим фактом того, почему эта работа вообще ощущается изнутри, пока сохраняется объяснительный остаток («трудная проблема сознания»). Но, как мы доказали в Главе 9, этот остаток — открытая научная задача внутри физикализма зависимости, а не повод возвращать в науку бестелесных духов, которые вовсе ничего не объясняют. Как же тогда мы узнаём, какие существа вокруг нас обладают сентиентностью, если чужое сознание нельзя потрогать руками напрямую (проблема других сознаний)? Через конвергенцию (схождение) независимых линий доказательств (Глава 1): наличие централизованной нервной организации и интеграционных контуров; сложное защитное поведение (не просто рефлекторное отдёргивание, а длительное щажение ранен"
+        },
+        {
+          "page": 182,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 181 издавать слышимый человеческим ухом крик не имеют ни малейшего отношения к реальности переживаемой боли. Нервная система оценивается не по эстетической симпатии наблюдателя и не по способности существа решать алгебраические задачи, а исключительно по наличию архитектуры отрицательной валентности. Наконец, критерий сентиентности в нашей книге полностью независим от типа физического субстрата [S42; S43]: с одной стороны, если в будущем искусственная небиологическая система действительно реализует строение субъективного валентного опыта, она станет полноправным субъектом этической защиты независимо от того, что в ней нет ДНК и углеродных клеток; с другой стороны, простая внешняя имитация человеческих фраз на экране языковой модели или пластиковая мимика робота без внутренней интеграцион"
+        }
+      ]
+    },
+    {
+      "id": "PH30-02",
+      "title": "Realizatio Physica — физическая реализация",
+      "pages": [
+        168,
+        181,
+        186
+      ],
+      "anchors": [
+        "OV:P0028",
+        "OV:P0077",
+        "OV:P0081",
+        "OV:P0082",
+        "OV:P0083"
+      ],
+      "refs": [
+        "R2",
+        "R3"
+      ],
+      "finding": "§20.6 признаёт объяснительный остаток; §21.3 связывает первый и третий перспективные доступы с одним процессом в рамках физикализма.",
+      "argument": "Различать нейронный коррелят, причинную предпосылку, реализующий механизм и метафизическое тождество. Даже причинное вмешательство не исчерпывает объяснения феноменальности.",
+      "objection": "Несогласие теорий сознания делает теорию ценности неопределённой.",
+      "response": "Теории реализации могут оставаться открытыми при наличии убедительных свидетельств конкретного опыта. Неопределённость становится существенной при переносе вывода на неизвестные системы.",
+      "decision": "В §20.6 добавить краткое сопоставление GNWT/IIT/HOT/рекуррентных подходов и исследование Cogitate 2025; не объявлять победителя.",
+      "source_context": [
+        {
+          "id": "OV:P0028",
+          "text": "And as far as Phenomenology, that is the raw sensation of feelings -- or the instance of an experience taking place inside the brain -- these are physically forced generations of chemical reaction. These are also not just taking place inside the brain, they are taking place inside the universe. They are not a payload or claim about truths and falsehoods and cannot be refuted or denied once they occur. Even if, for instance, you felt pain by an object that didn't actually hit you. Even after realizing the fact the object didn't hit you, it does not follow that pain wasn't felt. Note you cannot go back and revise a phenomenological state and correct it, based on updates of information, like you can with epistemological claims. Note that placebo and psychosomatic and illusory effects exist, which allow experience to arise independent and even contrary to all other factors of reality; such as feeling better by taking a useless innocuous sugar pill, feeling worse by convincing yourself you can't do better, or experiencing a total disruption of all worldly coherence by taking intense hallucinogens. Note therefore phenomenology actually transcends \"understanding\" and \"misunderstanding\". "
+        },
+        {
+          "id": "OV:P0077",
+          "text": "Recall that a representation is transparent if the system using it cannot recognize it as a representation. A world-model active in the brain is transparent if the brain has no chance of discovering that it is a model. A model of the current moment is transparent if the brain has no chance of discovering that it is simply the result of information-processing currently going on in itself."
+        },
+        {
+          "id": "OV:P0081",
+          "text": "2. Analyzing their contents in more detail (the representational level)."
+        },
+        {
+          "id": "OV:P0082",
+          "text": "3. Describing the functions bringing about these contents."
+        },
+        {
+          "id": "OV:P0083",
+          "text": "Discovering the global NCC means discovering how these functions are implemented in the nervous system. This would also allow us to decide which other beings on this planet enjoy the appearance of a world; these beings will have a recognizable physical counterpart in their brains. On the most simple and fundamental level, the global NCC will be a dynamic brain state exhibiting large-scale coherence. It will be fully integrated with whatever generates the virtual window of presence, because in a sense it is this window. Finally, it will have to make earlier processing stages unavailable to high-level attention. Source."
+        }
+      ],
+      "book_context": [
+        {
+          "page": 168,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 167 сигналов в таламо-кортикальной и лимбической сетях мозга вспыхивает качественно новое событие: состояние системы перестаёт быть просто переброской ионов и становится острой, обжигающей болью для самого субъекта. Вот почему дисциплина вывода (Глава 4) запрещает сваливать все эти явления под одно резиновое слово «реакция» и требует проходить пять ступеней перехода строго по очереди, без пропусков: Каждая стрелка на этой схеме — отдельный научный и философский вопрос, который нельзя перепрыгнуть простой сменой словаря. Вот почему так нелепо звучат популярные рассуждения о том, будто «трава тоже кричит, когда её косят, а бактерия страдает от антибиотика, потому что выпускает сигнальные молекулы». Датчик — это ещё не боль! Фотоэлемент автоматических дверей в супермаркете тоже безошибочно "
+        },
+        {
+          "page": 181,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 180 не менее между самым детальным описанием работы нейронных цепей обратной связи и самим фактом того, почему эта работа вообще ощущается изнутри, пока сохраняется объяснительный остаток («трудная проблема сознания»). Но, как мы доказали в Главе 9, этот остаток — открытая научная задача внутри физикализма зависимости, а не повод возвращать в науку бестелесных духов, которые вовсе ничего не объясняют. Как же тогда мы узнаём, какие существа вокруг нас обладают сентиентностью, если чужое сознание нельзя потрогать руками напрямую (проблема других сознаний)? Через конвергенцию (схождение) независимых линий доказательств (Глава 1): наличие централизованной нервной организации и интеграционных контуров; сложное защитное поведение (не просто рефлекторное отдёргивание, а длительное щажение ранен"
+        },
+        {
+          "page": 186,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 185 21.3. Первое и третье лицо: два окна в один и тот же процесс У каждого из нас есть уникальная привилегия первого лица — не в смысле какого-то социального превосходства или права диктовать физикам законы природы, а в смысле прямого внутреннего присутствия в собственном состоянии. Когда у вас раскалывается голова от мигрени, невролог может видеть спазм сосудов и активность ядер тройничного нерва на экране томографа, но сама мучительность боли дана напрямую только вам. Дуалисты веками пытались раздуть из этой разницы доступов картину «двух параллельных вселенных»: дескать, снаружи есть материальный мозг, а внутри парит нематериальная субстанция духа. Натуралистический физикализм (Глава 9) показывает, почему это удвоение лишнее: взгляд от первого лица и взгляд от третьего лица — это два "
+        }
+      ]
+    },
+    {
+      "id": "PH30-03",
+      "title": "Transparentia — прозрачность",
+      "pages": [
+        177,
+        178,
+        179,
+        180,
+        185
+      ],
+      "anchors": [
+        "OV:P0075",
+        "OV:P0077",
+        "OV:P0085",
+        "OV:P0086",
+        "OV:P0087",
+        "OV:P0088",
+        "OV:P0090",
+        "OV:P0093",
+        "OV:P0096",
+        "OV:P0098"
+      ],
+      "refs": [
+        "R4",
+        "R5"
+      ],
+      "finding": "§20.5 и §21.2.1 уже различают феноменальную и эпистемическую непосредственность. OV:P0085 сильнее: прозрачность объявляется практически универсальным объяснением опыта.",
+      "argument": "Феноменальная прозрачность — недоступность представления как представления на соответствующем уровне; эпистемическая прозрачность — возможность знать о наличии состояния. Истинность представленного содержания — отдельный вопрос.",
+      "objection": "Если репрезентация прозрачна, её содержание должно быть истинным.",
+      "response": "Прозрачное ошибочное восприятие логически возможно: факт опыта не гарантирует истинность представленного положения дел. Самомодель объясняет аспекты перспективы, но не является установленным достаточным объяснением всего сознания.",
+      "decision": "Сохранить разграничение в §21.2.1. В §20.5.1 заменить претензию на исчерпывающий ответ более точным указанием на объяснение конкретной эквивокации.",
+      "source_context": [
+        {
+          "id": "OV:P0075",
+          "text": "Transparency is a technical term in the modern philosophy of mind. Consciousness is \"transparent\" if the system using it cannot, by introspection alone, recognize it as a representation. If consciousness were to become \"opaque\" (that is, if it were actually possible to \"value\" or \"devalue\" it as only a mechanical representation, like Hythloday71 and other nihilists suggest), then we would lose that exact property of consciousness. Think of it as opening a fridge door to check if the light is on or off, the truth of the answer depends on whether the door is open or shut. So you can probably see the problem: To deny the value of consciousness while being a transparent model of consciousness---and while other transparent models keep existing in the universe---you are using an Analysandum of Opacity argument that reduces consciousness to deniable values, which completely misses the Explicandum and Explicans of Transparency that renders that very Analysandum of Opaque value-deniability impossible. Until you establish an Explicandum and Explicans of Opacity in consciousness, like DNA did with Transparency, your Analysanda of Opacity is essentially nothing more than a failed thought experiment that cannot coincide with reality.  Inmendham and Efilists acknowledge this, so we do not attempt to refute consciousness as a mechanically opaque, valueless or deniable representation, this philosophy acknowledges consciousness is a mechanically transparent representation, that necessarily maintains undeniable properties of value in order to even exist."
+        },
+        {
+          "id": "OV:P0077",
+          "text": "Recall that a representation is transparent if the system using it cannot recognize it as a representation. A world-model active in the brain is transparent if the brain has no chance of discovering that it is a model. A model of the current moment is transparent if the brain has no chance of discovering that it is simply the result of information-processing currently going on in itself."
+        },
+        {
+          "id": "OV:P0085",
+          "text": "Transparency is the answer for virtually every question regarding why real experience happens -- and why anything seems to be the case at all. Transparency is the reason water is wet, it is the ultimate reason why experience itself exists, and it is the explicans for the hard problem of consciousness."
+        },
+        {
+          "id": "OV:P0086",
+          "text": "Transparency is a property of epistemic states defined as follows:"
+        },
+        {
+          "id": "OV:P0087",
+          "text": "An epistemic state E is weakly transparent to a subject S if and only if when S is in state E, S can know that S is in state E."
+        },
+        {
+          "id": "OV:P0088",
+          "text": "An epistemic state E is strongly transparent to a subject S if and only if when S is in state E, S can know that S is in state E, AND when S is not in state E, S can know S is not in state E."
+        },
+        {
+          "id": "OV:P0090",
+          "text": "For starters, transparency is a property of active mental representations that are already satisfying the minimally sufficient constraints for conscious experience to occur. Some of these constraints might even be necessary conditions. For instance, phenomenally-transparent representations are always activated within a virtual window of presence and are functionally integrated into a unified global model of the world. Transparency results from a structural/architectonic property of the neural information-processing going on in our brains."
+        },
+        {
+          "id": "OV:P0093",
+          "text": " Firstly, cognitive availability of the fact that currently active phenomenal contents are the final products of internal representational processes is not enough to dissolve or weaken phenomenal transparency. The naïve realism of our experience remains. One cannot “think oneself out of” transparency (one’s phenomenal model of reality) with the help of purely cognitive operations alone. To simply have a mentally represented concept of the book you are holding in your hand, perhaps as being only a special form of representational contents, does not change the untranscendably realistic character of your phenomenal experience at all – at least not in a way that would be relevant in the current context. However, there seems to be a relevant difference between cognitive and attentional processing between conceptual and non-conceptual meta-representation of first-order phenomenal states. Only if you could actually attend to the construction process “itself” would you experience a shift in subjective experience, namely by adding new and non-conceptual content to your current model of reality."
+        },
+        {
+          "id": "OV:P0096",
+          "text": "Transparency is a special form of darkness. With regard to the phenomenology of visual experience transparency means that we are not able to see something, because it is transparent. We don’t see the window, but only the bird flying by. The negative fact that we don’t see the medium, the window, is itself not explicitly represented in the seeing process itself. Phenomenal transparency in general, however, means that something particular is not accessible for subjective experience, namely the representational character of the contents of conscious experience. This analysis refers to all sensory modalities and to our integrated phenomenal model of the world as a whole in particular – but also to large parts of our self-model. The instruments of representation themselves cannot be represented as such, and hence the system making the experience, on this level and by conceptual necessity, is entangled in a naive realism."
+        },
+        {
+          "id": "OV:P0098",
+          "text": "Of course, there may be coincidences of phenomenal immediacy and epistemic immediacy. But phenomenal content – as such – is not epistemic content, and it is a widely held and plausible assumption that it locally supervenes on brain properties. For every veridical perception there will be a hallucinatory state, indistinguishable from the first-person perspective. What is common between the two is their phenomenal content (I like to call it the “lowest common denominator,” or, more traditionally, “the highest common factor”; see Metzinger 2004). Phenomenal content can be dissociated from intentional content: a brain in a vat could possess states subjectively representing object colors as immediately and directly given. Any fully transparent phenomenal representation is characterized by the vehicle-generating mechanisms, which have led to its activation, plus the fact of a concrete internal state now being in existence and carrying its content, not being introspectively available anymore. The phenomenology of transparency, therefore, is the phenomenology of naive realism."
+        }
+      ],
+      "book_context": [
+        {
+          "page": 177,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 176 Натуралистический подход решает эту загадку без всякой мистики и без «неделимой духовной субстанции»: субъект совпадает с самим динамически собранным потоком переживаемого опыта. Единство перспективы обеспечивается тем, что все потоки сигналов от глаз, кожи, мышц и внутренних органов непрерывно сводятся к единому знаменателю — прозрачной самомодели организма. При этом важно понимать две глубокие вещи о природе нашего сознательного «Я». Во-первых, молекула ДНК построила только сам биологический процессор мозга, но не создала то разумное и этическое содержание, которым этот мозг сегодня наполнен: способность отличать логику от суеверия, понимать физику грома вместо страха перед Зевсом и формулировать золотое правило нравственности выковывалась двадцатью тысячами лет человеческой культу"
+        },
+        {
+          "page": 178,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 177 и сильную эпистемическую самодоступность самого факта страдания: невозможно испытывать сокрушительную агонию и «по невнимательности не замечать её». При этом сама феноменальная прозрачность работает в нашем уме как «особая форма слепоты (темноты)»: подобно человеку, смотрящему сквозь идеально чистое оконное стекло на улицу, сознание видит только пугающий или манящий мир за окном именно потому, что оно структурно слепо к самому стеклу — к тому факту, что вся эта картина сгенерирована нейронной механикой собственного мозга. Отказ от мифа о «неделимой субстанции Я» в пользу процессуальной самомодели Метцингера ни в малейшей степени не превращает человеческую личность и страдание в «пустую фикцию» — напротив, он объясняет, каким образом живая материя физически конструирует реального чувс"
+        },
+        {
+          "page": 179,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 178 В работах по организации страдания ([S04; S05; S154]) Метцингер диагностирует у аналитической философии систематическое «слепое пятно» к реальности страдания — при том, что из-за спонтанного блуждания ума и навязчивой тревоги человек теряет ментальную автономию примерно на две трети (66,7%) сознательного времени. Он выделяет четыре концептуально необходимых архитектурных условия страдания для любой биологической или искусственной системы, оставляя вопрос об их исчерпывающей совместной достаточности открытым в пользу принципа этической осторожности. 1) Условие сознательного опыта — наличие феноменального поля: в глубокой коме или до зачатия сознательный опыт равен нулю, поэтому нерождённые принципиально не способны страдать. 2) Условие феноменальной самомодели — интеграция сигналов в "
+        },
+        {
+          "page": 180,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 179 20.5.1. Прозрачность самомодели против субстанциального дуализма и редукционистского нигилизма Переход от архаического субстанциального дуализма (объяснения сознания через нематериальные сущности) к функциональному объяснению через физику и прозрачность ([S04; S05; G02]) даёт исчерпывающий ответ на уловку редукционистского нигилизма. Нигилисты заявляют: «Раз нейронаука доказала, что наше „я“ и чувства 4 лишь биохимическая иллюзия и репрезентация мозга, мы можем списать страдание как вычислительную фикцию, и объективной проблемы боли не существует!» ([G02; G04]). Фундаментальный просчёт таких нигилистов состоит в непонимании того, зачем эволюция ДНК вообще встроила прозрачность в нервную систему. Даже когда субъект когнитивно осознаёт нейровычислительную природу своих состояний (делая"
+        },
+        {
+          "page": 185,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 184 могло бы быть и никакой иллюзии! Ошибочным в иллюзии является представленный внешний источник, но само переживание иллюзии остаётся стопроцентным феноменальным фактом. Принцип феноменальной фиксации позволяет также устранить распространённую клинико- философскую путаницу вокруг острых депрессивных и суицидальных состояний (в частности, тезис о том, что страдающий субъект якобы «переоценивает интенсивность своего страдания из-за когнитивных искажений» [S01; S02]). Наша четырёхуровневая модель проводит здесь хирургически точную границу: человек в кризисе действительно может ошибаться на третьем уровне (в прогнозе будущего, полагая, что текущее состояние никогда не изменится, — и именно поэтому в Главе 42.2 обоснована временная соразмерная защитная опека). Однако субъект логически и ней"
+        }
+      ]
+    },
+    {
+      "id": "PH30-04",
+      "title": "Architectura Affectiva — эмоциональная окраска",
+      "pages": [
+        188,
+        189,
+        190,
+        191,
+        173
+      ],
+      "anchors": [
+        "OV:P0030",
+        "OV:P0031",
+        "OV:P0032",
+        "OV:P0033",
+        "OV:P0034"
+      ],
+      "refs": [
+        "R6",
+        "R7",
+        "R8"
+      ],
+      "finding": "§22.2–22.4 различают нейронный сигнал, первичную неприятность, когнитивное усиление и последующую оценку; на PDF 191 присутствует сильный тезис о всяком удовольствии как обслуживании напряжения.",
+      "argument": "Интенсивность ощущения, неприятность, мотивация избегания, желание получить награду, удовольствие и обучение — различные измерения. Их взаимодействие не означает тождества.",
+      "objection": "Если удовольствие связано с мотивацией, оно всегда лишь прекращение дефицита.",
+      "response": "Различимость liking и wanting не опровергает всякую структурную зависимость, но не подтверждает тотальное тождество. Сильный тезис требует независимых свидетельств.",
+      "decision": "Согласовать PDF 191 с разграничениями депривационализма в главе 26; не отрицать положительный опыт и сохранять независимость аргумента локальной антиценности.",
+      "source_context": [
+        {
+          "id": "OV:P0030",
+          "text": "Nociception and Negative Valence"
+        },
+        {
+          "id": "OV:P0031",
+          "text": "DNA life is the incident of deterministic chaos, has no reason to continue existing, serves no need or purpose while doing so. But DNA life is not just any code strung together by careless happenstance of physics - it also the code that invented every conceivable pain and harm. Since we don't want to commit ourselves to ambiguous babytalk, instead of \"bads, pains, ouches\", this can be signified as Nociception in biology or Negative Valencein affective neuroscience. This is \"objectively negative value\", not opinions of bad value. It does not rely on the subject to \"subjectively opine it with property\", because correctly: the property was determined for the subject, not by the subject. The values are not dice, and they are not wildcards -- they cannot be indeterminately or arbitrarily decided by the system they are instantiated in. These values are commenced by the universe's material determinism (just like literally everything else) - they are not commenced by any subject's discretion or whimsy. The values are galvanizing physical forces of truly distinct property. These values are not \"outside\" of reality, they cannot be discounted from reality's equation just because they happen in nerves and brains. It also doesn't matter if they are activated \"by\" or \"as\" or \"in\" non-identical substrata, catalysts, entities, or \"subjective\" systems -- IE."
+        },
+        {
+          "id": "OV:P0032",
+          "text": "- One subject has positive valence instantiated by peanutbutter, resulting in relieving nourishment."
+        },
+        {
+          "id": "OV:P0033",
+          "text": "- One subject has negative valence instantiated by peanutbuter, resulting in anguishing allergies."
+        },
+        {
+          "id": "OV:P0034",
+          "text": "Because such difference in no way changes the fact that each objective value exists, and exists distinctively and statically (they keep their static values and their separate values) - it's just that they are not instantiated totally identically across subjects. And finally, the fact that the event(s) and value(s) occur in subjects (more accurately called entities) does not refute, invalidate, or change even a single part of what happened. This is the point where the non-concrete (incoherent) idea of \"subjective value\" has been chopped up and examined as objective configuration in objective terms.  "
+        }
+      ],
+      "book_context": [
+        {
+          "page": 188,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 187 пополам, оконное стекло разлетается на осколки, стальная балка гнётся под прессом. Самому стеклу и самому камню от этого полностью всё равно — на первом уровне нет ни функции, ни жизни, ни боли. Уровень 2 — Функциональное повреждение (дисфункция) Изменение структуры снижает способность самоподдерживающейся системы выполнять свою работу и удерживать гомеостаз (Глава 18). Пережатый сосуд нарушает питание ткани, пробитая мембрана бактерии ведёт к лизису клетки, сломанный клапан насоса срывает циркуляцию. Здесь уже есть объективное различие между «исправной работой» и «поломкой» относительно строения системы, но всё ещё может не быть ни капли субъективного переживания (как у растения, бактерии или человека под глубоким общим наркозом). Уровень 3 — Ноцицепция (нейронное кодирование угрозы"
+        },
+        {
+          "page": 189,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 188 панический ужас, унижение, одиночество и тоска — сходятся в одном общем знаменателе: все они наделены отрицательной валентностью. И самое главное: отрицательный знак боли или удушья не придумывается человеком „после опыта“ в результате спокойного философского размышления! В популярной стоической или эзотерической литературе можно встретить наивный тезис: «В природе нет ничего плохого, боль нейтральна — ты сам своим мнением решаешь считать её плохой; измени отношение — и страдание исчезнет!» Нейробиология и честная феноменология полностью опровергают эту браваду. Конечно, с помощью выдержки, смысла или когнитивной переоценки человек способен уменьшить вторичную тревогу вокруг умеренной боли (о чём речь впереди). Но когда рука попадает в кипяток или когда перекрывается дыхание, отрицат"
+        },
+        {
+          "page": 190,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 189 польза конечного результата (здоровый зуб завтра) и внутренний валентный знак самого средства (острая боль сейчас) — это две радикально разные величины. В структуре самого переживаемого вреда современная наука о боли и страдании чётко выделяет два взаимодействующих слоя: первичная отрицательность — непосредственная соматическая или висцеральная мучительность самого состояния (жжение ожога, спазм удушья, тошнота, голодный спазм, сенсорная перегрузка); вторичная отрицательность — надстраивающийся над ней когнитивно-аффективный слой памяти, прогноза и оценки: ужас от мысли, что эта боль никогда не кончится; чувство полной беспомощности и потери контроля; страх надвигающейся инвалидности и распада всех жизненных планов. Вторичный слой способен многократно умножать тяжесть первичного сигн"
+        },
+        {
+          "page": 191,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 190 соотносятся между собой положительный опыт и внутреннее строение нужды и почему будущее счастье одних не даёт права назначать крайний риск другим, мы детально разберём в Части IV. При этом между двумя полюсами валентного опыта уже здесь проступает глубинная структурная разница: облегчение и удовольствие всегда работают как снятие или обслуживание предварительно созданного напряжения, тогда как острая боль, удушье и ужас бьют по сознанию как самодостаточная, ничем не спровоцированная со стороны жертвы катастрофа. Устранить чужую боль — значит ликвидировать реальную, кровоточащую чрезвычайную ситуацию; а вот «не создать нового любителя десертов и закатов» — не значит обделить кого бы то ни было. 22.5. Доказательное ядро и итог двадцать второй главы Соберём доказательное ядро двадцать в"
+        },
+        {
+          "page": 173,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 172 нейтральный характер переживания для самого субъекта; феноменальный факт — сам объективный факт того, что у отдельного субъекта в данный момент состоялось сознательное переживание (независимо от того, прав ли субъект относительно внешней причины этого состояния); переживаемый вред — состояние с отрицательной валентностью, которое реально присутствует для чувствующего существа как нечто мучительное, требующее прекращения, ослабления или избегания. На протяжении всей Четвёртой части мы будем строго удерживать четыре демаркационные границы: между ноцицепцией (сигналом угрозы) и болью (сознательным страданием); между самим наличием опыта и его валентным знаком; между первичной отрицательной валентностью и позднейшей смысловой переоценкой события; между объективной проблемой для субъекта "
+        }
+      ]
+    },
+    {
+      "id": "PH30-05",
+      "title": "Identitas Subjecti — тождество субъекта",
+      "pages": [
+        175,
+        177,
+        186
+      ],
+      "anchors": [
+        "OV:P0028",
+        "OV:P0032",
+        "OV:P0033",
+        "OV:P0034",
+        "OV:P0098"
+      ],
+      "refs": [
+        "R4",
+        "R9"
+      ],
+      "finding": "PDF 177 говорит о функционально том же «Я», одновременно признавая физическое разделение организмов.",
+      "argument": "Различать качественное сходство, численное тождество, причинную непрерывность и единство перспективы. Сходная организация не устанавливает одного общего носителя опыта.",
+      "objection": "Если два продолжения психологически одинаково связаны с исходным субъектом, почему оба не являются им?",
+      "response": "Если B и C различны, утверждения A=B и A=C совместно противоречат транзитивности тождества. Это ограничивает простой критерий сходства, но не выбирает окончательную теорию личного тождества.",
+      "decision": "На PDF 177 уточнить: качественно сходный тип уязвимости, а не численно один и тот же субъект. Не выводить переселение или всеобщую субъективность из сходства.",
+      "source_context": [
+        {
+          "id": "OV:P0028",
+          "text": "And as far as Phenomenology, that is the raw sensation of feelings -- or the instance of an experience taking place inside the brain -- these are physically forced generations of chemical reaction. These are also not just taking place inside the brain, they are taking place inside the universe. They are not a payload or claim about truths and falsehoods and cannot be refuted or denied once they occur. Even if, for instance, you felt pain by an object that didn't actually hit you. Even after realizing the fact the object didn't hit you, it does not follow that pain wasn't felt. Note you cannot go back and revise a phenomenological state and correct it, based on updates of information, like you can with epistemological claims. Note that placebo and psychosomatic and illusory effects exist, which allow experience to arise independent and even contrary to all other factors of reality; such as feeling better by taking a useless innocuous sugar pill, feeling worse by convincing yourself you can't do better, or experiencing a total disruption of all worldly coherence by taking intense hallucinogens. Note therefore phenomenology actually transcends \"understanding\" and \"misunderstanding\". "
+        },
+        {
+          "id": "OV:P0032",
+          "text": "- One subject has positive valence instantiated by peanutbutter, resulting in relieving nourishment."
+        },
+        {
+          "id": "OV:P0033",
+          "text": "- One subject has negative valence instantiated by peanutbuter, resulting in anguishing allergies."
+        },
+        {
+          "id": "OV:P0034",
+          "text": "Because such difference in no way changes the fact that each objective value exists, and exists distinctively and statically (they keep their static values and their separate values) - it's just that they are not instantiated totally identically across subjects. And finally, the fact that the event(s) and value(s) occur in subjects (more accurately called entities) does not refute, invalidate, or change even a single part of what happened. This is the point where the non-concrete (incoherent) idea of \"subjective value\" has been chopped up and examined as objective configuration in objective terms.  "
+        },
+        {
+          "id": "OV:P0098",
+          "text": "Of course, there may be coincidences of phenomenal immediacy and epistemic immediacy. But phenomenal content – as such – is not epistemic content, and it is a widely held and plausible assumption that it locally supervenes on brain properties. For every veridical perception there will be a hallucinatory state, indistinguishable from the first-person perspective. What is common between the two is their phenomenal content (I like to call it the “lowest common denominator,” or, more traditionally, “the highest common factor”; see Metzinger 2004). Phenomenal content can be dissociated from intentional content: a brain in a vat could possess states subjectively representing object colors as immediately and directly given. Any fully transparent phenomenal representation is characterized by the vehicle-generating mechanisms, which have led to its activation, plus the fact of a concrete internal state now being in existence and carrying its content, not being introspectively available anymore. The phenomenology of transparency, therefore, is the phenomenology of naive realism."
+        }
+      ],
+      "book_context": [
+        {
+          "page": 175,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 174 личности и завтрашнем дне, — рассуждает иной обыватель, — значит, и настоящей боли они не чувствуют!» Чтобы навсегда закрыть эту антропоцентрическую уловку, разведём пять различных уровней психической организации: сентиентность — базовая способность иметь субъективные ощущения и переживания (минимальное присутствие того, «каково это — быть в данном состоянии»); сознание (в широком смысле) — общее поле субъективного опыта, включающее ощущения, перцептивные образы, эмоции и потоки мыслей (причём сам по себе факт сознательного восприятия логически отделён от его валентного знака, который устанавливается следующим шагом); самосознание — способность системы выделять и моделировать саму себя как отдельного, устойчивого во времени участника событий («это моя рука, моя биография, моё будущее"
+        },
+        {
+          "page": 177,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 176 Натуралистический подход решает эту загадку без всякой мистики и без «неделимой духовной субстанции»: субъект совпадает с самим динамически собранным потоком переживаемого опыта. Единство перспективы обеспечивается тем, что все потоки сигналов от глаз, кожи, мышц и внутренних органов непрерывно сводятся к единому знаменателю — прозрачной самомодели организма. При этом важно понимать две глубокие вещи о природе нашего сознательного «Я». Во-первых, молекула ДНК построила только сам биологический процессор мозга, но не создала то разумное и этическое содержание, которым этот мозг сегодня наполнен: способность отличать логику от суеверия, понимать физику грома вместо страха перед Зевсом и формулировать золотое правило нравственности выковывалась двадцатью тысячами лет человеческой культу"
+        },
+        {
+          "page": 186,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 185 21.3. Первое и третье лицо: два окна в один и тот же процесс У каждого из нас есть уникальная привилегия первого лица — не в смысле какого-то социального превосходства или права диктовать физикам законы природы, а в смысле прямого внутреннего присутствия в собственном состоянии. Когда у вас раскалывается голова от мигрени, невролог может видеть спазм сосудов и активность ядер тройничного нерва на экране томографа, но сама мучительность боли дана напрямую только вам. Дуалисты веками пытались раздуть из этой разницы доступов картину «двух параллельных вселенных»: дескать, снаружи есть материальный мозг, а внутри парит нематериальная субстанция духа. Натуралистический физикализм (Глава 9) показывает, почему это удвоение лишнее: взгляд от первого лица и взгляд от третьего лица — это два "
+        }
+      ]
+    },
+    {
+      "id": "PH30-06",
+      "title": "Nexus Axiologicus — феноменология и ценность",
+      "pages": [
+        179,
+        184,
+        185,
+        187,
+        190,
+        193
+      ],
+      "anchors": [
+        "OV:P0025",
+        "OV:P0029",
+        "OV:P0034",
+        "OV:P0098"
+      ],
+      "refs": [
+        "R5",
+        "R6"
+      ],
+      "finding": "§20.5 рассматривает четыре условия страдания Метцингера, а §21–23 разводят факт, интерпретацию, отрицательность и норму.",
+      "argument": "Различить широкое понятие отрицательного опыта и более узкое рабочее понятие страдания у Метцингера (сознательный опыт, самомодель, отрицательная окраска, прозрачность). Не подменять первое вторым.",
+      "objection": "Если не установлена прозрачная самомодель, можно ли исключить всякую отрицательную значимость?",
+      "response": "Нет: четыре условия предложены для определённого понятия страдания, а не как доказанный критерий отсутствия всякого неблагоприятного опыта. Даже совместное выполнение условий не заявлено достаточным.",
+      "decision": "В §20.5 уточнить область модели; в §21.2 отделить факт опыта от безошибочности его классификации и интенсивности. Сохранять этику помощи, автономию и добровольность.",
+      "source_context": [
+        {
+          "id": "OV:P0025",
+          "text": "It is possible to have false purpose, false belief, false understanding, false information, false ideas, false concepts, and so on. But there is no such thing as \"false sensation\" or \"false experience\".  "
+        },
+        {
+          "id": "OV:P0029",
+          "text": "Because it is the event of sensation and experience in it of itself that is the real and concrete thing taking place in the universe. Phenomenological states cannot be put into the same pile as epistemological claims -- doing so is not only a categorical error, but phenomenology also overrides epistemology (it can't be refuted by it). Because for as long as the experience and sensation is happening, it remains irrefutable. Once the sensation stops happening, then it is simply no longer the case that the sensation is happening. Note there is no room in that for \"refuting\" the sensation and experience, it's like saying you can argue a running car out of existence.  "
+        },
+        {
+          "id": "OV:P0034",
+          "text": "Because such difference in no way changes the fact that each objective value exists, and exists distinctively and statically (they keep their static values and their separate values) - it's just that they are not instantiated totally identically across subjects. And finally, the fact that the event(s) and value(s) occur in subjects (more accurately called entities) does not refute, invalidate, or change even a single part of what happened. This is the point where the non-concrete (incoherent) idea of \"subjective value\" has been chopped up and examined as objective configuration in objective terms.  "
+        },
+        {
+          "id": "OV:P0098",
+          "text": "Of course, there may be coincidences of phenomenal immediacy and epistemic immediacy. But phenomenal content – as such – is not epistemic content, and it is a widely held and plausible assumption that it locally supervenes on brain properties. For every veridical perception there will be a hallucinatory state, indistinguishable from the first-person perspective. What is common between the two is their phenomenal content (I like to call it the “lowest common denominator,” or, more traditionally, “the highest common factor”; see Metzinger 2004). Phenomenal content can be dissociated from intentional content: a brain in a vat could possess states subjectively representing object colors as immediately and directly given. Any fully transparent phenomenal representation is characterized by the vehicle-generating mechanisms, which have led to its activation, plus the fact of a concrete internal state now being in existence and carrying its content, not being introspectively available anymore. The phenomenology of transparency, therefore, is the phenomenology of naive realism."
+        }
+      ],
+      "book_context": [
+        {
+          "page": 179,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 178 В работах по организации страдания ([S04; S05; S154]) Метцингер диагностирует у аналитической философии систематическое «слепое пятно» к реальности страдания — при том, что из-за спонтанного блуждания ума и навязчивой тревоги человек теряет ментальную автономию примерно на две трети (66,7%) сознательного времени. Он выделяет четыре концептуально необходимых архитектурных условия страдания для любой биологической или искусственной системы, оставляя вопрос об их исчерпывающей совместной достаточности открытым в пользу принципа этической осторожности. 1) Условие сознательного опыта — наличие феноменального поля: в глубокой коме или до зачатия сознательный опыт равен нулю, поэтому нерождённые принципиально не способны страдать. 2) Условие феноменальной самомодели — интеграция сигналов в "
+        },
+        {
+          "page": 184,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 183 нейрофеноменальными фактами, возникающими при взаимодействии одного и того же вещества с двумя разными иммунологическими конфигурациями организма. Релятивист совершает элементарную подмену: он выдаёт зависимость результата от конкретной структуры живой системы за «произвольность оценки». Когда система с ноцицепторами и прозрачной Я-моделью попадает в режим удушья или ожога, отрицательная значимость этого состояния — такой же упрямый объективный факт природы, как и химическая формула аллергена. 21.2. Что называется феноменальным фактом и четыре уровня возможной ошибки Введём центральное понятие двадцать первой главы — феноменальный факт. Под феноменальным фактом мы понимаем объективное положение дел, состоящее в том, что у отдельного чувствующего субъекта в данный интервал времени дей"
+        },
+        {
+          "page": 185,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 184 могло бы быть и никакой иллюзии! Ошибочным в иллюзии является представленный внешний источник, но само переживание иллюзии остаётся стопроцентным феноменальным фактом. Принцип феноменальной фиксации позволяет также устранить распространённую клинико- философскую путаницу вокруг острых депрессивных и суицидальных состояний (в частности, тезис о том, что страдающий субъект якобы «переоценивает интенсивность своего страдания из-за когнитивных искажений» [S01; S02]). Наша четырёхуровневая модель проводит здесь хирургически точную границу: человек в кризисе действительно может ошибаться на третьем уровне (в прогнозе будущего, полагая, что текущее состояние никогда не изменится, — и именно поэтому в Главе 42.2 обоснована временная соразмерная защитная опека). Однако субъект логически и ней"
+        },
+        {
+          "page": 187,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 186 Посылка 1: Событие может быть локализовано внутри конкретной физической системы и зависеть от неё, оставаясь при этом полностью объективным фактом мира. Посылка 2: Состоявшееся переживание является реальным состоянием отдельного субъекта и входит в причинную историю его организма. Посылка 3: Предполагаемый внешний источник, локализация, словесный отчёт и позднейшее воспоминание об опыте могут содержать ошибки (уровни 2–4) без устранения самого факта состоявшегося опыта (уровень 1), а разведение феноменальной и эпистемической непосредственности одновременно опровергает и картезианскую непогрешимость, и вульгарный элиминативизм. Посылка 4: Позиции первого и третьего лица дают асимметричные, но взаимно согласующиеся способы доступа к одному процессу, позволяя объективно исследовать чужо"
+        },
+        {
+          "page": 190,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 189 польза конечного результата (здоровый зуб завтра) и внутренний валентный знак самого средства (острая боль сейчас) — это две радикально разные величины. В структуре самого переживаемого вреда современная наука о боли и страдании чётко выделяет два взаимодействующих слоя: первичная отрицательность — непосредственная соматическая или висцеральная мучительность самого состояния (жжение ожога, спазм удушья, тошнота, голодный спазм, сенсорная перегрузка); вторичная отрицательность — надстраивающийся над ней когнитивно-аффективный слой памяти, прогноза и оценки: ужас от мысли, что эта боль никогда не кончится; чувство полной беспомощности и потери контроля; страх надвигающейся инвалидности и распада всех жизненных планов. Вторичный слой способен многократно умножать тяжесть первичного сигн"
+        },
+        {
+          "page": 193,
+          "excerpt": "ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026 192 Схема связей 02. Объективные проблемы и ошибки и уровни вреда. Физическое изменение, нарушение функции, ноцицепция, отрицательное переживание и широкий вред различаются. Оценка ошибки требует названного критерия. Как читать и предел вывода: две ветви показывают различие функциональных последствий и переживаемого вреда. Условия «может вызывать» и «при наличии переживания» существенны: из одного лишь физического повреждения или ноцицептивного сигнала не следует автоматическое наличие боли без сентиентной интеграции (Главы 19–22). Широкий вред охватывает также поражение интересов и возможностей существующего субъекта, а понятие Первичной Ошибки (Глава 24.4) получает строгий оценочный смысл относительно явно принятого сентиоцентрического критерия предотвращения вреда. 23.2. Реляционная о"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "R1",
+      "title": "Birch, Schnell & Clayton (2020). Dimensions of Animal Consciousness",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32830051/",
+      "relevance": "Многомерные профили сознания, а не единственная лестница."
+    },
+    {
+      "id": "R2",
+      "title": "Seth & Bayne (2022). Theories of consciousness",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35505255/",
+      "relevance": "Четыре семейства теорий и проблема их различения."
+    },
+    {
+      "id": "R3",
+      "title": "Cogitate Consortium (2025). Adversarial testing of GNWT and IIT",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12137136/",
+      "relevance": "Прямое сравнение предсказаний двух теорий, не окончательное решение."
+    },
+    {
+      "id": "R4",
+      "title": "Metzinger (2003). Phenomenal transparency and cognitive self-reference",
+      "url": "https://doi.org/10.1023/B:PHEN.0000007366.42918.EB",
+      "relevance": "Феноменальная самомодель и прозрачность."
+    },
+    {
+      "id": "R5",
+      "title": "Metzinger (2017). Suffering",
+      "url": "https://www.blogs.uni-mainz.de/fb05philosophieengl/files/2013/07/Metzinger_Suffering_2017.pdf",
+      "relevance": "Четыре предложенных необходимых условия, без утверждения достаточности."
+    },
+    {
+      "id": "R6",
+      "title": "IASP (2020). Revised definition of pain",
+      "url": "https://www.iasp-pain.org/publications/iasp-news/iasp-announces-revised-definition-of-pain/",
+      "relevance": "Боль не тождественна ноцицепции; отсутствие речи не исключает боли."
+    },
+    {
+      "id": "R7",
+      "title": "Berridge & Kringelbach (2015). Pleasure systems in the brain",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25950633/",
+      "relevance": "Различение liking, wanting и learning."
+    },
+    {
+      "id": "R8",
+      "title": "Rainville et al. (1999). Dissociation of sensory and affective dimensions of pain",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10467921/",
+      "relevance": "Раздельная модифицируемость сенсорной интенсивности и неприятности."
+    },
+    {
+      "id": "R9",
+      "title": "Personal Identity (Stanford Encyclopedia of Philosophy)",
+      "url": "https://plato.stanford.edu/entries/identity-personal/",
+      "relevance": "Психологическая и физическая непрерывность, проблема ветвления."
+    },
+    {
+      "id": "R10",
+      "title": "New York Declaration on Animal Consciousness (2024)",
+      "url": "https://sites.google.com/nyu.edu/nydeclaration/declaration",
+      "relevance": "Реалистическая возможность опыта у многих животных; декларация, не эксперимент."
+    }
+  ],
+  "tests": {
+    "transparency": {
+      "models": 8,
+      "transparent_false": 2,
+      "example": [
+        1,
+        0,
+        0
+      ]
+    },
+    "conditions": {
+      "all_models": 32,
+      "consistent": 17,
+      "all_conditions_without_suffering": 1
+    },
+    "evidence": {
+      "single": "4/5",
+      "duplicate": "4/5",
+      "independent": "16/17"
+    },
+    "identity": {
+      "models": 8,
+      "consistent": 5,
+      "counterexamples": [
+        {
+          "ab": 0,
+          "ac": 1,
+          "bc": 1,
+          "consistent": false
+        },
+        {
+          "ab": 1,
+          "ac": 0,
+          "bc": 1,
+          "consistent": false
+        },
+        {
+          "ab": 1,
+          "ac": 1,
+          "bc": 0,
+          "consistent": false
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Сверка выбранных страниц по ранее извлечённому тексту; не новый сплошной аудит PDF.",
+    "Академические источники проверены по аннотациям и поисковым выдержкам, не по всем полным текстам.",
+    "Булевы и байесовские примеры — абстрактные модели, не измерения сознания и не клинические тесты.",
+    "Досье — авторская аналитическая реконструкция; исторические копии не сверены с живой Вики. Монография не изменена."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "version": "2.6",
+  "unchanged_graph": true,
+  "unchanged_book_sha256": true,
+  "changed_prior_files": [
+    "Atlas_Efilismi.html",
+    "README.md"
+  ],
+  "prior_file_count": 85,
+  "reproduced_tests": true,
+  "all_json_parse": true,
+  "browser": [
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "checks": [
+        "five dossiers",
+        "seven profiles",
+        "six tests",
+        "search",
+        "empty search",
+        "reset",
+        "source expansion",
+        "no horizontal page overflow"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": [
+        "five dossiers",
+        "seven profiles",
+        "six tests",
+        "search",
+        "empty search",
+        "reset",
+        "source expansion",
+        "no horizontal page overflow"
+      ],
+      "errors": []
+    }
+  ],
+  "method": "Chromium set_content, no direct file:// navigation",
+  "limits": [
+    "Рабочая классификация является редакторской реконструкцией; не установлено тождество всех этических и естественных свойств.",
+    "Академическая сверка по выбранным разделам SEP и издательским выдержкам; книги и статьи целиком не прочитаны.",
+    "Контекст книги — ранее извлечённый текст выбранных страниц; возможны дефекты извлечения.",
+    "Конечные модели проверяют только ковариацию и материальную импликацию, не онтологию, не модальную необходимость и не этическую истинность.",
+    "Монография и исходный граф не изменены."
+  ]
+}

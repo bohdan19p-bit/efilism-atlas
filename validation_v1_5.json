@@ -1,0 +1,57 @@
+{
+  "version": "1.5",
+  "nodes": 2851,
+  "edges": 4741,
+  "added_nodes": 42,
+  "added_edges": 107,
+  "principles": 9,
+  "cases": 8,
+  "minimal_tests": 15,
+  "functional_independence": 9,
+  "subset_evaluations": 4096,
+  "semantic_evaluations": 4096,
+  "baseline_conflicts": 0,
+  "stress_conflict": true,
+  "checks": [
+    "previous nodes and edges preserved exactly",
+    "unique IDs and valid endpoints",
+    "embedded JSON equals external JSON",
+    "closure agrees with semantic intersection",
+    "reproduction script and node --check passed"
+  ],
+  "browser": [
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "checks": [
+        "tab",
+        "filter 9 axioms",
+        "axiom details",
+        "context navigation",
+        "minimal set",
+        "global search",
+        "stress test"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": [
+        "tab",
+        "filter 9 axioms",
+        "axiom details",
+        "context navigation",
+        "minimal set",
+        "global search",
+        "stress test"
+      ],
+      "errors": []
+    }
+  ],
+  "archive": "verified by zipfile.testzip"
+}

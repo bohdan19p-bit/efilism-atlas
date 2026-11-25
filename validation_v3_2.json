@@ -1,0 +1,156 @@
+{
+  "version": "3.2",
+  "browser_checks": [
+    [
+      [
+        1280,
+        900
+      ],
+      "initial"
+    ],
+    [
+      [
+        1280,
+        900
+      ],
+      "search"
+    ],
+    [
+      [
+        1280,
+        900
+      ],
+      "sources"
+    ],
+    [
+      [
+        1280,
+        900
+      ],
+      "selection"
+    ],
+    [
+      [
+        1280,
+        900
+      ],
+      "label"
+    ],
+    [
+      [
+        1280,
+        900
+      ],
+      "risk"
+    ],
+    [
+      [
+        1280,
+        900
+      ],
+      "export"
+    ],
+    [
+      [
+        1280,
+        900
+      ],
+      "reset"
+    ],
+    [
+      [
+        1280,
+        900
+      ],
+      "width"
+    ],
+    [
+      [
+        1280,
+        900
+      ],
+      "no JS errors"
+    ],
+    [
+      [
+        390,
+        844
+      ],
+      "initial"
+    ],
+    [
+      [
+        390,
+        844
+      ],
+      "search"
+    ],
+    [
+      [
+        390,
+        844
+      ],
+      "sources"
+    ],
+    [
+      [
+        390,
+        844
+      ],
+      "selection"
+    ],
+    [
+      [
+        390,
+        844
+      ],
+      "label"
+    ],
+    [
+      [
+        390,
+        844
+      ],
+      "risk"
+    ],
+    [
+      [
+        390,
+        844
+      ],
+      "export"
+    ],
+    [
+      [
+        390,
+        844
+      ],
+      "reset"
+    ],
+    [
+      [
+        390,
+        844
+      ],
+      "width"
+    ],
+    [
+      [
+        390,
+        844
+      ],
+      "no JS errors"
+    ]
+  ],
+  "old_files_changed": [
+    "Atlas_Efilismi.html",
+    "README.md"
+  ],
+  "graph_sha256": "93a94409477d12439487162aafbf7b95bae88355b369f9873e2d4ee9c0dd9102",
+  "graph_unchanged": true,
+  "embedded_json_equal": true,
+  "reproduction_equal": true,
+  "book_hash_verified": true,
+  "mode": "Chromium set_content; local navigation not tested",
+  "file_count": 120
+}

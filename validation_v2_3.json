@@ -1,0 +1,63 @@
+{
+  "version": "2.3",
+  "pdf_pages": 529,
+  "pages_with_text": 527,
+  "records": 137,
+  "counts": {
+    "candidate": 96,
+    "covered": 18,
+    "partial": 5,
+    "not_found": 18
+  },
+  "pairs": 1666,
+  "arguments": 18,
+  "addressed_argument_pages": 78,
+  "argument_page_addresses": 78,
+  "new_nodes": 161,
+  "new_edges": 675,
+  "nodes": 3344,
+  "edges": 7730,
+  "old_graph_preserved": true,
+  "embedded_json_verified": true,
+  "original_sha256_verified": true,
+  "browser_tests": [
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "checks": [
+        "137 records",
+        "status filter",
+        "search",
+        "empty state",
+        "18 arguments",
+        "8 terms",
+        "5 supplements",
+        "no horizontal overflow",
+        "no JS errors"
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": [
+        "137 records",
+        "status filter",
+        "search",
+        "empty state",
+        "18 arguments",
+        "8 terms",
+        "5 supplements",
+        "no horizontal overflow",
+        "no JS errors"
+      ]
+    },
+    {
+      "main_atlas": "initialization and new link",
+      "errors": []
+    }
+  ]
+}

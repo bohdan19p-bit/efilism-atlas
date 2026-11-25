@@ -1,0 +1,53 @@
+{
+  "version": "1.8",
+  "old_nodes_preserved": 2927,
+  "old_edges_preserved": 5160,
+  "nodes": 3076,
+  "edges": 6487,
+  "added_nodes": 149,
+  "added_edges": 1327,
+  "coverage_counts": {
+    "n": 40,
+    "r": 10,
+    "p": 38,
+    "g": 49
+  },
+  "priority_counts": {
+    "P3": 73,
+    "P2": 41,
+    "P1": 13,
+    "P0": 10
+  },
+  "literal_matches": 412,
+  "unique_source_paragraphs": 355,
+  "all_137_anchors_found": true,
+  "ontology_covered_near_or_partial": 63,
+  "unique_identifiers": true,
+  "edge_endpoints_valid": true,
+  "embedded_atlas_matches_json": true,
+  "limitations": "Содержательная сверка выборочная; не независимая проверка оригиналов. Протестированы выбранные сценарии, не все страницы. Прямое открытие file:// заблокировано политикой среды; тесты через загрузку содержимого HTML в Chromium.",
+  "browser_checks": [
+    "1280: standalone 137 entries",
+    "1280: standalone gap filter",
+    "1280: priority filter",
+    "1280: bilingual search and article",
+    "1280: related navigation",
+    "1280: integrated tab",
+    "1280: integrated search and details",
+    "1280: source navigation",
+    "1280: back navigation",
+    "390: standalone 137 entries",
+    "390: standalone gap filter",
+    "390: priority filter",
+    "390: bilingual search and article",
+    "390: related navigation",
+    "390: integrated tab",
+    "390: integrated search and details",
+    "390: source navigation",
+    "390: back navigation"
+  ],
+  "browser_errors": [],
+  "browser_local_file_tested": false,
+  "archive_files": 56,
+  "archive_integrity": "verified after packaging"
+}

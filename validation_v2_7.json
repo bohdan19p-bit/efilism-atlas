@@ -1,0 +1,60 @@
+{
+  "version": "2.7",
+  "unchanged_graph": true,
+  "unchanged_book_sha256": true,
+  "changed_prior_files": [
+    "Atlas_Efilismi.html",
+    "README.md"
+  ],
+  "prior_file_count": 90,
+  "reproduced_tests": true,
+  "all_json_parse": true,
+  "browser": [
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "checks": [
+        "five dossiers",
+        "five tests",
+        "initial aggregate",
+        "scale reversal",
+        "tie",
+        "search",
+        "empty search",
+        "reset",
+        "source expansion",
+        "no page overflow"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": [
+        "five dossiers",
+        "five tests",
+        "initial aggregate",
+        "scale reversal",
+        "tie",
+        "search",
+        "empty search",
+        "reset",
+        "source expansion",
+        "no page overflow"
+      ],
+      "errors": []
+    }
+  ],
+  "method": "Chromium set_content, no direct file:// navigation",
+  "limits": [
+    "Теория локальной антиценности является кандидатной философской гипотезой, не доказанным тождеством.",
+    "Академическая сверка: выбранные разделы SEP, IASP и статьи Фрика и критики Бенатара; V7 и V9 — аннотации. Это не систематический обзор.",
+    "Сверка книги по ранее извлечённому тексту выбранных страниц; PDF заново не извлекался. Нумерация — PDF, на единицу больше печатной.",
+    "Примеры используют условные числа, не эмпирические измерения. Булевы контрмодели предполагают независимость переменных и проверяют отсутствие формального следования без связующих посылок.",
+    "Монография и прежний семантический граф не изменены."
+  ]
+}

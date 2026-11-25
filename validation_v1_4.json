@@ -1,0 +1,56 @@
+{
+  "version": "1.4",
+  "nodes": 2809,
+  "edges": 4634,
+  "added_nodes": 29,
+  "added_edges": 39,
+  "tests": 18,
+  "models": 2486,
+  "with_countermodel": 12,
+  "no_countermodel_in_bound": 6,
+  "checks": [
+    "unique nodes and edges",
+    "valid endpoints",
+    "preserved original nodes",
+    "HTML embedded JSON equals atlas JSON",
+    "preserved original edges",
+    "HTML content tested in Chromium; file URI blocked by administrator"
+  ],
+  "browser": [
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "checks": [
+        "loaded HTML content",
+        "tab",
+        "type filter",
+        "module details",
+        "test details",
+        "back",
+        "global search",
+        "positive bounded result"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": [
+        "loaded HTML content",
+        "tab",
+        "type filter",
+        "module details",
+        "test details",
+        "back",
+        "global search",
+        "positive bounded result"
+      ],
+      "errors": []
+    }
+  ],
+  "archive": "CRC checked"
+}

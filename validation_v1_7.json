@@ -1,0 +1,40 @@
+{
+  "version": "1.7",
+  "objects": 2927,
+  "edges": 5160,
+  "added_objects": 23,
+  "added_edges": 151,
+  "prior_records_unchanged": true,
+  "unique_ids": true,
+  "valid_edge_endpoints": true,
+  "recommendations": 10,
+  "modules": 5,
+  "contexts": 8,
+  "conditional_forbidden": 1,
+  "undetermined": 7,
+  "unique_book_pages": 24,
+  "html_data_matches": true,
+  "book_unchanged": true,
+  "browser_test": {
+    "mode": "set_content, network blocked",
+    "results": [
+      {
+        "viewport": [
+          1280,
+          900
+        ],
+        "scenarios": 7,
+        "javascript_errors": []
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "scenarios": 7,
+        "javascript_errors": []
+      }
+    ]
+  },
+  "book_sha256_matches_previous": true
+}

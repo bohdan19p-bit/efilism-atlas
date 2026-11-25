@@ -1,0 +1,92 @@
+{
+  "version": "2.9",
+  "previous_graph_byte_identical": true,
+  "reproduction_equal": true,
+  "corpus_addresses_verified": 27,
+  "page_addresses_verified": 26,
+  "book_sha256_matches": true,
+  "browser_tests": [
+    [
+      1280,
+      "modal initial"
+    ],
+    [
+      1280,
+      "modal common"
+    ],
+    [
+      1280,
+      "modal reset"
+    ],
+    [
+      1280,
+      "logistic identical"
+    ],
+    [
+      1280,
+      "logistic divergence"
+    ],
+    [
+      1280,
+      "macro closed"
+    ],
+    [
+      1280,
+      "macro open"
+    ],
+    [
+      1280,
+      "search"
+    ],
+    [
+      1280,
+      "source details"
+    ],
+    [
+      1280,
+      "no js errors"
+    ],
+    [
+      390,
+      "modal initial"
+    ],
+    [
+      390,
+      "modal common"
+    ],
+    [
+      390,
+      "modal reset"
+    ],
+    [
+      390,
+      "logistic identical"
+    ],
+    [
+      390,
+      "logistic divergence"
+    ],
+    [
+      390,
+      "macro closed"
+    ],
+    [
+      390,
+      "macro open"
+    ],
+    [
+      390,
+      "search"
+    ],
+    [
+      390,
+      "source details"
+    ],
+    [
+      390,
+      "no js errors"
+    ]
+  ],
+  "browser_method": "Chromium set_content; direct file opening not tested",
+  "academic_scope": "search excerpts only"
+}

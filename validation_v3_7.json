@@ -1,0 +1,58 @@
+{
+  "version": "3.7",
+  "checks": {
+    "previous_files_preserved_except_navigation_and_readme": true,
+    "graph_byte_identical": true,
+    "unique_html_ids": true,
+    "internal_links_resolve": true,
+    "historical_anchors_resolve": true,
+    "reference_occurrences_preserved": true,
+    "all_sections_counts": true,
+    "all_json_parse": true,
+    "main_link": true,
+    "kit_complete": true
+  },
+  "browser_checks": {
+    "1280:initial": true,
+    "1280:search": true,
+    "1280:empty": true,
+    "1280:arguments": true,
+    "1280:detail": true,
+    "1280:source_jump": true,
+    "1280:bibliography": true,
+    "1280:expand": true,
+    "1280:collapse": true,
+    "1280:no_horizontal_overflow": true,
+    "1280:no_js_errors": true,
+    "390:initial": true,
+    "390:search": true,
+    "390:empty": true,
+    "390:arguments": true,
+    "390:detail": true,
+    "390:source_jump": true,
+    "390:bibliography": true,
+    "390:expand": true,
+    "390:collapse": true,
+    "390:no_horizontal_overflow": true,
+    "390:no_js_errors": true
+  },
+  "browser_method": "Chromium, set_content, 1280×900 and 390×844; direct file:// not tested",
+  "changed_previous_files": [
+    "Atlas_Efilismi.html",
+    "README.md"
+  ],
+  "previous_file_count": 139,
+  "graph_sha256": "93a94409477d12439487162aafbf7b95bae88355b369f9873e2d4ee9c0dd9102",
+  "counts": {
+    "concepts": 137,
+    "principles": 9,
+    "arguments": 18,
+    "claims": 108,
+    "objections": 12,
+    "bibliography_urls": 139,
+    "reference_occurrences": 198,
+    "amendments": 24,
+    "source_paragraphs": 678,
+    "historical_documents": 6
+  }
+}

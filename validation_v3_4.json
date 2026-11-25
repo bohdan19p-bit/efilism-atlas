@@ -1,0 +1,60 @@
+{
+  "version": "3.4",
+  "metrics": {
+    "recommendations": 95,
+    "clusters": 24,
+    "priority": {
+      "P1": 8,
+      "P2": 14,
+      "P3": 2
+    },
+    "concepts": 137,
+    "principles": 9,
+    "arguments": 18,
+    "direct_dependencies": 16,
+    "transitive_dependencies": 22
+  },
+  "all_source_records_assigned_once": true,
+  "graph_byte_identical": true,
+  "book_hash_verified": true,
+  "embedded_json_equal": true,
+  "all_previous_files_present": true,
+  "changed_previous_files": [
+    "Atlas_Efilismi.html",
+    "README.md"
+  ],
+  "browser_checks": [
+    "1280: 24 tasks",
+    "1280: P1 filter",
+    "1280: search",
+    "1280: source expansion",
+    "1280: JSON export",
+    "1280: strata",
+    "1280: concepts",
+    "1280: principles",
+    "1280: arguments",
+    "1280: source_recommendations",
+    "1280: no horizontal overflow",
+    "1280: no JS errors",
+    "390: 24 tasks",
+    "390: P1 filter",
+    "390: search",
+    "390: source expansion",
+    "390: JSON export",
+    "390: strata",
+    "390: concepts",
+    "390: principles",
+    "390: arguments",
+    "390: source_recommendations",
+    "390: no horizontal overflow",
+    "390: no JS errors"
+  ],
+  "browser_method": "Chromium set_content, not direct file navigation",
+  "limits": [
+    "Кластеризация редакторская; некоторые записи содержат несколько предложений, назначен один основной кластер.",
+    "Сокращение числа задач не означает устранения всех смысловых различий; исходные записи сохранены.",
+    "Оценки охвата унаследованы из Lacunae, не повторная независимая экспертиза.",
+    "Принципы кандидатные, граф зависимостей наследует редакторскую реконструкцию и не является доказательством.",
+    "Новых академических источников не проверялось; монография не редактировалась."
+  ]
+}

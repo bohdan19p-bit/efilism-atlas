@@ -1,0 +1,60 @@
+{
+  "version": "2.2",
+  "records": 14,
+  "unique_paragraphs": 65,
+  "unique_pages": 28,
+  "new_nodes": 23,
+  "new_edges": 168,
+  "nodes": 3183,
+  "edges": 7055,
+  "legacy_graph_preserved": true,
+  "quote_markers_verified": 14,
+  "html_data_verified": true,
+  "browser_tests": [
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "standalone": "passed",
+      "checks": [
+        "initial list",
+        "search",
+        "detail",
+        "source expand",
+        "status filter",
+        "selection",
+        "empty state",
+        "no overflow",
+        "no JS error"
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "standalone": "passed",
+      "checks": [
+        "initial list",
+        "search",
+        "detail",
+        "source expand",
+        "status filter",
+        "selection",
+        "empty state",
+        "no overflow",
+        "no JS error"
+      ]
+    },
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "main_atlas": "link, initialization and search input passed",
+      "errors": []
+    }
+  ],
+  "limitations": "14 выбранных досье; локальные копии, без независимой проверки исторической Вики. Генеалогия означает статус употребления, не доказательство авторства. Сопоставление с книгой по сохранённым выдержкам."
+}

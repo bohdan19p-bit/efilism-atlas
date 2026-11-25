@@ -1,0 +1,48 @@
+{
+  "version": "1.6",
+  "preserved_nodes": 2851,
+  "preserved_edges": 4741,
+  "new_nodes": 53,
+  "new_edges": 268,
+  "nodes": 2904,
+  "edges": 5009,
+  "structural_checks": "passed",
+  "html_embedded_json_matches": true,
+  "profile_evaluations": 132,
+  "subset_evaluations": 6144,
+  "browser_tests": [
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "checks": [
+        "tab",
+        "module",
+        "objection",
+        "principle",
+        "global_search",
+        "profile",
+        "case"
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": [
+        "tab",
+        "module",
+        "objection",
+        "principle",
+        "global_search",
+        "profile",
+        "case"
+      ],
+      "errors": []
+    }
+  ],
+  "browser_scope": "Chromium set_content, offline; file:// not tested"
+}

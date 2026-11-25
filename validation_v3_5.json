@@ -1,0 +1,40 @@
+{
+  "version": "3.5",
+  "checks": {
+    "anchors": true,
+    "secondary_anchors": true,
+    "all_95_origins": true,
+    "graph_unchanged": true,
+    "book_hash": true,
+    "main_link": true,
+    "previous_files_preserved": true,
+    "embedded_data": true,
+    "1280_all": true,
+    "1280_p1": true,
+    "1280_search": true,
+    "1280_filter": true,
+    "1280_persist": true,
+    "1280_export": true,
+    "1280_width": true,
+    "1280_js": true,
+    "390_all": true,
+    "390_p1": true,
+    "390_search": true,
+    "390_filter": true,
+    "390_persist": true,
+    "390_export": true,
+    "390_width": true,
+    "390_js": true
+  },
+  "all_passed": true,
+  "browser_method": "Chromium set_content (1280×900, 390×844), local file navigation not tested",
+  "records": 24,
+  "previous_files": 130,
+  "counts": {
+    "исследование": 3,
+    "решение автора": 1,
+    "правка": 19,
+    "сохранить": 1
+  },
+  "book_modified": false
+}

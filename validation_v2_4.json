@@ -1,0 +1,63 @@
+{
+  "version": "2.4",
+  "counts": {
+    "covered": 106,
+    "partial": 21,
+    "unresolved": 3,
+    "reconstructed": 7
+  },
+  "new_counts": {
+    "covered": 88,
+    "partial": 16,
+    "unresolved": 3,
+    "reconstructed": 7
+  },
+  "concept_ids_unique": true,
+  "all_114_previous_pending_reviewed": true,
+  "address_pages_nonempty": true,
+  "argument_count": 18,
+  "graph_byte_identical": true,
+  "book_sha256_verified": true,
+  "html_json_equal": true,
+  "browser_tests": [
+    {
+      "viewport": [
+        1280,
+        900
+      ],
+      "passed": [
+        "initial 137",
+        "status filter",
+        "ID search",
+        "expand detail",
+        "18 arguments",
+        "7 supplements",
+        "no horizontal overflow",
+        "no JS errors"
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "passed": [
+        "initial 137",
+        "status filter",
+        "ID search",
+        "expand detail",
+        "18 arguments",
+        "7 supplements",
+        "no horizontal overflow",
+        "no JS errors"
+      ]
+    }
+  ],
+  "limitations": [
+    "Смысловые оценки редакторские и основаны на выбранных фрагментах; отсутствие локатора не доказывает отсутствия идеи.",
+    "23 ранее проверенные оценки наследованы без повторного аудита.",
+    "Использован ранее восстановленный текст PDF, а не новый OCR; ошибки символов и формул возможны.",
+    "Сверка 18 аргументов является проверкой содержательного соответствия, не независимой проверкой всех посылок.",
+    "Новые внешние академические источники не добавлялись; оригинал книги и семантический граф не изменены."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "version": "3.3",
+  "checks": [
+    "embedded_json_equal",
+    "graph_byte_identical",
+    "reproduction",
+    "main_navigation",
+    "all_previous_paths_preserved"
+  ],
+  "browser_checks": [
+    "1280: all dossiers",
+    "1280: initial conflict",
+    "1280: compatible",
+    "1280: reset",
+    "1280: search",
+    "1280: expand source",
+    "1280: JSON export",
+    "1280: no horizontal overflow",
+    "1280: no JS errors",
+    "390: all dossiers",
+    "390: initial conflict",
+    "390: compatible",
+    "390: reset",
+    "390: search",
+    "390: expand source",
+    "390: JSON export",
+    "390: no horizontal overflow",
+    "390: no JS errors"
+  ],
+  "browser_method": "Chromium set_content, not direct file navigation",
+  "graph_sha256": "93a94409477d12439487162aafbf7b95bae88355b369f9873e2d4ee9c0dd9102",
+  "book_sha256": "1c27519aa47a76d894b4a3e89aedbe1af0d15a5e4472a4e8529ff8a51a6c0713",
+  "book_sha256_verified_during_build": true,
+  "dossiers": 7,
+  "pages": 17,
+  "anchors": 14,
+  "references": 9,
+  "limitations": [
+    "Адресное сопоставление по ранее извлечённым страницам; не сплошное чтение и не новый анализ PDF.",
+    "Академические источники изучены по поисковым выдержкам; не систематический обзор.",
+    "Формальные модели описывают структуру требований, не истинность принципов и не разрешение на действия.",
+    "Рекомендации — редакторская реконструкция. Оригинальная монография и семантический граф не изменены."
+  ]
+}

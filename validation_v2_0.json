@@ -1,0 +1,38 @@
+{
+  "version": "2.0",
+  "nodes": 3160,
+  "edges": 6887,
+  "added_nodes": 46,
+  "added_edges": 142,
+  "dossiers": 6,
+  "source_anchors": 46,
+  "book_pages": 20,
+  "references": 9,
+  "tests_reproduced": 6,
+  "old_records_preserved": true,
+  "unique_ids": true,
+  "edge_endpoints_valid": true,
+  "embedded_json_equal": true,
+  "javascript_syntax_valid": true,
+  "browser_test": {
+    "engine": "Chromium",
+    "mode": "set_content",
+    "viewports": [
+      [
+        1280,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "checks": [
+      "раздел Profunditas",
+      "глобальный поиск",
+      "открытие досье Fact Prime",
+      "отсутствие ошибок JavaScript"
+    ],
+    "result": "passed"
+  }
+}

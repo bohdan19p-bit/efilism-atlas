@@ -1,0 +1,129 @@
+{
+  "version": "3.6",
+  "browser_checks": [
+    {
+      "width": 1280,
+      "test": "5 dossiers",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "test": "8 tests",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "test": "full closure",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "test": "remove A",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "test": "remove H",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "test": "search",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "test": "open dossier",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "test": "open source",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "test": "export",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "test": "layout",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "test": "no JS errors",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "5 dossiers",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "8 tests",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "full closure",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "remove A",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "remove H",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "search",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "open dossier",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "open source",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "export",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "layout",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "test": "no JS errors",
+      "passed": true
+    }
+  ],
+  "browser_method": "Chromium set_content, not file://",
+  "previous_files": 134,
+  "modified_previous_files": [
+    "Atlas_Efilismi.html",
+    "README.md"
+  ],
+  "graph_sha256": "93a94409477d12439487162aafbf7b95bae88355b369f9873e2d4ee9c0dd9102",
+  "graph_nodes": 3344,
+  "graph_edges": 7730,
+  "book_sha256": "1c27519aa47a76d894b4a3e89aedbe1af0d15a5e4472a4e8529ff8a51a6c0713",
+  "formal_reproduced": true,
+  "formal_mismatches": 0,
+  "embedded_json_equal": true,
+  "file_count": 139
+}

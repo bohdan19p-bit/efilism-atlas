@@ -1,0 +1,38 @@
+{
+  "version": "1.9",
+  "node_count": 3114,
+  "edge_count": 6745,
+  "new_nodes": 38,
+  "new_edges": 258,
+  "relations": 32,
+  "statuses": {
+    "source": 22,
+    "reconstruction": 10
+  },
+  "distinct_anchors": 97,
+  "source_anchor_links": 125,
+  "previous_nodes_and_edges_unchanged": true,
+  "unique_ids": true,
+  "all_endpoints_exist": true,
+  "embedded_json_equal": true,
+  "scope": "Выборочное содержательное чтение локального корпуса, пять групп, 32 отношения. Не исчерпывающий аудит всех 137 статей.",
+  "browser_tests": [
+    "1280: tab",
+    "1280: relation detail",
+    "1280: source navigation",
+    "1280: back",
+    "1280: search",
+    "1280: dossier",
+    "1280: edge filter",
+    "390: tab",
+    "390: relation detail",
+    "390: source navigation",
+    "390: back",
+    "390: search",
+    "390: dossier",
+    "390: edge filter"
+  ],
+  "browser_errors": [],
+  "browser_method": "Chromium offline set_content, not file://",
+  "archive_file_count": 59
+}

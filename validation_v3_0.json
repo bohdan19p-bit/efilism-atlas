@@ -1,0 +1,101 @@
+{
+  "version": "3.0",
+  "graph_unchanged": true,
+  "nodes": 3344,
+  "edges": 7730,
+  "previous_files_preserved": true,
+  "changed_previous_files": [
+    "Atlas_Efilismi.html",
+    "README.md"
+  ],
+  "computation_reproduced": true,
+  "json_valid": true,
+  "browser_checks": [
+    [
+      1280,
+      "load"
+    ],
+    [
+      1280,
+      "transparency"
+    ],
+    [
+      1280,
+      "conditions"
+    ],
+    [
+      1280,
+      "duplicate"
+    ],
+    [
+      1280,
+      "independent"
+    ],
+    [
+      1280,
+      "identity"
+    ],
+    [
+      1280,
+      "search"
+    ],
+    [
+      1280,
+      "source"
+    ],
+    [
+      1280,
+      "width"
+    ],
+    [
+      1280,
+      "navigation_links"
+    ],
+    [
+      390,
+      "load"
+    ],
+    [
+      390,
+      "transparency"
+    ],
+    [
+      390,
+      "conditions"
+    ],
+    [
+      390,
+      "duplicate"
+    ],
+    [
+      390,
+      "independent"
+    ],
+    [
+      390,
+      "identity"
+    ],
+    [
+      390,
+      "search"
+    ],
+    [
+      390,
+      "source"
+    ],
+    [
+      390,
+      "width"
+    ],
+    [
+      390,
+      "navigation_links"
+    ]
+  ],
+  "browser_errors": 0,
+  "local_file_navigation": false,
+  "local_file_blocker": "ERR_BLOCKED_BY_ADMINISTRATOR; tested HTML content",
+  "source_anchors": 21,
+  "book_pages": 19,
+  "file_count": 110
+}

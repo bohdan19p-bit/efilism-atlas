@@ -1,0 +1,61 @@
+{
+  "version": "2.1",
+  "source_version": "2.0",
+  "map_counts": {
+    "universal": 1,
+    "concept": 18,
+    "argument": 18,
+    "causal": 1,
+    "book": 57
+  },
+  "map_count": 95,
+  "displayed_edge_instances": 407,
+  "detail_records": 932,
+  "book_shared_topic_edges": 115,
+  "excluded_book_mapping_ids_without_chapter": [
+    "E1:03713",
+    "E1:03740",
+    "E1:03754",
+    "E1:03766",
+    "E1:03773",
+    "E1:03775",
+    "E1:03815",
+    "E1:03823"
+  ],
+  "original_unified_json_sha256": "026a9967e85ccb76427c1bbb7ddb914fd0f5a086dfb2546afe2b077dc77279b9",
+  "original_unified_json_unchanged": true,
+  "checks": [
+    "1280: embedded HTML and universal map",
+    "1280: concept tab",
+    "1280: argument tab",
+    "1280: causal tab",
+    "1280: book tab",
+    "1280: chapter locator",
+    "1280: argument edge",
+    "1280: type filter",
+    "1280: search",
+    "1280: zoom",
+    "1280: causal source card",
+    "1280: SVG export",
+    "1280: no body horizontal overflow",
+    "390: embedded HTML and universal map",
+    "390: concept tab",
+    "390: argument tab",
+    "390: causal tab",
+    "390: book tab",
+    "390: chapter locator",
+    "390: argument edge",
+    "390: type filter",
+    "390: search",
+    "390: zoom",
+    "390: causal source card",
+    "390: SVG export",
+    "390: no body horizontal overflow"
+  ],
+  "browser_errors": [],
+  "limits": [
+    "No independent verification of original corpus or book.",
+    "Only cartographic view; no additions to semantic base.",
+    "Selected chapter links are capped at 8; themes are not citations."
+  ]
+}

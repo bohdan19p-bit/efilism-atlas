@@ -1,4 +1,125 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Epistemologia Efilismi v2.8</title><style>*{box-sizing:border-box}body{margin:0;background:#111c23;color:#e7edf0;font:16px/1.65 system-ui,sans-serif}main,header{max-width:1000px;margin:auto;padding:24px}header{border-bottom:1px solid #41605f}h1{font-size:clamp(26px,5vw,44px);line-height:1.2}h2{font-size:22px;line-height:1.3}h3{font-size:16px;color:#9cdbcc}a{color:#9cdbcc}article,section{background:#1a2931;border:1px solid #395359;border-radius:14px;padding:20px;margin:16px 0}small{color:#b3c9ce}input,select,button{font:inherit;color:inherit;background:#25383f;border:1px solid #52716e;border-radius:8px;padding:9px;max-width:100%}input{width:100%}nav{display:flex;flex-wrap:wrap;gap:12px}summary{cursor:pointer;color:#b9e4d9;font-weight:600;padding:8px 0}details details{border-left:2px solid #52716e;padding-left:12px}p{overflow-wrap:anywhere;white-space:pre-line}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:8px;text-align:left;border-bottom:1px solid #395359} .scroll{overflow-x:auto} @media(max-width:500px){main,header{padding:14px}article,section{padding:14px}td,th{padding:5px}}</style><style>main{max-width:980px;margin:auto;padding:16px}.panel{border:1px solid #bdcfca;border-radius:14px;padding:18px;margin:16px 0}textarea,input[type=range],input[type=text],select{width:100%;box-sizing:border-box}textarea{font:inherit;display:block;background:transparent;color:inherit;border:1px solid #a3aaa7;border-radius:7px;padding:8px;margin:7px 0 15px}.dossier[hidden]{display:none}.bar{height:12px;background:#b6c1c0;border-radius:8px;overflow:hidden}.bar span{display:block;height:100%;background:#438f87}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metrics p{margin:4px 0}button{padding:9px 14px;border-radius:8px;cursor:pointer}#diagnosis{white-space:pre-wrap;line-height:1.6}a{overflow-wrap:anywhere}@media(max-width:480px){.panel{padding:12px}}</style></head><body><header><small>ATLAS EFILISMI · 2.8 / EPISTEMOLOGIA</small><h1>Эпистемология и метод</h1><p>Пять досье · восемь примеров · журнал проверки</p><a href="Atlas_Efilismi.html">← Главный атлас</a></header><main><section class="panel"><h2>Различимость двух моделей</h2><p>Взаимоисключающие, исчерпывающие гипотезы A и B. Условные вероятности демонстрационные.</p><label for="prior">P(A): <output id="priorv">50%</output></label><input id="prior" type="range" min="10" max="90" step="10" value="50"><label for="la">P(E|A): <output id="lav">80%</output></label><input id="la" type="range" min="10" max="90" step="10" value="80"><label for="lb">P(E|B): <output id="lbv">80%</output></label><input id="lb" type="range" min="10" max="90" step="10" value="80"><h3 id="posterior" aria-live="polite"></h3><div class="bar"><span id="postbar"></span></div><p id="interpret"></p><p>729 точных проверок сетки, 81 случай равных правдоподобий. Это не оценка реальных гипотез.</p></section><section class="panel"><h2>Метапознавательная калибровка</h2><p>Четыре бинарных суждения: два правильных, два ошибочных. Одинаковая средняя уверенность 70%, одинаковая точность 50%.</p><div class="metrics"><div><h3>Серия A</h3><p>90%, 80%, 60%, 50%</p><p>Брайер: 0.165</p></div><div><h3>Серия B</h3><p>50%, 60%, 80%, 90%</p><p>Брайер: 0.465</p></div></div><p>Пример иллюстрирует разное качество вероятностных прогнозов; малая серия не измеряет общую компетентность.</p></section><section class="panel"><h2>Примеры диагностики</h2><label for="case">Выберите пример</label><select id="case"><option value="C1">Незнание факта</option><option value="C2">Равный прогноз</option><option value="C3">Переименование</option><option value="C4">Неоднозначность</option><option value="C5">Самоприменение</option><option value="C6">Уверенность</option><option value="C7">Собственный нормативный мост</option><option value="C8">Причина убеждения</option></select><p id="diagnosis" aria-live="polite"></p><button id="usecase">Перенести утверждение в журнал</button></section><section class="panel"><h2>Журнал объяснительного аудита</h2><label for="claim">Проверяемое утверждение</label><textarea id="claim" rows="3"></textarea><label for="step0">1. Очистка вопроса и экспланандум</label><textarea id="step0" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step1">2. Значения и область действия понятий</label><textarea id="step1" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step2">3. Проверка данных и допущений</label><textarea id="step2" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step3">4. Механизм или правило вывода</label><textarea id="step3" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step4">5. Различимость следствий</label><textarea id="step4" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step5">6. Сравнение сильных альтернатив</label><textarea id="step5" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step6">7. Объяснительный остаток</label><textarea id="step6" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step7">8. Предел вывода и условия пересмотра</label><textarea id="step7" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><p id="filled" aria-live="polite">Заполнено 0 из 8 шагов</p><button id="export">Экспорт журнала JSON</button> <button id="reset">Очистить</button><p>Заполнение полей не подтверждает истинность. Данные не сохраняются после закрытия страницы, если не экспортированы.</p></section><label for="q">Поиск по досье</label><input id="q" type="search" placeholder="Например, метапознание"><p id="count" aria-live="polite"></p><article class="dossier" data-id="EP28-01"><h2>Veritas Objectiva — истина и статус знания</h2><h3>Результат</h3><p>§1.2 уже содержит шесть опор реализма; §1.3 и §1.5 разделяют положение дел, знание и уверенность.</p><h3>Аргумент</h3><p>Раздельно фиксировать T: истинность утверждения, J: его обоснованность, C: субъективную уверенность, X: достаточность объяснения. Истинное убеждение может быть плохо обосновано; обоснованное — ошибочно. Контраргумент самоприменения работает против универсального отрицания истины, предъявленного как безусловно истинное, но не автоматически против локальной зависимости описания от рамки.</p><h3>Возражение</h3><p>Некоторые факты зависят от социальных правил или психических состояний. Не всякая зависимость от субъекта есть произвол.</p><h3>Ответ</h3><p>Различить зависимость существования события от субъектов и зависимость истинности утверждения от его одобрения. Не переносить аргумент против глобального релятивизма на все разновидности контекстуализма.</p><h3>Редакторское решение</h3><p>§1.2, §2.4: уточнить область самоприменения. В §23.2 связать объективность феноменального факта с отдельной аксиологической посылкой; не подменять её корреспондентной истиной.</p><details><summary>Исходные фрагменты</summary><details><summary>OT:P0003</summary><p>Efilism does not rely on human-centricity, subject-centricity, subject-relation, subjective analysanda, or syllogistic propositional logic to derive or posit conclusions -- it drills deeper than this, with meta-cognition, explicandum and explicans, closed-concepts, and modal logic to maintain conclusions that are objectively and necessarily true, regardless of any possible alternative and regardless of the subject. For example:</p></details><details><summary>OT:P0073</summary><p>Objective reality and objective truth exist, because if objective reality and objective truth did not exist, then it would be necessarily true that objective truth and objective reality does not exist.</p></details><details><summary>PA:P0201</summary><p>Objective truth: The glass is approximately 50% capacity, and even on perfect 50% balance some surface sections would be below and others would be above 50% capacity, changing constantly as atoms shift and liquid evaporates.</p></details><details><summary>PA:P0205</summary><p>As mentioned, there is only correct data or incorrect data. This makes it hard for subjectivists/relativists to make a coherent case. You&#x27;ll find the problem with such philosophy is that it&#x27;s not anchored: it&#x27;s a fallacious form of evasion. It exists part-and-parcel as not being anchored to anything objective. It&#x27;s like saying &quot;It&#x27;s objectively true that objective truth doesn&#x27;t exist.&quot; Despite all evasion, they are inevitably caught right here, between the self-refutation fallacy and special-pleading fallacy.</p></details><details><summary>PDF 32</summary><p>ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Эпистемология и метод исследования · Efilism RUS</title><style>*{box-sizing:border-box}body{margin:0;background:#111c23;color:#e7edf0;font:16px/1.65 system-ui,sans-serif}main,header{max-width:1000px;margin:auto;padding:24px}header{border-bottom:1px solid #41605f}h1{font-size:clamp(26px,5vw,44px);line-height:1.2}h2{font-size:22px;line-height:1.3}h3{font-size:16px;color:#9cdbcc}a{color:#9cdbcc}article,section{background:#1a2931;border:1px solid #395359;border-radius:14px;padding:20px;margin:16px 0}small{color:#b3c9ce}input,select,button{font:inherit;color:inherit;background:#25383f;border:1px solid #52716e;border-radius:8px;padding:9px;max-width:100%}input{width:100%}nav{display:flex;flex-wrap:wrap;gap:12px}summary{cursor:pointer;color:#b9e4d9;font-weight:600;padding:8px 0}details details{border-left:2px solid #52716e;padding-left:12px}p{overflow-wrap:anywhere;white-space:pre-line}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:8px;text-align:left;border-bottom:1px solid #395359} .scroll{overflow-x:auto} @media(max-width:500px){main,header{padding:14px}article,section{padding:14px}td,th{padding:5px}}</style><style>main{max-width:980px;margin:auto;padding:16px}.panel{border:1px solid #bdcfca;border-radius:14px;padding:18px;margin:16px 0}textarea,input[type=range],input[type=text],select{width:100%;box-sizing:border-box}textarea{font:inherit;display:block;background:transparent;color:inherit;border:1px solid #a3aaa7;border-radius:7px;padding:8px;margin:7px 0 15px}.dossier[hidden]{display:none}.bar{height:12px;background:#b6c1c0;border-radius:8px;overflow:hidden}.bar span{display:block;height:100%;background:#438f87}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metrics p{margin:4px 0}button{padding:9px 14px;border-radius:8px;cursor:pointer}#diagnosis{white-space:pre-wrap;line-height:1.6}a{overflow-wrap:anywhere}@media(max-width:480px){.panel{padding:12px}}</style>
+<style id="ru-atlas-unified-nav">
+  .ru-top-header {
+    background: linear-gradient(135deg, #162c4d 0%, #1f4068 100%) !important;
+    color: #f4f7fb !important;
+    padding: 16px 20px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.14) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif !important;
+  }
+  .ru-top-brand {
+    max-width: 720px;
+  }
+  .ru-top-kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #a8c7ec;
+    margin-bottom: 4px;
+  }
+  .ru-top-header h1 {
+    margin: 0 0 4px !important;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem) !important;
+    line-height: 1.25 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+  }
+  .ru-top-header p {
+    margin: 0 !important;
+    font-size: 0.88rem !important;
+    color: #d6e4f5 !important;
+    line-height: 1.4 !important;
+  }
+  .ru-top-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .ru-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 13px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.84rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .ru-nav-pill:hover {
+    background: rgba(255,255,255,0.22);
+  }
+  .ru-nav-pill-primary {
+    background: #ffffff;
+    color: #162c4d !important;
+    border-color: #ffffff;
+  }
+  .ru-nav-pill-primary:hover {
+    background: #e6eef8;
+  }
+  .ru-mod-menu {
+    position: relative;
+  }
+  .ru-mod-menu summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 7px 13px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #ffffff;
+    font-size: 0.84rem;
+    font-weight: 600;
+    user-select: none;
+  }
+  .ru-mod-menu summary::-webkit-details-marker { display: none; }
+  .ru-mod-menu summary:hover { background: rgba(255,255,255,0.22); }
+  .ru-mod-dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    z-index: 9999;
+    width: min(320px, 88vw);
+    max-height: 70vh;
+    overflow-y: auto;
+    background: #ffffff;
+    color: #1f2933;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.25);
+    padding: 8px;
+  }
+  .ru-mod-dropdown a {
+    display: block;
+    padding: 7px 10px;
+    border-radius: 6px;
+    color: #1b365d !important;
+    text-decoration: none !important;
+    font-size: 0.84rem;
+    font-weight: 500;
+  }
+  .ru-mod-dropdown a:hover {
+    background: #eef3f9;
+  }
+  .ru-mod-dropdown a.ru-mod-active {
+    background: #e6eef8;
+    font-weight: 700;
+    color: #102a43 !important;
+  }
+</style>
+
+</head><body><header class="ru-top-header"><div class="ru-top-brand"><span class="ru-top-kicker">Efilism RUS · Исследовательский атлас v3.8 (ПК-архив)</span><h1>Эпистемология и метод исследования</h1><p>Критерии истины, границы знания, скептицизм и объяснительные модели</p></div><div class="ru-top-actions"><a class="ru-nav-pill ru-nav-pill-primary" href="index.html">← Быстрый Атлас</a><a class="ru-nav-pill" href="Cartographia_Efilismi.html">95 схем</a><details class="ru-mod-menu"><summary>Все модули (19) ▾</summary><div class="ru-mod-dropdown"><a href="Atlas_Efilismi.html">Полный граф и база (для ПК)</a><a href="Cartographia_Efilismi.html">Картография (95 схем)</a><a href="Encyclopaedia_Efilismi.html">Энциклопедия понятий</a><a href="Systematica_Efilismi.html">Систематика и матрица</a><a href="Demonstratio_Fundamentalis.html">Фундаментальные проверки</a><a href="Corpus_Definitivum.html">Сводный реестр (архив)</a><a href="Ethica_Efilismi.html">Этика и совместимость норм</a><a href="Metaethica_Efilismi.html">Метаэтика</a><a href="Ontologia_Valororum.html">Онтология ценности</a><a href="Justificatio_Efilismi.html">Обоснование посылок</a><a href="Epistemologia_Efilismi.html" class="ru-mod-active">Эпистемология и метод</a><a href="Metaphysica_Efilismi.html">Метафизика и причинность</a><a href="Phenomenologia_Efilismi.html">Феноменология опыта</a><a href="Biologia_Efilismi.html">Биология и отбор</a><a href="Psychologia_Efilismi.html">Психология убеждений</a><a href="Hermeneutica_Efilismi.html">Герменевтика источников</a><a href="Concordantia_Efilismi.html">Поиск по тексту книги</a><a href="Lacunae_Efilismi.html">Анализ пробелов</a><a href="Revisio_Definitiva.html">Реестр правок к книге</a></div></details></div></header><main><section class="panel"><h2>Различимость двух моделей</h2><p>Взаимоисключающие, исчерпывающие гипотезы A и B. Условные вероятности демонстрационные.</p><label for="prior">P(A): <output id="priorv">50%</output></label><input id="prior" type="range" min="10" max="90" step="10" value="50"><label for="la">P(E|A): <output id="lav">80%</output></label><input id="la" type="range" min="10" max="90" step="10" value="80"><label for="lb">P(E|B): <output id="lbv">80%</output></label><input id="lb" type="range" min="10" max="90" step="10" value="80"><h3 id="posterior" aria-live="polite"></h3><div class="bar"><span id="postbar"></span></div><p id="interpret"></p><p>729 точных проверок сетки, 81 случай равных правдоподобий. Это не оценка реальных гипотез.</p></section><section class="panel"><h2>Метапознавательная калибровка</h2><p>Четыре бинарных суждения: два правильных, два ошибочных. Одинаковая средняя уверенность 70%, одинаковая точность 50%.</p><div class="metrics"><div><h3>Серия A</h3><p>90%, 80%, 60%, 50%</p><p>Брайер: 0.165</p></div><div><h3>Серия B</h3><p>50%, 60%, 80%, 90%</p><p>Брайер: 0.465</p></div></div><p>Пример иллюстрирует разное качество вероятностных прогнозов; малая серия не измеряет общую компетентность.</p></section><section class="panel"><h2>Примеры диагностики</h2><label for="case">Выберите пример</label><select id="case"><option value="C1">Незнание факта</option><option value="C2">Равный прогноз</option><option value="C3">Переименование</option><option value="C4">Неоднозначность</option><option value="C5">Самоприменение</option><option value="C6">Уверенность</option><option value="C7">Собственный нормативный мост</option><option value="C8">Причина убеждения</option></select><p id="diagnosis" aria-live="polite"></p><button id="usecase">Перенести утверждение в журнал</button></section><section class="panel"><h2>Журнал объяснительного аудита</h2><label for="claim">Проверяемое утверждение</label><textarea id="claim" rows="3"></textarea><label for="step0">1. Очистка вопроса и экспланандум</label><textarea id="step0" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step1">2. Значения и область действия понятий</label><textarea id="step1" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step2">3. Проверка данных и допущений</label><textarea id="step2" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step3">4. Механизм или правило вывода</label><textarea id="step3" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step4">5. Различимость следствий</label><textarea id="step4" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step5">6. Сравнение сильных альтернатив</label><textarea id="step5" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step6">7. Объяснительный остаток</label><textarea id="step6" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><label for="step7">8. Предел вывода и условия пересмотра</label><textarea id="step7" rows="2" placeholder="Запишите проверку или нерешённый вопрос"></textarea><p id="filled" aria-live="polite">Заполнено 0 из 8 шагов</p><button id="export">Экспорт журнала JSON</button> <button id="reset">Очистить</button><p>Заполнение полей не подтверждает истинность. Данные не сохраняются после закрытия страницы, если не экспортированы.</p></section><label for="q">Поиск по досье</label><input id="q" type="search" placeholder="Например, метапознание"><p id="count" aria-live="polite"></p><article class="dossier" data-id="EP28-01"><h2>Veritas Objectiva — истина и статус знания</h2><h3>Результат</h3><p>§1.2 уже содержит шесть опор реализма; §1.3 и §1.5 разделяют положение дел, знание и уверенность.</p><h3>Аргумент</h3><p>Раздельно фиксировать T: истинность утверждения, J: его обоснованность, C: субъективную уверенность, X: достаточность объяснения. Истинное убеждение может быть плохо обосновано; обоснованное — ошибочно. Контраргумент самоприменения работает против универсального отрицания истины, предъявленного как безусловно истинное, но не автоматически против локальной зависимости описания от рамки.</p><h3>Возражение</h3><p>Некоторые факты зависят от социальных правил или психических состояний. Не всякая зависимость от субъекта есть произвол.</p><h3>Ответ</h3><p>Различить зависимость существования события от субъектов и зависимость истинности утверждения от его одобрения. Не переносить аргумент против глобального релятивизма на все разновидности контекстуализма.</p><h3>Редакторское решение</h3><p>§1.2, §2.4: уточнить область самоприменения. В §23.2 связать объективность феноменального факта с отдельной аксиологической посылкой; не подменять её корреспондентной истиной.</p><details><summary>Исходные фрагменты</summary><details><summary>OT:P0003</summary><p>Efilism does not rely on human-centricity, subject-centricity, subject-relation, subjective analysanda, or syllogistic propositional logic to derive or posit conclusions -- it drills deeper than this, with meta-cognition, explicandum and explicans, closed-concepts, and modal logic to maintain conclusions that are objectively and necessarily true, regardless of any possible alternative and regardless of the subject. For example:</p></details><details><summary>OT:P0073</summary><p>Objective reality and objective truth exist, because if objective reality and objective truth did not exist, then it would be necessarily true that objective truth and objective reality does not exist.</p></details><details><summary>PA:P0201</summary><p>Objective truth: The glass is approximately 50% capacity, and even on perfect 50% balance some surface sections would be below and others would be above 50% capacity, changing constantly as atoms shift and liquid evaporates.</p></details><details><summary>PA:P0205</summary><p>As mentioned, there is only correct data or incorrect data. This makes it hard for subjectivists/relativists to make a coherent case. You&#x27;ll find the problem with such philosophy is that it&#x27;s not anchored: it&#x27;s a fallacious form of evasion. It exists part-and-parcel as not being anchored to anything objective. It&#x27;s like saying &quot;It&#x27;s objectively true that objective truth doesn&#x27;t exist.&quot; Despite all evasion, they are inevitably caught right here, between the self-refutation fallacy and special-pleading fallacy.</p></details><details><summary>PDF 32</summary><p>ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026
 31
 заявляет о себе одним безошибочным признаком — способностью оказывать сопротивление нашим
 прогнозам и вынуждать модель к перестройке.

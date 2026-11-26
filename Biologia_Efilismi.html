@@ -1,4 +1,125 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Biologia Efilismi v3.1</title><style>:root{color-scheme:light dark;--bg:#f1f5f4;--paper:#fff;--ink:#173532;--line:#c8d8d4;--accent:#176b60;--muted:#526a65}@media(prefers-color-scheme:dark){:root{--bg:#112522;--paper:#1b3430;--ink:#e7f4ef;--line:#49665f;--accent:#8cdbcb;--muted:#b4cdc5}}*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,sans-serif;background:var(--bg);color:var(--ink)}header{background:#164c45;color:#fff;padding:24px max(18px,calc((100% - 900px)/2))}header h1{font-size:clamp(24px,5vw,40px);margin:0}header a{color:#d8f6ed}main{max-width:940px;margin:auto;padding:16px}article,.panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}h2{font-size:21px;margin-top:0}h3{font-size:16px;margin-bottom:4px}p{margin:6px 0 12px}.muted,small{color:var(--muted)}a{color:var(--accent);overflow-wrap:anywhere}input[type=search],select{width:100%;padding:12px;font:inherit;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}label{display:block;margin:9px 0}summary{cursor:pointer;font-weight:600;padding:8px 0}details details{margin-left:10px}output{display:block;font-weight:600;margin:12px 0;color:var(--accent)}.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:550px){.cols{grid-template-columns:1fr}article,.panel{padding:14px}}[hidden]{display:none!important}input[type=range]{width:100%} .stat{padding:10px;border-left:3px solid var(--accent);margin:8px 0} .bar{height:12px;border-radius:5px;background:var(--accent);max-width:100%;transition:width .12s} .bar.alt{background:#b79551}</style></head><body><header><a href="Atlas_Efilismi.html">← Полный атлас</a><h1>Biologia Efilismi</h1><p>v3.1 · репликация, отбор и архитектура нужды</p></header><main><section class="panel"><h2>Модели и границы вывода</h2><h3>Приспособленность и среднее значение признака</h3><p>Два одинаково представленных типа, неизменная передача признака. Веса — условный вклад в следующее поколение; значения признака — условные единицы.</p><div class="cols"><div><h3>Тип A</h3><label>Вес вклада <span id="awval"></span><input id="aw" type="range" min="1" max="4" value="1"></label><label>Оценка признака <span id="azval"></span><input id="az" type="range" min="0" max="3" value="3"></label></div><div><h3>Тип B</h3><label>Вес вклада <span id="bwval"></span><input id="bw" type="range" min="1" max="4" value="2"></label><label>Оценка признака <span id="bzval"></span><input id="bz" type="range" min="0" max="3" value="0"></label></div></div><div class="stat">Исходное среднее: <output id="before"></output><div id="bb" class="bar alt"></div>Среднее потомков: <output id="after"></output><div id="ab" class="bar"></div></div><output id="delta"></output><small>Применение к благополучию требует обоснования шкалы; это не эмпирические данные.</small><h3>Ограниченная коррекция</h3><label>Возмущение <span id="dval"></span><input id="d" type="range" min="0" max="5" value="4"></label><label>Предел ответа <span id="cval"></span><input id="c" type="range" min="0" max="5" value="2"></label><output id="res"></output><small>Функциональный остаток, не мера боли. Повторение зависимости не моделирует автоматически опыт.</small><h3>Демаркация уровней</h3><label><input id="fn" type="checkbox" checked> Функциональный процесс</label><label><input id="exp" type="checkbox"> Отрицательное переживание установлено</label><label><input id="norm" type="checkbox"> Нормативная посылка и условия применимости установлены</label><output id="bridge"></output><small>Модель различения, не универсальное правило этической оценки.</small></section><label for="q">Поиск по семи досье</label><input id="q" type="search" placeholder="Отбор, нужда, абиогенез…"><p id="count" class="muted"></p><article class="dossier"><h2>Abiogenesis — абиогенез</h2><p class="muted">BIO31-01 · PDF 141, 144, 145, 146 · R1, R2</p><h3>Сверка</h3><p>§14.6–14.8 уже разводят самоподдержание, репликацию, модульную и интеграционную правдоподобность. Печатная с. 144 описывает возможные геохимические опоры довольно категорично.</p><h3>Реконструкция</h3><p>Физическая осуществимость отдельного перехода не устанавливает совместимость всех переходов или их фактическую историю. Отсутствие предвидения не равнозначно отсутствию причин. Абиогенез — историческая предпосылка опыта, не эпизод опыта.</p><h3>Возражение</h3><p>Если эксперимент воспроизводит несколько компонентов протоклетки, разве история происхождения жизни уже объяснена?</p><h3>Ответ</h3><p>Нет: необходимы совместимость условий, временная последовательность, независимые геохимические ограничения и сравнительная оценка альтернатив.</p><h3>Редакторское решение</h3><p>Сохранить §14.8. В §14.7 представить конкретные среды и этапы РНК→ДНК как реконструкции, а не единственную установленную хронологию. Не выводить вероятность абиогенеза из одного известного случая.</p><details><summary>Исторический корпус</summary><details><summary>PA:P0258</summary><p>Efilism is a spear-heading of knowledge, not just by using this framework, but by using a set of already-confirmed conclusions that any intellectually honest thinker must concede. And even if any counter-arguer does not concede the points, they still fail to refute points: For instance, the point that Abiogenesis / DNA is the origin of life, &amp; had no ends, &amp; no means, &amp; it was just happenstance - in other words, life&#x27;s inception is logically indefensible. Yet life is acting exactly contrary to that. How peculiar, what&#x27;s making that happen? Well we can cite the naturalistic fallacy, which not only explains the main error code DNA is running on but also ensures nobody can &#x27;automatically assume nature is correct because it&#x27;s natural&#x27;.</p></details><details><summary>AN:P0122</summary><p>DNA life was incident with absolutely no ends or means, that is a fundamental point of evolution&#x27;s discovery: [https://en.wikipedia.org/wiki/Abiogenesis Abiogenesis] was just an incident that happened. The fact it keeps happening makes it a mere physical process. You cannot assume there&#x27;s &quot;meaning&quot; in the process of being processed. When you cite &quot;meaning&quot; you&#x27;re just cheating the argument with &#x27;&#x27;&#x27;emotional glad-handing&#x27;&#x27;&#x27;.&#x27;&#x27;&#x27; &#x27;&#x27;&#x27;Because that&#x27;s exactly what everyone &#x27;&#x27;&#x27;desires&#x27;&#x27;&#x27;: a meaning to life.</p></details><details><summary>COMP:P0461</summary><p>Efilism is a spear-heading of knowledge, not just by using this framework, but by using a set of already-confirmed conclusions that any intellectually honest thinker must concede. And even if any counter-arguer does not concede the points, they still fail to refute points: For instance, the point that Abiogenesis / DNA is the origin of life, &amp; had no ends, &amp; no means, &amp; it was just happenstance - in other words, life&#x27;s inception is logically indefensible. Yet life is acting exactly contrary to that. How peculiar, what&#x27;s making that happen? Well we can cite the naturalistic fallacy, which not only explains the main error code DNA is running on but also ensures nobody can &#x27;automatically assume nature is correct because it&#x27;s natural&#x27;.</p></details></details><details><summary>Текст страниц</summary><details><summary>PDF 141</summary><p style="white-space:pre-wrap">ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Биология, ДНК и эволюционный отбор · Efilism RUS</title><style>:root{color-scheme:light dark;--bg:#f1f5f4;--paper:#fff;--ink:#173532;--line:#c8d8d4;--accent:#176b60;--muted:#526a65}@media(prefers-color-scheme:dark){:root{--bg:#112522;--paper:#1b3430;--ink:#e7f4ef;--line:#49665f;--accent:#8cdbcb;--muted:#b4cdc5}}*{box-sizing:border-box}body{margin:0;font:16px/1.55 system-ui,sans-serif;background:var(--bg);color:var(--ink)}header{background:#164c45;color:#fff;padding:24px max(18px,calc((100% - 900px)/2))}header h1{font-size:clamp(24px,5vw,40px);margin:0}header a{color:#d8f6ed}main{max-width:940px;margin:auto;padding:16px}article,.panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}h2{font-size:21px;margin-top:0}h3{font-size:16px;margin-bottom:4px}p{margin:6px 0 12px}.muted,small{color:var(--muted)}a{color:var(--accent);overflow-wrap:anywhere}input[type=search],select{width:100%;padding:12px;font:inherit;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}label{display:block;margin:9px 0}summary{cursor:pointer;font-weight:600;padding:8px 0}details details{margin-left:10px}output{display:block;font-weight:600;margin:12px 0;color:var(--accent)}.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:550px){.cols{grid-template-columns:1fr}article,.panel{padding:14px}}[hidden]{display:none!important}input[type=range]{width:100%} .stat{padding:10px;border-left:3px solid var(--accent);margin:8px 0} .bar{height:12px;border-radius:5px;background:var(--accent);max-width:100%;transition:width .12s} .bar.alt{background:#b79551}</style>
+<style id="ru-atlas-unified-nav">
+  .ru-top-header {
+    background: linear-gradient(135deg, #162c4d 0%, #1f4068 100%) !important;
+    color: #f4f7fb !important;
+    padding: 16px 20px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.14) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif !important;
+  }
+  .ru-top-brand {
+    max-width: 720px;
+  }
+  .ru-top-kicker {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #a8c7ec;
+    margin-bottom: 4px;
+  }
+  .ru-top-header h1 {
+    margin: 0 0 4px !important;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem) !important;
+    line-height: 1.25 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+  }
+  .ru-top-header p {
+    margin: 0 !important;
+    font-size: 0.88rem !important;
+    color: #d6e4f5 !important;
+    line-height: 1.4 !important;
+  }
+  .ru-top-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .ru-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 13px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.84rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .ru-nav-pill:hover {
+    background: rgba(255,255,255,0.22);
+  }
+  .ru-nav-pill-primary {
+    background: #ffffff;
+    color: #162c4d !important;
+    border-color: #ffffff;
+  }
+  .ru-nav-pill-primary:hover {
+    background: #e6eef8;
+  }
+  .ru-mod-menu {
+    position: relative;
+  }
+  .ru-mod-menu summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 7px 13px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #ffffff;
+    font-size: 0.84rem;
+    font-weight: 600;
+    user-select: none;
+  }
+  .ru-mod-menu summary::-webkit-details-marker { display: none; }
+  .ru-mod-menu summary:hover { background: rgba(255,255,255,0.22); }
+  .ru-mod-dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    z-index: 9999;
+    width: min(320px, 88vw);
+    max-height: 70vh;
+    overflow-y: auto;
+    background: #ffffff;
+    color: #1f2933;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.25);
+    padding: 8px;
+  }
+  .ru-mod-dropdown a {
+    display: block;
+    padding: 7px 10px;
+    border-radius: 6px;
+    color: #1b365d !important;
+    text-decoration: none !important;
+    font-size: 0.84rem;
+    font-weight: 500;
+  }
+  .ru-mod-dropdown a:hover {
+    background: #eef3f9;
+  }
+  .ru-mod-dropdown a.ru-mod-active {
+    background: #e6eef8;
+    font-weight: 700;
+    color: #102a43 !important;
+  }
+</style>
+
+</head><body><header class="ru-top-header"><div class="ru-top-brand"><span class="ru-top-kicker">Efilism RUS · Исследовательский атлас v3.8 (ПК-архив)</span><h1>Биология, ДНК и эволюционный отбор</h1><p>Репликаторы, естественный отбор, страдания в дикой природе и уязвимость</p></div><div class="ru-top-actions"><a class="ru-nav-pill ru-nav-pill-primary" href="index.html">← Быстрый Атлас</a><a class="ru-nav-pill" href="Cartographia_Efilismi.html">95 схем</a><details class="ru-mod-menu"><summary>Все модули (19) ▾</summary><div class="ru-mod-dropdown"><a href="Atlas_Efilismi.html">Полный граф и база (для ПК)</a><a href="Cartographia_Efilismi.html">Картография (95 схем)</a><a href="Encyclopaedia_Efilismi.html">Энциклопедия понятий</a><a href="Systematica_Efilismi.html">Систематика и матрица</a><a href="Demonstratio_Fundamentalis.html">Фундаментальные проверки</a><a href="Corpus_Definitivum.html">Сводный реестр (архив)</a><a href="Ethica_Efilismi.html">Этика и совместимость норм</a><a href="Metaethica_Efilismi.html">Метаэтика</a><a href="Ontologia_Valororum.html">Онтология ценности</a><a href="Justificatio_Efilismi.html">Обоснование посылок</a><a href="Epistemologia_Efilismi.html">Эпистемология и метод</a><a href="Metaphysica_Efilismi.html">Метафизика и причинность</a><a href="Phenomenologia_Efilismi.html">Феноменология опыта</a><a href="Biologia_Efilismi.html" class="ru-mod-active">Биология и отбор</a><a href="Psychologia_Efilismi.html">Психология убеждений</a><a href="Hermeneutica_Efilismi.html">Герменевтика источников</a><a href="Concordantia_Efilismi.html">Поиск по тексту книги</a><a href="Lacunae_Efilismi.html">Анализ пробелов</a><a href="Revisio_Definitiva.html">Реестр правок к книге</a></div></details></div></header><main><section class="panel"><h2>Модели и границы вывода</h2><h3>Приспособленность и среднее значение признака</h3><p>Два одинаково представленных типа, неизменная передача признака. Веса — условный вклад в следующее поколение; значения признака — условные единицы.</p><div class="cols"><div><h3>Тип A</h3><label>Вес вклада <span id="awval"></span><input id="aw" type="range" min="1" max="4" value="1"></label><label>Оценка признака <span id="azval"></span><input id="az" type="range" min="0" max="3" value="3"></label></div><div><h3>Тип B</h3><label>Вес вклада <span id="bwval"></span><input id="bw" type="range" min="1" max="4" value="2"></label><label>Оценка признака <span id="bzval"></span><input id="bz" type="range" min="0" max="3" value="0"></label></div></div><div class="stat">Исходное среднее: <output id="before"></output><div id="bb" class="bar alt"></div>Среднее потомков: <output id="after"></output><div id="ab" class="bar"></div></div><output id="delta"></output><small>Применение к благополучию требует обоснования шкалы; это не эмпирические данные.</small><h3>Ограниченная коррекция</h3><label>Возмущение <span id="dval"></span><input id="d" type="range" min="0" max="5" value="4"></label><label>Предел ответа <span id="cval"></span><input id="c" type="range" min="0" max="5" value="2"></label><output id="res"></output><small>Функциональный остаток, не мера боли. Повторение зависимости не моделирует автоматически опыт.</small><h3>Демаркация уровней</h3><label><input id="fn" type="checkbox" checked> Функциональный процесс</label><label><input id="exp" type="checkbox"> Отрицательное переживание установлено</label><label><input id="norm" type="checkbox"> Нормативная посылка и условия применимости установлены</label><output id="bridge"></output><small>Модель различения, не универсальное правило этической оценки.</small></section><label for="q">Поиск по семи досье</label><input id="q" type="search" placeholder="Отбор, нужда, абиогенез…"><p id="count" class="muted"></p><article class="dossier"><h2>Abiogenesis — абиогенез</h2><p class="muted">BIO31-01 · PDF 141, 144, 145, 146 · R1, R2</p><h3>Сверка</h3><p>§14.6–14.8 уже разводят самоподдержание, репликацию, модульную и интеграционную правдоподобность. Печатная с. 144 описывает возможные геохимические опоры довольно категорично.</p><h3>Реконструкция</h3><p>Физическая осуществимость отдельного перехода не устанавливает совместимость всех переходов или их фактическую историю. Отсутствие предвидения не равнозначно отсутствию причин. Абиогенез — историческая предпосылка опыта, не эпизод опыта.</p><h3>Возражение</h3><p>Если эксперимент воспроизводит несколько компонентов протоклетки, разве история происхождения жизни уже объяснена?</p><h3>Ответ</h3><p>Нет: необходимы совместимость условий, временная последовательность, независимые геохимические ограничения и сравнительная оценка альтернатив.</p><h3>Редакторское решение</h3><p>Сохранить §14.8. В §14.7 представить конкретные среды и этапы РНК→ДНК как реконструкции, а не единственную установленную хронологию. Не выводить вероятность абиогенеза из одного известного случая.</p><details><summary>Исторический корпус</summary><details><summary>PA:P0258</summary><p>Efilism is a spear-heading of knowledge, not just by using this framework, but by using a set of already-confirmed conclusions that any intellectually honest thinker must concede. And even if any counter-arguer does not concede the points, they still fail to refute points: For instance, the point that Abiogenesis / DNA is the origin of life, &amp; had no ends, &amp; no means, &amp; it was just happenstance - in other words, life&#x27;s inception is logically indefensible. Yet life is acting exactly contrary to that. How peculiar, what&#x27;s making that happen? Well we can cite the naturalistic fallacy, which not only explains the main error code DNA is running on but also ensures nobody can &#x27;automatically assume nature is correct because it&#x27;s natural&#x27;.</p></details><details><summary>AN:P0122</summary><p>DNA life was incident with absolutely no ends or means, that is a fundamental point of evolution&#x27;s discovery: [https://en.wikipedia.org/wiki/Abiogenesis Abiogenesis] was just an incident that happened. The fact it keeps happening makes it a mere physical process. You cannot assume there&#x27;s &quot;meaning&quot; in the process of being processed. When you cite &quot;meaning&quot; you&#x27;re just cheating the argument with &#x27;&#x27;&#x27;emotional glad-handing&#x27;&#x27;&#x27;.&#x27;&#x27;&#x27; &#x27;&#x27;&#x27;Because that&#x27;s exactly what everyone &#x27;&#x27;&#x27;desires&#x27;&#x27;&#x27;: a meaning to life.</p></details><details><summary>COMP:P0461</summary><p>Efilism is a spear-heading of knowledge, not just by using this framework, but by using a set of already-confirmed conclusions that any intellectually honest thinker must concede. And even if any counter-arguer does not concede the points, they still fail to refute points: For instance, the point that Abiogenesis / DNA is the origin of life, &amp; had no ends, &amp; no means, &amp; it was just happenstance - in other words, life&#x27;s inception is logically indefensible. Yet life is acting exactly contrary to that. How peculiar, what&#x27;s making that happen? Well we can cite the naturalistic fallacy, which not only explains the main error code DNA is running on but also ensures nobody can &#x27;automatically assume nature is correct because it&#x27;s natural&#x27;.</p></details></details><details><summary>Текст страниц</summary><details><summary>PDF 141</summary><p style="white-space:pre-wrap">ЭФИЛИЗМ: ФИЛОСОФИЯ АБСОЛЮТНОГО АНТИНАТАЛИЗМА • 2026
 140
 Столь же важно сразу провести и верхнюю демаркационную черту Третьей части: наше исследование
 здесь сознательно останавливается за один шаг до появления сознания, боли и этической
